@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "0fb1948386f4581c72424a69587e6471",
+      "css": "minus-3",
+      "code": 59397,
+      "src": "elusive"
+    }
+  ]
+}

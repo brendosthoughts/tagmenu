@@ -1,0 +1,79 @@
+
+body{
+
+	background: black;
+	height:100%;
+	width:100%;
+}
+
+.menu-wrapper{
+ font-size: 0.3em;
+ 	bottom:8em;
+ 	left:4em;
+
+}
+#menu-icon{
+
+	border-radius: 0.2em;
+	display:block;
+	color:white;
+	font-size:4em;
+	font-weight:900;
+	width:1.5em;
+	background:grey;
+	letter-spacing: -0.17em;
+	line-height:0.4em;
+	position: absolute;
+	height:1.4em;
+	text-align:center;
+	padding:0 !important;
+	margin:0 !important;
+	cursor: pointer;
+
+}
+#menu-icon span{
+
+display: inline-block;
+	padding: 0px;
+	margin:0px;
+}
+.menu-bar{
+top: -0.4em;
+position: relative;
+width: 90%;
+margin-left: 0%;
+margin-right: 10%;
+}
+
+.menu .bar-left{
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+}
+.menu .bar-right{
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+}
+
+.arrow .bar-left{
+	height:0.3em;
+
+-webkit-transform: translate(0.34em, 0.05em) rotate(35deg);
+	-moz-transform: translate(0.34em, 0.05em) rotate(35deg);
+	transform: translate(0.34em, 0.05em) rotate(35deg);
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+
+transform-origin: center center;
+-webkit-transform-origin: center center;
+}
+
+.arrow .bar-right{
+	height:0.3em;
+-webkit-transform: translate(-0.34em, 0.15em) rotate(-35deg);
+	-moz-transform: translate(-0.34em, 0.15em) rotate(-35deg);
+	transform: translate(-0.34em, 0.15em) rotate(-35deg);
+		transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+transform-origin: center center;
+-webkit-transform-origin: center center;
+}
