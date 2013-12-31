@@ -38,12 +38,10 @@ function print_tag_nav(){
         {
 	   if($val['tag_name']!=="unlisted"){
 	         $msg .= '<li class="icon icon-arrow-left">
-			      <a class="icon icon-display" href="#">' . $val['tag_name'] . '</a>
-			      	<div class="mp-level">
-				<a class="category-all" href="/tag.php?tag=' . $val['tag_name']  .  '">
-				<h2 class="icon icon-display">' . $val['tag_name'] . '</h2>
-				</a>
-				<a class="mp-back" href="#">back</a>
+			    <a class="icon icon-display" href="#">' . $val['tag_name'] . '</a>
+			    <div class="mp-level">
+			        <a class="category-all" href="/tag.php?tag=' . $val['tag_name']  .  '"><h2 class="icon icon-display">' . $val['tag_name'] . '</h2></a>
+			        <a class="mp-back" href="#">back</a>
 				<ul>';
 		 $sql = "SELECT * FROM phpro_tag_targets targets 
 		 INNER JOIN sub_tags ON targets.sub_tag_id = sub_tags.sub_tag_id
@@ -57,10 +55,12 @@ function print_tag_nav(){
 		 {
 		    if  ($subtag['sub_tag_name']!=="unknown") // || ($subtag['sub_tag_name'] !=="random") )
 		    {
-		      $msg .= '<li><a href="subTag.php?subtag='. $subtag['sub_tag_name']. '">'. $subtag['sub_tag_name'] . '</a></li>';
+		      $msg .= '<li><a href="subTag.php?subtag='. $subtag['sub_tag_name']. '">'. $subtag['sub_tag_name'] . '</a></li> ';
 		    }
 		 }
-		 $msg .= '</ul></li>';
+		 $msg .= '</ul>
+			</div>
+		     </li>';
 	    }
         }
         $msg .= '</ul></div></nav>';
