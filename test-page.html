@@ -8,6 +8,9 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css">
 		<link rel="stylesheet" type="text/css" href="css/icons.css">
 		<link rel="stylesheet" type="text/css" href="css/component.css">
+		<link rel="stylesheet" href="fonts/css/fontello.css">
+	    <link rel="stylesheet" href="fonts/css/animation.css">
+   		<link rel="stylesheet" type="text/css" href="css/search.css" />
 		<script src="js/modernizr.custom.js"></script><style type="text/css"></style>
 	</head>
 	<body screen_capture_injected="true">
@@ -15,9 +18,7 @@
 			<!-- Push Wrapper -->
 			<div class="mp-pusher" id="mp-pusher" style="-webkit-transform: translate3d(0, 0, 0);">
 
-				<!-- category-menu -->
-
-					
+				<!-- category-menu -->					
     <nav id="category-menu" class="category-menu mp-overlap">
                                         <div class="mp-level" data-level="1">
                                                
@@ -424,12 +425,7 @@
 													<br>
 							<br>						<br>
 							<br>
-							<div class="category">
-													tjdhrgxft<br>
-													tsrhhd<br>
-													bxdt<br>
-													bd<br>
-							</div>
+
 					</div><!-- /scroller-inner -->
 					<!-- Top Navigation -->
 					
@@ -437,18 +433,92 @@
 
 			</div><!-- /pusher -->
 			<header class="main-header">
-				<h1>Mind-Knowledge.com</h1><span>Watch ... Think, Learn, Do!</span>
-				<div class="category">
-					<div >
-						<p><a href="#" id="trigger" class="menu-trigger">Categories <br></a></p>
+				<div class="site-title">
+					<h1>Mind-Knowledge.com</h1><span class="sub-header">Watch ... Think, Learn, Do!</span>
+				</div>
+				<nav id="main-site" >
+					<ul>
+						<li>
+							<a href="#"><i class="icon-video"></i>Documentaries</a>
+						</li>			
+						<li>
+							<a href="#"><i class="icon-comment"></i>Talks</a>
+							<ul>
+								<li>
+									<a href="#"><i class="icon-users"></i>Confrences</a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-video"></i>Debates</a>
+								</li>
+								<li>
+									<a href="#"><i class="icon-video"></i>Lectures</a>
+								</li>								
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="icon-podcast"></i>Webcasts</a>
+						</li>
+
+						<li>
+							<a href="#"><i class="icon-plus"></i>More</a>
+							<ul>
+								<li>
+									<a href="#"><i class="icon-videocam"></i>Producers</a>
+								</li>
+							</ul>
+						</li>						
+					</ul>
+
+				</nav>
+			
+				<div class="share-search-wrapper">		
+					<div class="social-share">
+						<a href="#" class="icon-facebook"></a>					
+						<a href="#" class="icon-twitter"></a>
+						<a href="#" class="icon-gplus"></a>
+						<a href="#" class="icon-tumblr"></a>
+						<a href="#" class="icon-reddit"></a>
+						<a href="#" class="icon-stumbleupon"></a>
+						<a href="#" class="icon-email"></a>
+						<a href="#" class="icon-rss"></a>
+					</div>			
+					<div id="sb-search" class="sb-search">		
+						<form>
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<span class="sb-icon-search icon-search"></span>
+						</form>	
 					</div>
 				</div>
+				<div class="category">
+						<a href="#" id="trigger" class="menu-trigger">
+							<div class="menu-wrapper">
+								<div id="menu-icon" >
+									<div class="menu-bar">
+										<span class="bar-left ">_</span>
+										<span class="bar-right ">_</span>
+									</div>
+									<div class="menu-bar">
+										<span class="bar-left ">_</span>
+										<span class="bar-right ">_</span>
+									</div>
+									<div class="menu-bar">
+										<span class="bar-left ">_</span>
+										<span class="bar-right ">_</span>
+									</div>
+								</div>
+							</div>
+							<span class="category-text">Categories </span></a>				 	
+				</div>
+
 			</header>
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>
 		<script src="js/mlpushmenu.js"></script>
+		<script src="js/uisearch.js"></script>
 		<script>
-			new mlPushMenu( document.getElementById( 'category-menu' ), document.getElementById( 'trigger' ) );
+			new UISearch( document.getElementById( 'sb-search' ) );
+			new mlPushMenu( document.getElementById( 'category-menu' ), document.getElementById( 'trigger' ), document.getElementById('menu-icon') );
 		</script>
 	
 

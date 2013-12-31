@@ -57,9 +57,10 @@
 		return e.parentNode && closest( e.parentNode, classname );
 	}
 
-	function mlPushMenu( el, trigger, options ) {	
+	function mlPushMenu( el, trigger, menu, options ) {	
 		this.el = el;
 		this.trigger = trigger;
+		this.menuIcon = menu;
 		this.options = extend( this.defaults, options );
 		// support 3d transforms
 		this.support = Modernizr.csstransforms3d;
@@ -199,11 +200,18 @@
 			}
 			// add class mp-level-open to the opening level element
 			classie.add( subLevel || this.levels[0], 'mp-level-open' );
+			classie.remove(this.menuIcon, 'menu');
+			classie.add(this.menuIcon, 'arrow');
+
 		},
 		// close the menu
 		_resetMenu : function() {
 			this._setTransform('translate3d(0,0,0)');
 			this.level = 0;
+			classie.remove(this.menuIcon, 'arrow');
+			classie.add(this.menuIcon, 'menu');
+			
+
 			// remove class mp-pushed from main wrapper
 			classie.remove( this.wrapper, 'mp-pushed' );
 			this._toggleLevels();

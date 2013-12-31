@@ -10,45 +10,166 @@ html, body, .container {
 	height: 100%;
 }
 .main-header{
+	color:black;
 	float:left;
 	position :fixed;
 	top:0;
 	width:100%;
 	left:0;
 	height:7%;
-	min-height:6.5em;
+	min-height:7em;
 	display: inline-block;
 	background:grey;
+	color:black;
 }
-.main-header h1{
+.main-header .site-title{
+	displaY:block;
+	width:30%;
+	float:left;
+	min-width:15em;
+}
+.main-header .site-title h1{
+	float:left;
 	text-align:left;
 	margin:0px;
 	padding:0.4em 0px 0px 1em;
 	color: black;
-	width:45%;
-	min-width:15em;
+	width:100%;
 }
-.main-header span{
-	text-align:right;
-	padding-left:4em;
-	color:black;
-	width:33%;
+.main-header .site-title .sub-header{
+	float:left;
+	display:block;
+	text-align:left;
+	padding-left:6em;
+	width:100%;
 	font-size:1.0em;
 	font-style: italic;
 }
+.menu-wrapper{
+ font-size: 0.3em;
+ float:left;
+}
+
+#main-site{
+	display:inline-block;
+	float:left;
+	text-align:center;
+	width: 100%;
+	position:absolute;
+	bottom: 0;
+}
+#main-site ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size:1.5em;
+}
+#main-site ul li {
+	padding:0.25em .5em 0em .5em;
+  	display: block;
+  	position: relative;
+  	float: left;
+ 
+}
+#main-site ul li ul{
+display:none;
+}
+
+
+
+#menu-icon{
+	font-family:"Times New Roman",Georgia,Serif;
+	border-radius: 0.2em;
+	display:block;
+	font-size:4em;
+	font-weight:900;
+	width:1.4em;
+	background:grey;
+	letter-spacing: -0.17em;
+	line-height:0.4em;
+	position: absolute;
+	height:1.4em;
+	text-align:center;
+	padding:0 !important;
+	margin:0 !important;
+	cursor: pointer;
+
+}
+#menu-icon span{
+display: inline-block;
+	padding: 0px;
+	margin:0px;
+}
+.menu-bar{
+top: -0.4em;
+position: relative;
+width: 90%;
+margin-left: 0%;
+margin-right: 10%;
+}
+
+.menu .bar-left{
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+-ms-transition: -ms-transform 0.5s;
+}
+.menu .bar-right{
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+-ms-transition: -ms-transform 0.5s;
+}
+
+.arrow .bar-left{
+	height:0.3em;
+
+-webkit-transform: translate(0.34em, 0.05em) rotate(35deg);
+	-moz-transform: translate(0.34em, 0.05em) rotate(35deg);
+	-ms-transform: translate(0.34em, 0.05em) rotate(35deg);
+	transform: translate(0.34em, 0.05em) rotate(35deg);
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+
+transform-origin: center center;
+-webkit-transform-origin: center center;
+-ms-transform-origin: center center;
+}
+
+.arrow .bar-right{
+	height:0.3em;
+	-webkit-transform: translate(-0.34em, 0.16em) rotate(-35deg);
+	-moz-transform: translate(-0.34em, 0.16em) rotate(-35deg);
+	-ms-transform: translate(-0.34em, 0.16em) rotate(-35deg);
+	transform: translate(-0.34em, 0.16em) rotate(-35deg);
+		transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+transform-origin: center center;
+-webkit-transform-origin: center center;
+-ms-transform-origin: center center;
+}
 .category{
+	position:absolute;
+	bottom:2.5em;
 	display:inline-block;
 	float:right;
-	margin-right:1.7em;
+	right: 1.5em;
+	width:13em;
+	text-align:left;
+}
+.category-text{
+	position: absolute;
+	right:0;
+	font-size:1.0em;
+	padding-top: 0.5em;
+
 }
 .menu-trigger {
 	float:right;
 	color:black;
-	width:9em;
 	text-align:right;
-	margin: 0px;
-	padding:0px;
+/*	margin: 0px;
+	padding:0px;*/
 	font-size: 1.4em;
+	width:7em;
 }
 
 .menu-trigger:before {
@@ -62,7 +183,7 @@ html, body, .container {
 }
 .scroller {
 	overflow-y: scroll; 
-	height: 93%;
+	height: 100%;
 	bottom:0;
 }
 
@@ -80,7 +201,7 @@ html, body, .container {
 
 
 .mp-pusher {
-	padding-top:6.5em;
+	padding-top:7em;
 	position: relative;
 	right: 0;
 	height: 100%;
@@ -219,7 +340,7 @@ html, body, .container {
 	color: #ccc;
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 	font-weight: 350;
-	font-size: 1.8em;
+	font-size: 1.4em;
 	text-align: center;
 }
 7
@@ -244,6 +365,8 @@ html, body, .container {
 	font-weight: 700;
 	letter-spacing: 1px;
 	font-size: 1em;
+	padding-left:0px;
+	text-align:left;
 }
 
 .mp-overlap .mp-level.mp-level-overlay > h2::before {
@@ -262,7 +385,7 @@ html, body, .container {
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	text-shadow: 0 0 1px rgba(255,255,255,0.1);
-	font-size: 1.3em;
+	font-size: 1.2em;
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	-moz-transition: background 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, box-shadow 0.3s;
@@ -270,7 +393,7 @@ html, body, .container {
 
 .category-menu ul li::before {
 	position: absolute;
-	left: 10px;
+	left: 10px; 
 	z-index: -1;
 	color: rgba(0,0,0,0.2);
 	line-height: 3.5;
@@ -324,6 +447,7 @@ html, body, .container {
 	color: transparent;
 }
 
+
 /* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
 /* We'll show the first level only */
 .no-csstransforms3d .mp-pusher,
@@ -339,4 +463,29 @@ html, body, .container {
 .no-csstransforms3d .category-menu > .mp-level,
 .no-js .category-menu > .mp-level {
 	display: block;
+}
+
+
+@media only screen and (max-width: 70em){
+#main-site{
+	display:inline-block;
+	float:left;
+	text-align:center;
+	width: 40em;
+	position:absolute;
+	bottom: -2em;
+	left:0;
+	border-bottom-right-radius: 2em;
+	background: grey;
+
+
+}
+}
+
+@media only screen and (max-width: 40em){
+
+#main-site{
+
+	display:none;
+}
 }
