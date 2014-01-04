@@ -1,6 +1,45 @@
 #logo{
-width:200px;
-height:200px;
-background: url('../images/man-brain.png') center center fixed;
+width:32em;
+height:30em;
+background: url('../images/manBrain.svg');
 background-size: cover;
+display:block;
+position: absolute;
+z-index:1;
+}
+.icon-cog{
+
+	color:grey;
+	display:block;
+	position:relative;
+}
+#cog-1{
+		z-index:3;
+	font-size:10em;
+	left:10%;
+	top:5%;
+	color:red;
+}
+#cog-2{
+		z-index:4;
+	color: blue;
+	font-size:7em;
+	left:27.5%;
+	top:-3%;
+
+}
+#cog-3{
+		z-index:56
+	color:green;
+	font-size:5em;
+	left:2em;
+	top:2em;
+
+}
+#cog-4{
+		z-index:6;
+	font-size:5em;
+	left:2em;
+	top:2em;
+	color:rgba(0, 0, 0, 0.5);
 }

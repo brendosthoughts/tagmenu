@@ -51,14 +51,26 @@ html, body, .container {
  margin-left:3.3em;
 }
 
-#main-site{
+/*#main-site{
 	display:inline-block;
 	float:left;
 	text-align:center;
 	width: 100%;
 	position:absolute;
 	bottom: 0;
+}*/
+#main-site{
+	display:inline-block;
+	float:left;
+	text-align:center;
+	width: 40em;
+	position:absolute;
+	bottom: -2em;
+	left:0;
+	border-bottom-right-radius: 2em;
+	background: grey;
 }
+
 #main-site ul{
 	margin: 0;
 	padding: 0;
@@ -75,6 +87,9 @@ html, body, .container {
 #main-site .main-dropdown ul{
 	font-size: 0.9em;
 display:none;
+}
+.icon-angle-circled-down{
+	font-size:0.4em;
 }
 #main-site .open ul{
 	display:block;
@@ -157,6 +172,7 @@ position: relative;
 width: 80%;
  height:0.5em;
 }
+
 
 .menu .bar-left{
 	transition: transform 0.5s;
@@ -254,7 +270,7 @@ transform-origin: center center;
 .category-menu {
 	float: right;
 	position: absolute; /* we can't use fixed here :( */
-	top: 6.5em;
+	top: 9em;
 	display:block;
 	right: 200px;
 	z-index: 1;
@@ -342,7 +358,7 @@ transform-origin: center center;
 	transform: translate3d(40px, 0, 0);
 }
 .mp-level-open {
-	overflow-y:scroll;
+	overflow-y:auto;
 	overflow-x:hidden;
 }
 /* First level */
@@ -376,6 +392,7 @@ transform-origin: center center;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	height:100%;
 }
 
 .category-menu h2 {
@@ -508,6 +525,7 @@ transform-origin: center center;
 .no-js .category-menu > .mp-level {
 	display: block;
 }
+
 
 
 @media only screen and (max-width: 70em){

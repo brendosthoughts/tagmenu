@@ -1,0 +1,77 @@
+body {
+  background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/billie_holiday.png); // Background from subtlepatterns.com
+}
+
+.cog,
+.cog2,
+.cog3 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50px;
+}
+
+.cog {
+  left: 100px;
+  background: url(http://williamleeks.com/testing/cog1.png);
+  animation: cog 10s ease-in-out infinite;
+}
+.cog2 {
+  left: 240px;
+  background: url(http://williamleeks.com/testing/cog2.png);
+  animation: cogalt 10s ease-in-out infinite;
+}
+
+.cog3 {
+  left: 382px;
+  background: url(http://williamleeks.com/testing/cog1.png);
+  animation: cog 10s ease-in-out infinite;
+}
+
+@keyframes cog {
+  0% { transform: rotate(0deg); }
+  8% {transform: rotate(39deg); } 
+  10% { transform: rotate(36deg); }
+  18% { transform: rotate(75deg); }
+  20% { transform: rotate(72deg); }
+  28% { transform: rotate(111deg); }
+  30% { transform: rotate(108deg); }
+  38% { transform: rotate(147deg); }
+  40% { transform: rotate(144deg); }
+  48% { transform: rotate(183deg); }
+  50% { transform: rotate(180deg); }
+  58% { transform: rotate(219deg); }
+  60% { transform: rotate(216deg); }
+  68% { transform: rotate(255deg); }
+  70% { transform: rotate(252deg); }
+  78% { transform: rotate(291deg); }
+  80% { transform: rotate(288deg); }
+  88% { transform: rotate(327deg); }
+  90% { transform: rotate(324deg); }
+  98% { transform: rotate(363deg); }
+  100% { transform: rotate(360deg); }
+ }
+
+@keyframes cogalt {
+  0% { transform: rotate(0deg); }
+  8% {transform: rotate(-39deg); } 
+  10% { transform: rotate(-36deg); }
+  18% { transform: rotate(-75deg); }
+  20% { transform: rotate(-72deg); }
+  28% { transform: rotate(-111deg); }
+  30% { transform: rotate(-108deg); }
+  38% { transform: rotate(-147deg); }
+  40% { transform: rotate(-144deg); }
+  48% { transform: rotate(-183deg); }
+  50% { transform: rotate(-180deg); }
+  58% { transform: rotate(-219deg); }
+  60% { transform: rotate(-216deg); }
+  68% { transform: rotate(-255deg); }
+  70% { transform: rotate(-252deg); }
+  78% { transform: rotate(-291deg); }
+  80% { transform: rotate(-288deg); }
+  88% { transform: rotate(-327deg); }
+  90% { transform: rotate(-324deg); }
+  98% { transform: rotate(-363deg); }
+  100% { transform: rotate(-360deg); }
+ }

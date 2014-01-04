@@ -1,0 +1,631 @@
+/*= Known Animation Issues in Firefox=*/
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #272727;
+}
+
+
+/*=============================================================================================*/
+/*======================================= Scaling Cogs ========================================*/
+/*=============================================================================================*/
+
+/*#cogs-wrapper {
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	-o-transform: scale(0.3);
+	-ms-transform: scale(0.3);
+	transform: scale(0.3);
+}*/
+
+/*=============================================================================================*/
+/*======================================= Cog Container =======================================*/
+/*=============================================================================================*/
+
+#cogs-wrapper{
+	background: url('../images/manBrain.svg');
+	background-size: cover;
+	width:750px;
+	height:750px;
+}
+
+.cogContainer {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.cogContainer>[class^="cog"] {
+	background: #666;
+	width: 5.625em;
+	height: 5.625em;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 2;
+	border: 0.105em solid #e3e3e3;
+	-webkit-box-shadow: 
+	inset 0px 0px 1px 1px rgba(0,0,0,0.5);
+	box-shadow: 
+	inset 0px 0px 1px 1px rgba(0,0,0,0.5);
+}
+
+
+
+/*=============================================================================================*/
+/*====================================== Individual Cogs ======================================*/
+/*=============================================================================================*/
+
+.cog1{
+	font-size:0.5em;
+top: 12.6em;
+left: 18.8em;
+
+}
+.cog2{
+top: 9em;
+left: 12em;
+}
+.cog3{
+top: 15.2em;
+left: 15.9em;
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+.cog4{
+	top: 5em;
+	left: 35em;
+	-webkit-transform: rotate(20deg) scale(0.5);
+	-moz-transform: rotate(20deg) scale(0.5);
+	-o-transform: rotate(20deg) scale(0.5);
+	-ms-transform: rotate(20deg) scale(0.5);
+	transform: rotate(20deg) scale(0.5);
+}
+.cog5{
+	left: 15.1em;
+	top: 6.5em;
+	font-size:1.5em;
+}
+.cog6{
+	left:36.8em;
+	top:21em;
+	-webkit-transform: rotate(20deg) scale(0.3);
+	-moz-transform: rotate(20deg) scale(0.3);
+	-o-transform: rotate(20deg) scale(0.3);
+	-ms-transform: rotate(20deg) scale(0.3);
+	transform: rotate(20deg) scale(0.3);
+}
+.cog7{
+	font-size:0.5em;
+	left:80em;
+	top:45em;
+	-webkit-transform: scale(0.3);
+	-moz-transform: scale(0.3);
+	-o-transform: scale(0.3);
+	-ms-transform: scale(0.3);
+	transform: scale(0.3);
+}
+.cog8{
+	font-size:0.5em;
+	left:70em;
+	top:18em;
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+}
+.cog9{
+	font-size:0.5em;
+	left:48.5em;
+	top:11em;
+	-webkit-transform: rotate(-8deg);
+	-moz-transform: rotate(-8deg);
+	-o-transform: rotate(-8deg);
+	-ms-transform: rotate(-8deg);
+	transform: rotate(-8deg);
+}
+
+/*=============================================================================================*/
+/*====================================== Middle Circles =======================================*/
+/*=============================================================================================*/
+
+.outerCircle, .middleCircle, .innerCircle, .screw-hole{
+	border-radius:50%;
+	position: absolute;
+	z-index: 2;
+
+	-webkit-box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.4),
+	0px 0px 2px 0.5px rgba(0,0,0,0.2),
+	inset 0px 0px 0.5px 1px rgba(0,0,0,0.3),
+	0px 0px 20px 5px rgba(0,0,0,0.4),
+	0px 0px 40px 5px rgba(0,0,0,0.4);
+	box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.4),
+	0px 0px 2px 0.5px rgba(0,0,0,0.2),
+	inset 0px 0px 0.5px 1px rgba(0,0,0,0.3),
+	0px 0px 20px 5px rgba(0,0,0,0.4),
+	0px 0px 40px 5px rgba(0,0,0,0.4);
+}
+
+.outerCircle {
+
+	width: 4.688em;
+	height: 4.688em;
+
+	background: rgba(255, 255, 255, 0.2);
+
+	margin-left:8.5%;
+	margin-top: 8.5%;
+
+}
+
+.middleCircle {
+
+	width: 3.75em;
+	height: 3.75em;
+
+	background: rgba(6, 6, 6, 0.2);
+
+	margin-left: 17%;
+	margin-top: 17%;
+
+
+}
+
+.innerCircle {
+
+	width: 1.5em;
+	height: 1.5em;
+	border: .15em dashed rgba(102, 102, 102, 0.8);
+	border-radius: 50%;
+	background: rgba(33,33,33, 0.4);
+
+	color: #000;
+	margin-left:34%;
+	margin-top: 34%;
+}
+.screw-hole{
+	border-radius: 0;
+z-index: 4;
+	width: 0.075em;
+	height:1.08em;
+	background: #272323;
+	display: block;
+	position: absolute;
+	margin-left:48%;
+	margin-top:15%;
+
+}
+.cog .innerCircle{
+	-webkit-transform: rotate(33deg);
+	-moz-transform: rotate(33deg);
+	-ms-transform: rotate(33deg);
+}
+
+/*=============================================================================================*/
+/*========================================= Cog Teeth =========================================*/
+/*=============================================================================================*/
+
+span[class*="Tooth"] {
+	border-radius: 25%;
+	background:	#666;
+	position: absolute;
+	z-index: 7;
+	width: 1.125em;
+	height: 1.5em;
+	-webkit-box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.2);
+	box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.2);
+
+}
+
+/*
+.topTooth, .topRightTooth, .bottomRightTooth,.bottomTooth, .bottomLeftTooth, .topLeftTooth {
+	width: 1.125em;
+	height: 1.5em;
+}*/
+
+/*.rightTooth, .leftTooth {
+	width: 1.5em;
+	height: 1.125em;
+}*/
+
+/*font size 1 teeth*/
+.topTooth {
+margin-left: 39%;
+margin-top: -27%;
+}
+
+.topRightTooth {
+	margin-left: 83%;
+	margin-top: -10%;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.rightTooth {
+		-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+margin-left: 104%;
+margin-top: 38%;
+}
+
+.bottomRightTooth {
+margin-left: 87%;
+margin-top: 80%;
+
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+.bottomTooth {
+margin-left: 41%;
+margin-top: 100%;
+}
+
+.bottomLeftTooth {
+	margin-left: -6%;
+	margin-top: 80%;
+
+	-webkit-transform: rotate(225deg);
+	-moz-transform: rotate(225deg);
+	-o-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	transform: rotate(225deg);
+}
+
+.leftTooth {
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	margin-left: -24%;
+	margin-top: 40%;
+}
+
+.topLeftTooth {
+	margin-left: -6%;
+	margin-top: -8%;
+
+	-webkit-transform: rotate(315deg);
+	-moz-transform: rotate(315deg);
+	-o-transform: rotate(315deg);
+	-ms-transform: rotate(315deg);
+	transform: rotate(315deg);
+}
+
+/*font-size half teeth*/
+.half span[class*="Tooth"] {
+	font-size:2em;
+}
+.half .topTooth{
+	margin-left:30%;
+	margin-top:-51%;
+}
+.half .rightTooth{
+	margin-left:105%;
+	margin-top:25%;
+}
+.half .bottomTooth{
+	margin-left:30%;
+	margin-top:100%;
+}
+.half .leftTooth{
+	margin-left:-48%;
+	margin-top:25%;
+}
+.oneAndHalf span[class*="Tooth"] {
+font-size:0.666666666em;
+}	
+
+
+.oneAndHalf .leftTooth{
+margin-left:-17%;
+margin-top:42%;
+}
+.oneAndHalf .topTooth{
+margin-left:43%;
+margin-top:-18%;
+}
+.oneAndHalf .rightTooth{
+margin-left:103%;
+margin-top:42%;
+}
+.oneAndHalf .bottomTooth{
+margin-left:43%;
+margin-top:100%;
+}
+.rightToothTopTop{
+	margin-left:75%;
+	margin-top: -10%;
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+.rightToothTopBottom{
+		margin-left:97%;
+	margin-top: 13%;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+.rightToothBottomTop{
+			margin-left:97%;
+	margin-top: 69%;
+	-webkit-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-o-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	transform: rotate(120deg);
+}
+.rightToothBottomBottom{
+		margin-left:75%;
+	margin-top: 92%;
+	-webkit-transform: rotate(150deg);
+	-moz-transform: rotate(150deg);
+	-o-transform: rotate(150deg);
+	-ms-transform: rotate(150deg);
+	transform: rotate(150deg);
+}
+
+.leftToothTopTop{
+	margin-left:12%;
+	margin-top: -10%;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+.leftToothTopBottom{
+		margin-left:-10%;
+	margin-top: 13%;
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+}
+
+.leftToothBottomTop{
+			margin-left:-10%;
+	margin-top: 69%;
+	-webkit-transform: rotate(-120deg);
+	-moz-transform: rotate(-120deg);
+	-o-transform: rotate(-120deg);
+	-ms-transform: rotate(-120deg);
+	transform: rotate(-120deg);
+}
+.leftToothBottomBottom{
+		margin-left:12%;
+	margin-top: 92%;
+	-webkit-transform: rotate(-150deg);
+	-moz-transform: rotate(-150deg);
+	-o-transform: rotate(-150deg);
+	-ms-transform: rotate(-150deg);
+	transform: rotate(-150deg);
+}
+/*=============================================================================================*/
+/*======================================== Center Nuts ========================================*/
+/*=============================================================================================*/
+
+.middleCircle > * {
+
+	background: #494949;
+	width: 0.375em;
+	height: 0.375em;
+	position: absolute;
+	border-radius: 100%;
+	font-size: 0.375em;
+	line-height: 0.3em;
+	text-align: center;
+	color: #3a3a3a;
+
+	-webkit-box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.4),
+	0px 0px 2px 0.5px rgba(0,0,0,0.2),
+	inset 0px 0px 0.5px 1px rgba(0,0,0,0.3);
+	box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.4),
+	0px 0px 2px 0.5px rgba(0,0,0,0.2),
+	inset 0px 0px 0.5px 1px rgba(0,0,0,0.3);
+
+}
+
+.nutTop {
+
+	margin-left: 45%;		
+}
+
+.nutTopRight {
+/*	margin-top: 30px;
+	margin-left: 155px;
+*/	margin-top: 15%;
+	margin-left: 77%;
+}
+
+.nutRight {
+	margin-top: 45%;
+	margin-left: 90%;
+
+}
+
+.nutBottomRight {
+
+	margin-top: 77%;
+	margin-left: 75%;
+}
+
+.nutBottom {
+
+	margin-top: 89%;
+	margin-left: 45%;
+}
+
+.nutBottomLeft {
+
+	margin-top: 77%;
+	margin-left: 15%;
+}
+
+.nutLeft {
+
+	margin-top: 45%;
+	margin-left: 0%;
+}
+
+.nutTopLeft {
+
+	margin-top: 15%;
+	margin-left: 15%;
+}
+
+/*=============================================================================================*/
+/*====================================== Navigation Bar =======================================*/
+/*=============================================================================================*/
+.cog1{
+   -webkit-animation: rotate-left 4.5s linear infinite;
+	-moz-animation: rotate-left 4.5s linear infinite;
+
+}
+.cog2{
+   -webkit-animation: rotate-right 9s linear infinite;
+	-moz-animation: rotate-right 9s linear infinite;
+}
+.cog3{
+   -webkit-animation: rotate-left 9s linear infinite;
+   -moz-animation: rotate-left 9s linear infinite;
+}
+.cog4{
+   -webkit-animation: rotate-right-keep-scale-zero-point-five 2.25s linear infinite;
+   -moz-animation: rotate-right-keep-scale-zero-point-five 2.25s linear infinite;
+
+}
+.cog5{
+   -webkit-animation: rotate-right 13.5s linear infinite;
+   -moz-animation: rotate-right 13.5s linear infinite;
+}
+.cog6{
+   -webkit-animation: rotate-right-keep-scale-zero-point-three 1s linear infinite;
+   -moz-animation: rotate-right-keep-scale-zero-point-three 1s linear infinite;
+}
+.cog8{
+   -webkit-animation: rotate-left-keep-scale-zero-point-five 1.125s linear infinite;
+   -moz-animation: rotate-left-keep-scale-zero-point-five 1.125s linear infinite;
+}
+.cog9{
+   -webkit-animation: rotate-left 4.5s linear infinite;
+   -moz-animation: rotate-left 4.5s linear infinite;
+}
+
+
+/*=============================================================================================*/
+/*============================== Navigation Bar Hover Animation ===============================*/
+/*=============================================================================================*/
+
+
+/*Rotate right standard*/
+
+@-webkit-keyframes rotate-right
+{
+  from { -webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate-right
+{
+  from { -moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+
+
+/*rotate right with scale of 0.3*/
+@-webkit-keyframes rotate-right-keep-scale-zero-point-three
+{
+  from { -webkit-transform: scale(0.3) rotate(0deg);}
+  to {-webkit-transform: scale(0.3) rotate(360deg);}
+}
+@-moz-keyframes rotate-right-keep-scale-zero-point-three
+{
+  from { -moz-transform: scale(0.3) rotate(0deg);}
+  to {-moz-transform: scale(0.3) rotate(360deg);}
+}
+
+/*rotate right with scale 0.5*/
+@-webkit-keyframes rotate-right-keep-scale-zero-point-five
+{
+  from { -webkit-transform: scale(0.5) rotate(0deg);}
+  to {-webkit-transform: scale(0.5) rotate(360deg);}
+}
+@-moz-keyframes rotate-right-keep-scale-zero-point-five
+{
+  from { -moz-transform: scale(0.5) rotate(0deg);}
+  to {-moz-transform: scale(0.5) rotate(360deg);}
+}
+
+
+
+
+/*Rotate left standard*/
+
+@-webkit-keyframes rotate-left
+{
+  from { -webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(-360deg);}
+}
+@-moz-keyframes rotate-left
+{
+   from { -moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(-360deg);}
+}
+/*Rotate left with scale 0.3*/
+
+@-webkit-keyframes rotate-left-keep-scale-zero-point-five
+{
+  from { -webkit-transform: scale(0.3) rotate(0deg);}
+  to {-webkit-transform: scale(0.3) rotate(-360deg);}
+}
+@-moz-keyframes rotate-left-keep-scale-zero-point-five
+{
+  from { -moz-transform: scale(0.3) rotate(0deg);}
+  to {-moz-transform: scale(0.3) rotate(-360deg);}
+}
+/*Rotate left with scale 0.5*/
+@-webkit-keyframes rotate-left-keep-scale-zero-point-five
+{
+  from { -webkit-transform: scale(0.5) rotate(0deg);}
+  to {-webkit-transform: scale(0.5) rotate(-360deg);}
+}
+@-moz-keyframes rotate-left-keep-scale-zero-point-five
+{
+  from { -moz-transform: scale(0.5) rotate(0deg);}
+  to {-moz-transform: scale(0.5) rotate(-360deg);}
+}

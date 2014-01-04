@@ -1,0 +1,78 @@
+
+
+.sign-up{
+	display: block;
+	width:100%;
+	max-width:20em;
+	margin:0 auto;
+	background:grey;
+	color:#000;
+	border:inset 3px;
+	border-color: rgba(0, 0, 0, 0.7);
+	border-radius:2em;
+}
+#buttons{
+
+	margin-top: 2em;
+}
+.sign-up a, span, input{
+	display:block;
+	margin:0 auto;
+	text-align: center;
+}
+.sign-up .register{
+	background: rgba(0,0,0,0.3);
+	color: white;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	border-color: grey;
+	font-size:1.5em;
+	margin-top:1.25em;
+}	
+.sign-up form{
+border-top: inset 2px;
+border-color: rgba (0,0,0,0.3);
+padding-top: 1em;
+margin-top: 0;
+}
+.sign-up form span{
+text-align: left;
+font-size: 0.8em;
+padding-left:2.8em;
+}
+
+.sign-up form input{
+	margin-bottom: 1em;
+	height: 2em;
+	width: 13em;
+	color: white;
+	padding-left:0.5em;
+	font-size: 1.3em;
+	text-align:left;
+	background: rgba(0,0,0, 0.6);
+	border-radius: 0.3em;
+	border-color: rgba(0,0,0,0.3);
+}
+.sign-up form input::-webkit-input-placeholder {
+	color: #ccc;
+	padding-left: 0.5em;
+}
+.sign-up form input:-moz-placeholder {
+	color: #ccc;
+	padding-left: 0.5em;
+
+}
+.sign-up form input:-ms-input-placeholder {
+	color: #ccc;
+	padding-left: 0.5em;
+
+}
+
+#sign-up-submit{
+	width: 7.5em;
+	text-align: center;
+	color: white;
+	font-weight:bold;
+	font-size: 1.5em;
+}
+
