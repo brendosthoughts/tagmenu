@@ -103,7 +103,7 @@
 				<!-- scroller -->
 				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
 					<div class="scroller-inner">
-						<?php echo $subTemplate; ?>
+						<?php include $subTemplate; ?>
 							
 						<footer class="main-footer"> 
 							<ul class="about"><a href="#"> About </a>
@@ -291,5 +291,5 @@
 
 		</div><!-- /container -->
 <?php
-    return ob_get_clean();
+    return ob_end_flush();
 } ?>

@@ -39,10 +39,8 @@ if (array_key_exists("login", $_GET)) {
 
 <div class="sign-up">
 <div id="buttons">
-    <a class="fb-login" href="?login&oauth_provider=twitter"><img src="../images/sign-in-with-twitter-gray.png"></a>
-    <span class="sign-up-or">Or</span>
-    <a class="twitter-login" href="?login&oauth_provider=facebook"><img src="../images/active_404.png"></a>
-    <span class="sign-up-or">Or</span>
+    <a class="fb-login oauth-button" href="?login&oauth_provider=twitter"><img src="../images/sign-in-with-twitter-gray.png"></a>
+    <a class="twitter-login oauth-button" href="?login&oauth_provider=facebook"><img src="../images/active_404.png"></a>
 </div>
 <span class="register">Create an Account</span>
 <form class="sign-up-register">

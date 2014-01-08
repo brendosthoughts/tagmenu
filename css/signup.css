@@ -12,8 +12,10 @@
 	border-radius:2em;
 }
 #buttons{
-
 	margin-top: 2em;
+}
+#buttons .oauth-button {
+	margin-bottom: 1em;
 }
 .sign-up a, span, input{
 	display:block;
