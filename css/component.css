@@ -9,6 +9,17 @@
 html, body, .container {
 	height: 100%;
 }
+.add-left{
+	display: inline-block;
+
+	position:absolute;
+	left:0;
+	top: 7em;
+	width: 200px;
+	height: 100%;
+	background: red;
+	z-index: 100;
+}
 .main-header{
 	color:black;
 	float:left;
@@ -17,6 +28,7 @@ html, body, .container {
 	width:100%;
 	left:0;
 	height:7%;
+	z-index:100;
 	min-height:7em;
 	display: inline-block;
 	background:grey;
@@ -26,6 +38,7 @@ html, body, .container {
 	displaY:block;
 	width:30%;
 	float:left;
+	margin-left:8em;
 	min-width:15em;
 }
 .main-header .site-title h1{
@@ -51,25 +64,18 @@ html, body, .container {
  margin-left:3.3em;
 }
 
-/*#main-site{
-	display:inline-block;
-	float:left;
-	text-align:center;
-	width: 100%;
-	position:absolute;
-	bottom: 0;
-}*/
 #main-site{
-	display:inline-block;
-	float:left;
-	text-align:center;
-	width: 40em;
-	position:absolute;
-	bottom: -2em;
-	left:0;
-	border-bottom-right-radius: 2em;
-	background: grey;
+display: block;
+float: left;
+text-align: center;
+min-width: 40em;
+width: 50%;
+margin-right: 25%;
+margin-left: 25%;
+position: absolute;
+bottom: 0;
 }
+
 
 #main-site ul{
 	margin: 0;
@@ -261,20 +267,21 @@ transform-origin: center center;
 
 
 .mp-pusher {
-	padding-top:7em;
+	top:7em;
 	position: relative;
-	right: 0;
-	height: 100%;
+	left:200px;
+	width: calc(100% - 200px);
+	height: calc(100% - 7em);
 }
 
 .category-menu {
 	float: right;
 	position: absolute; /* we can't use fixed here :( */
-	top: 9em;
+	top: 0em;
 	display:block;
-	right: 200px;
+	right: 11em;
 	z-index: 1;
-	width: 200px;
+	width: 11em;
 	height: 100%;
 	-webkit-transform: translate3d(100%, 0, 0);
 	-moz-transform: translate3d(100%, 0, 0);
@@ -321,9 +328,9 @@ transform-origin: center center;
 .mp-pusher.mp-pushed::after,
 .mp-level.mp-level-overlay::after {
 	right:0;
-/*	width: 100%;
+	width: 100%;
 	height: 100%;
-	*/
+
 	opacity: 1;
 	-webkit-transition: opacity 0.3s;
 	-moz-transition: opacity 0.3s;
@@ -333,6 +340,11 @@ transform-origin: center center;
 .mp-level.mp-level-overlay {
 	cursor: pointer;
 	overflow:hidden;
+
+}
+.mp-level-open{
+	opacity:1;
+
 }
 
 .mp-level.mp-level-overlay.mp-level::before {
@@ -352,10 +364,11 @@ transform-origin: center center;
 
 /* overlap */
 .mp-overlap .mp-level.mp-level-open {
+	/* this translate ws 40px*/
 	box-shadow: 1px 0 2px rgba(0,0,0,0.2);
-	-webkit-transform: translate3d(40px, 0, 0);
-	-moz-transform: translate3d(40px, 0, 0);
-	transform: translate3d(40px, 0, 0);
+	-webkit-transform: translate3d(20px, 0, 0);
+	-moz-transform: translate3d(20px, 0, 0);
+	transform: translate3d(20px, 0, 0);
 }
 .mp-level-open {
 	overflow-y:auto;
@@ -373,6 +386,7 @@ transform-origin: center center;
 	-moz-transform: translate3d(100%, 0, 0);
 	transform: translate3d(100%, 0, 0);
 }
+
 
 /* cover */
 .mp-cover .mp-level.mp-level-open {
@@ -409,7 +423,7 @@ transform-origin: center center;
 	position: absolute;
 	top: 0;
 	right: 0;
-	margin-right: 8px;
+/*	margin-right: 8px;*/
 	font-size: 75%;
 	line-height: 1.8;
 	opacity: 0;
@@ -492,13 +506,14 @@ transform-origin: center center;
 	transition: background 0.3s;
 }
 
-.mp-back::after {
-	font-family: 'linecons';
-	position: absolute;
-	content: "\e037";
-	right: 10px;
+.mp-back::before {
+	font-family: 'fontello';
+/*	position: absolute;
+*/	content: "\e82f";
+	left: 10px;
+	margin-right: 1em;
 	font-size: 1.3em;
-	color: rgba(0,0,0,0.3);
+	color: white;
 }
 
 .category-menu .mp-level.mp-level-overlay > .mp-back,
@@ -508,12 +523,20 @@ transform-origin: center center;
 	color: transparent;
 }
 
+.main-footer{
+display: block;
+width: 100%;
+height: 150px;
+background: grey;
+margin: 2em 0 0 0;
+
+}
 
 /* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
 /* We'll show the first level only */
 .no-csstransforms3d .mp-pusher,
 .no-js .mp-pusher {
-	padding-left: 300px;
+/*	padding-left: 300px;*/
 }
 
 .no-csstransforms3d .category-menu .mp-level,
@@ -529,6 +552,7 @@ transform-origin: center center;
 
 
 @media only screen and (max-width: 70em){
+
 #main-site{
 	display:inline-block;
 	float:left;
@@ -539,6 +563,7 @@ transform-origin: center center;
 	left:0;
 	border-bottom-right-radius: 2em;
 	background: grey;
+	margin: 0;
 
 
 }

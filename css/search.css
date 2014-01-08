@@ -4,16 +4,19 @@
 	right:0;
 	top:0;
 	float:right;
-	width:30em;
+	width:19em;
 	background: #000;
 	border-bottom-left-radius:2em;	
 
 }
 .sb-search {
-	position: relative;
+	position: absolute;
+	top:0;
+	right:0;
 	width: 0%;
-	min-width: 60px;
-	height: 60px;
+	border-left: 1px solid grey;
+	min-width: 3.5em;
+	height: 4em;
 	max-width:30em;
 	float: right;
 	overflow: hidden;
@@ -73,7 +76,8 @@
 	float:left;
 	color:grey;
 	font-size:1.4em;
-	width:18em;
+	width:11em;
+	height: 2em;
 }
 .social-share a{
 	margin: 0.5em 0.3em 0.5em 0.3em;
@@ -92,21 +96,8 @@
 .icon-gplus:hover{
 	color:#dd4b39;
 }
-.icon-tumblr:hover{
-	color:#32506d;
-}
-.icon-stumbleupon:hover{
-	background:#eb4c28;
-	border-radius:50%;
-	padding:0.1em 0.3em 0.2em 0.1em;
-	margin-right: 0;
-	margin-left:0.2em;
-}
-.icon-reddit:hover{
-	color: #c5d7e8;
-}
 .icon-email:hover{
-	color:#2d92cc;
+	color:#808080;
 }
 .icon-rss:hover{
 	color: #FF6600;
@@ -139,10 +130,9 @@
 }
 
 .users{
-
 	display:block;
 	position: absolute;
-	right: 27.4em;
+	right: 17.2em;
 	top:0;
 
 }

@@ -26,12 +26,19 @@ body {
 /*======================================= Cog Container =======================================*/
 /*=============================================================================================*/
 
-#cogs-wrapper{
-	background: url('../images/manBrain.svg');
-	background-size: cover;
-	width:750px;
-	height:750px;
+.logo-wrapper{
+	color:#262626;
+	width:45em;
+	height:45em;
 }
+.logo-wrapper::before{
+	font-family: 'fontello';
+	content: "\e86d";
+	left: 10px;
+	font-size: 39em;
+	color: black;
+}
+
 
 .cogContainer {
 	position: absolute;
@@ -50,12 +57,56 @@ body {
 	border-radius: 50%;
 	position: absolute;
 	z-index: 2;
-	border: 0.105em solid #e3e3e3;
+	border: 0.105em solid #666;
 	-webkit-box-shadow: 
 	inset 0px 0px 1px 1px rgba(0,0,0,0.5);
 	box-shadow: 
 	inset 0px 0px 1px 1px rgba(0,0,0,0.5);
 }
+
+
+/*=============================================================================================*/
+/*====================================== Special Functions ======================================*/
+/*=============================================================================================*/
+.band2light {
+	border: 0.2em dotted #272727;
+position: absolute;
+z-index: 10;
+width: 14.6em;
+height: 1.6em;
+left: 19.75em;
+top: 10.0em;
+border-radius: 12% 120% 87% 85% / 51% 61% 100% 50%;
+
+-webkit-transform: rotate(-16deg);
+	-moz-transform:rotate(-16deg);
+	-o-transform:rotate(-16deg);
+	-ms-transform:rotate(-16deg);
+	transform:rotate(-16deg);
+}
+.icon-lightbulb{
+font-size: 9em;
+position: absolute;
+	text-transform: none;
+left: 4.5em;
+top: 0.1em;
+	z-index: 100;
+	text-shadow: 0 0 3px #000;
+	color: #171717;
+	-webkit-animation: flicker 4s infinite alternate;
+}
+
+/*.icon-gauge{
+position: absolute;
+font-size: 3.5em;
+left: 9.8em;
+top: 2.8em;
+color: grey;
+z-index: 3;
+}
+*/
+
+
 
 
 
@@ -65,17 +116,17 @@ body {
 
 .cog1{
 	font-size:0.5em;
-top: 12.6em;
-left: 18.8em;
+top: 18.6em;
+left: 7.1em;
 
 }
 .cog2{
-top: 9em;
-left: 12em;
+top: 12em;
+left: 6em;
 }
 .cog3{
-top: 15.2em;
-left: 15.9em;
+top: 18.1em;
+left: 10.5em;
 	-webkit-transform: rotate(10deg);
 	-moz-transform: rotate(10deg);
 	-o-transform: rotate(10deg);
@@ -84,8 +135,8 @@ left: 15.9em;
 }
 
 .cog4{
-	top: 5em;
-	left: 35em;
+top: 6em;
+left: 31em;
 	-webkit-transform: rotate(20deg) scale(0.5);
 	-moz-transform: rotate(20deg) scale(0.5);
 	-o-transform: rotate(20deg) scale(0.5);
@@ -93,33 +144,23 @@ left: 15.9em;
 	transform: rotate(20deg) scale(0.5);
 }
 .cog5{
-	left: 15.1em;
-	top: 6.5em;
+	left: 11.7em;
+	top: 10.25em;
 	font-size:1.5em;
 }
 .cog6{
-	left:36.8em;
-	top:21em;
+	left: 38.8em;
+	top: 28em;
 	-webkit-transform: rotate(20deg) scale(0.3);
 	-moz-transform: rotate(20deg) scale(0.3);
 	-o-transform: rotate(20deg) scale(0.3);
 	-ms-transform: rotate(20deg) scale(0.3);
 	transform: rotate(20deg) scale(0.3);
 }
-.cog7{
-	font-size:0.5em;
-	left:80em;
-	top:45em;
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	-o-transform: scale(0.3);
-	-ms-transform: scale(0.3);
-	transform: scale(0.3);
-}
 .cog8{
 	font-size:0.5em;
-	left:70em;
-	top:18em;
+	left: 67em;
+	top: 20em;
 	-webkit-transform: scale(0.5);
 	-moz-transform: scale(0.5);
 	-o-transform: scale(0.5);
@@ -128,8 +169,8 @@ left: 15.9em;
 }
 .cog9{
 	font-size:0.5em;
-	left:48.5em;
-	top:11em;
+	left:38.5em;
+	top:22.5em;
 	-webkit-transform: rotate(-8deg);
 	-moz-transform: rotate(-8deg);
 	-o-transform: rotate(-8deg);
@@ -209,11 +250,61 @@ z-index: 4;
 	margin-top:15%;
 
 }
+.chainCircle {
+
+	width: 2.5em;
+	height: 2.5em;
+	border: .3em dotted #000;
+	border-radius: 50%;
+	background: #171717;
+
+	color: #000;
+}
+/* Special adjustements on specific cogs */
 .cog .innerCircle{
 	-webkit-transform: rotate(33deg);
 	-moz-transform: rotate(33deg);
 	-ms-transform: rotate(33deg);
 }
+.cog4 .chainCircle{
+	margin-left: 36%;
+	margin-top: 36%;
+	font-size:0.5em;
+		border: .3em dashed #000;
+
+}
+.cog9 .chainCircle{
+width: 2.5em;
+height: 2.5em;
+border: .3em dotted #000;
+border-radius: 50%;
+background: #171717;
+color: #000;
+margin-left: 23%;
+margin-top: 23%;
+
+}
+.cog4 .screw-hole{
+	width: 0.15em;
+	height: 1.7em;
+	background: #272323;
+	display: block;
+	position: absolute;
+margin-left: 11%;
+margin-top: 4%;
+
+}
+.cog9 .screw-hole{
+
+	width: 0.15em;
+	height: 1.7em;
+	background: #272323;
+	display: block;
+	position: absolute;
+margin-left: 21%;
+margin-top: 8%;
+}
+
 
 /*=============================================================================================*/
 /*========================================= Cog Teeth =========================================*/
@@ -526,21 +617,18 @@ margin-top:100%;
    -moz-animation: rotate-left 9s linear infinite;
 }
 .cog4{
-   -webkit-animation: rotate-right-keep-scale-zero-point-five 2.25s linear infinite;
-   -moz-animation: rotate-right-keep-scale-zero-point-five 2.25s linear infinite;
+   -webkit-animation: rotate-left-keep-scale-zero-point-five 2.25s linear infinite;
+   -moz-animation: rotate-left-keep-scale-zero-point-five 2.25s linear infinite;
 
 }
 .cog5{
    -webkit-animation: rotate-right 13.5s linear infinite;
    -moz-animation: rotate-right 13.5s linear infinite;
 }
-.cog6{
-   -webkit-animation: rotate-right-keep-scale-zero-point-three 1s linear infinite;
-   -moz-animation: rotate-right-keep-scale-zero-point-three 1s linear infinite;
-}
+
 .cog8{
-   -webkit-animation: rotate-left-keep-scale-zero-point-five 1.125s linear infinite;
-   -moz-animation: rotate-left-keep-scale-zero-point-five 1.125s linear infinite;
+   -webkit-animation: rotate-right-keep-scale-zero-point-five 1.125s linear infinite;
+   -moz-animation: rotate-right-keep-scale-zero-point-five 1.125s linear infinite;
 }
 .cog9{
    -webkit-animation: rotate-left 4.5s linear infinite;
@@ -628,4 +716,73 @@ margin-top:100%;
 {
   from { -moz-transform: scale(0.5) rotate(0deg);}
   to {-moz-transform: scale(0.5) rotate(-360deg);}
+}
+
+
+
+@-webkit-keyframes flicker {
+  0% { 
+  	text-shadow: 0 0 3px #000;
+		color: #171717;
+  }
+	1% { 
+		text-shadow: 0 0 300px #CCC; 
+		color: #CCC;
+	}
+  2% { 
+  	text-shadow: 0 0 3px #000;
+		color: #171717;
+  }
+  3% { 
+		text-shadow:  0 0 300px #FFF; 
+		color: #DDD;
+	}
+	15% { 
+		text-shadow: 0 0 300px #FFF; 
+		color: #DDD;
+	}
+	16% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+	25% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+	26% { 
+		text-shadow: 0 0 300px #FFF; 
+		color: #DDD;
+	}
+	39% { 
+		text-shadow:  0 0 300px #FFF; 
+		color: #DDD;
+	}
+	40% { 
+		text-shadow:  0 0 130px #CCC; 
+		color: #CCC;
+	}
+	45% { 
+		text-shadow: 0 0 130px #CCC; 
+		color: #CCC;
+	}
+	46% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+	77% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+	78% { 
+		text-shadow: 0 0 130px #CCC; 
+		color: #CCC;
+	}
+	79% { 
+		text-shadow: 0 0 130px #CCC; 
+		color: #CCC;
+	}
+	80% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
 }

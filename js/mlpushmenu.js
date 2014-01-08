@@ -75,7 +75,7 @@
 			// cover: the open levels will be on top of any previous open level
 			type : 'overlap', // overlap || cover
 			// space between each overlaped level
-			levelSpacing : 40,
+			levelSpacing : 0,
 			// classname for the element (if any) that when clicked closes the current level
 			backClass : 'mp-back'
 		},
@@ -86,6 +86,8 @@
 			this.level = 0;
 			// the moving wrapper
 			this.wrapper = document.getElementById( 'mp-pusher' );
+			// get the open elements
+			this.LevelOpen = document.getElementById( 'mp-pusher' );
 			// the mp-level elements
 			this.levels = Array.prototype.slice.call( this.el.querySelectorAll( 'div.mp-level' ) );
 			// save the depth of each of these mp-level elements
@@ -95,8 +97,8 @@
 			this.menuItems = Array.prototype.slice.call( this.el.querySelectorAll( 'li' ) );
 			// if type == "cover" these will serve as hooks to move back to the previous level
 			this.levelBack = Array.prototype.slice.call( this.el.querySelectorAll( '.' + this.options.backClass ) );
-			// event type (if mobile use touch events)
-			this.eventtype = mobilecheck() ? 'touchstart' : 'click';
+			// event type (if mobile use touch events) --> this was touchstart switched to touch end
+			this.eventtype = mobilecheck() ? 'touchend' : 'click';
 			// add the class mp-overlap or mp-cover to the main element depending on options.type
 			classie.add( this.el, 'mp-' + this.options.type );
 			// initialize / bind the necessary events
@@ -129,7 +131,7 @@
 				}
 			} );
 
-			// opening a sub level menu
+			// opening a sub level menu  
 			this.menuItems.forEach( function( el, i ) {
 				// check if it has a sub level
 				var subLevel = el.querySelector( 'div.mp-level' );
@@ -138,9 +140,14 @@
 						ev.preventDefault();
 						var level = closest( el, 'mp-level' ).getAttribute( 'data-level' );
 						if( self.level <= level ) {
+							
 							ev.stopPropagation();
+
+							var elPosition =  $(el).position(); 
+							var scrollPosition = $(el).scrollTop();							
+							alert('top: '+ elPosition.top + ' scrolling: ' + scrollPosition);
 							classie.add( closest( el, 'mp-level' ), 'mp-level-overlay' );
-							self._openMenu( subLevel );
+							self._openMenu( subLevel,el );
 						}
 					} );
 				}
@@ -172,17 +179,19 @@
 				} );
 			} );	
 		},
-		_openMenu : function( subLevel ) {
+		_openMenu : function( subLevel, elOffset) {
 			// increment level depth
 			++this.level;
-
+	
 			// move the main wrapper
-			var levelFactor = ( this.level - 1 ) * this.options.levelSpacing,
+			var levelFactor = ( this.level - 1 ) *  this.options.levelSpacing,
 				translateVal = this.options.type === 'overlap' ? this.el.offsetWidth + levelFactor : this.el.offsetWidth;
 			
 			this._setTransform( 'translate3d('  + -1*translateVal + 'px,0,0)' );
 
 			if( subLevel ) {
+					
+
 				// reset transform for sublevel
 				this._setTransform( '', subLevel );
 				// need to reset the translate value for the level menus that have the same level depth and are not open
