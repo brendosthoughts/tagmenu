@@ -142,10 +142,6 @@
 						if( self.level <= level ) {
 							
 							ev.stopPropagation();
-
-							var elPosition =  $(el).position(); 
-							var scrollPosition = $(el).scrollTop();							
-							alert('top: '+ elPosition.top + ' scrolling: ' + scrollPosition);
 							classie.add( closest( el, 'mp-level' ), 'mp-level-overlay' );
 							self._openMenu( subLevel,el );
 						}

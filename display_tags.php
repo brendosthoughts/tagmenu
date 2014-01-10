@@ -31,7 +31,6 @@ function print_tag_nav(){
         /*** loop over the array and create the listing ***/
   	$msg = '    <nav id="category-menu" class="category-menu">
                                         <div class="mp-level">
-                                                <h2 class="icon icon-world">All Categories</h2>
                                                 <ul>
 		';
         foreach($res as $val)

@@ -9,7 +9,7 @@
 			    <link rel="stylesheet" href="fonts/css/animation.css">
    		<link rel="stylesheet" type="text/css" href="css/search.css" />
    		<link rel="stylesheet" type="text/css" href="logo/logoInNav.css">
-  		 <link rel="stylesheet" href="home.css">
+  		 <link rel="stylesheet" href="css/home.css">
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 		<script src="js/modernizr.custom.js"></script><style type="text/css"></style>

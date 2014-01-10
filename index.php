@@ -1,4 +1,5 @@
 <?php
+include '../db.class.php';
 $subTemplate="home.php";
 include 'header.php';
 include 'main-template.php';
