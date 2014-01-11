@@ -44,8 +44,11 @@ foreach ( $tagging_info as $value )
 		}
 		?>
 	</span>
+        <a href="#" title="Play Video"> 
         <img src="<?=$vid['cover_img']?>" alt="img title">
+        <i class="icon-play-circled"></i>
         <span class="playTime"><?=$vid['play_time']?></span>
+        </a>
         <span class="vidSubtags">
 		<?php
 		foreach($sub_tags as $subtag){
