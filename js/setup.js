@@ -6,6 +6,7 @@
   		var popularSub = $("#popularSub");
 		 
 		  popularMain.owlCarousel({
+		    autoHeight : false,
 		    singleItem : true,
 		    slideSpeed : 1000,
 		    navigation: true,
@@ -17,6 +18,7 @@
 		  });
 		 
 		  popularSub.owlCarousel({
+		    autoHeight : false,
 		    items : 8,
 		    itemsDesktop      : [1199,10],
 		    itemsDesktopSmall     : [979,10],
