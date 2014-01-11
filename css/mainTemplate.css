@@ -1,0 +1,1597 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body, .container {
+	height: 100%;
+}
+.add-left{
+	display: inline-block;
+
+	position:absolute;
+	left:0;
+	top: 7em;
+	width: 200px;
+	height: 100%;
+	background: red;
+	z-index: 100;
+}
+.main-header{
+	color:black;
+	float:left;
+	position :fixed;
+	top:0;
+	width:100%;
+	left:0;
+	height:7%;
+	z-index:100;
+	min-height:7em;
+	display: inline-block;
+	background:grey;
+	color:black;
+}
+.main-header .site-title{
+	displaY:block;
+	width:30%;
+	float:left;
+	margin-left:8em;
+	min-width:15em;
+}
+.main-header .site-title h1{
+	float:left;
+	text-align:left;
+	margin:0px;
+	padding:0.4em 0px 0px 1em;
+	color: black;
+	width:100%;
+}
+.main-header .site-title .sub-header{
+	float:left;
+	display:block;
+	text-align:left;
+	padding-left:6em;
+	width:100%;
+	font-size:1.0em;
+	font-style: italic;
+}
+.menu-wrapper{
+ font-size: 0.2em;
+ float:left;
+ margin-left:3.3em;
+}
+
+#main-site{
+display: block;
+float: left;
+text-align: center;
+min-width: 40em;
+width: 50%;
+margin-right: 25%;
+margin-left: 25%;
+position: absolute;
+bottom: 0;
+}
+
+
+#main-site ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size:1.5em;
+}
+#main-site ul li {
+	padding:0.25em .5em 0em .5em;
+  	display: block;
+  	position: relative;
+  	float: left;
+ 
+}
+#main-site .main-dropdown ul{
+	font-size: 0.9em;
+display:none;
+}
+.icon-angle-circled-down{
+	font-size:0.4em;
+}
+#main-site .open ul{
+	display:block;
+	position:absolute;
+	
+	width: 8em; 
+	text-align:left;
+	height:10%;
+	left:-1em;
+
+}
+#main-site ul li ul li{
+	padding: 0.2em;
+	width:100%;
+background: grey;
+border-bottom:solid 1px #ccc;
+border-right:solid 1px #ccc;
+border-left:solid 1px #ccc;
+}
+
+#main-site li:hover{
+	border-top-right-radius: 1em;
+	border-top-left-radius: 1em;
+	background: rgba(0, 0, 0, 0.6);
+}
+#main-site li .main-dropdown a:after{
+    content'<i class=" icon-angle-double-down"></i>';
+    color:white;
+}
+#main-site li ul li:hover{
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+#main-site li ul li:last-child{
+	border-bottom-right-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
+#menu-icon{
+	border-radius: 0.2em;
+	display:block;
+	color:white;
+	font-size:4em;
+	font-weight:900;
+	width:1.5em;
+	background:grey;
+	letter-spacing: -0.17em;
+	line-height:0.4em;
+	top:0.7em;
+	position: absolute;
+
+	text-align:center;
+	margin-left:1em;
+	padding:0 !important;
+	margin:0 !important;
+	cursor: pointer;
+
+}
+#menu-icon span{
+
+display: inline-block;
+	padding: 0px;
+	margin:0px;
+  background: black;
+  height:0.15em;
+  width:50%;
+}
+.bar-left {
+  position: absolute;
+  left:0;
+  top:0;
+}
+.bar-right {
+  position:absolute;
+  right:0;
+  top:0;
+}
+.menu-bar{
+position: relative;
+width: 80%;
+ height:0.5em;
+}
+
+
+.menu .bar-left{
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+}
+.menu .bar-right{
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+}
+
+.arrow .bar-left{
+	height:0.3em;
+
+-webkit-transform: translate(0.07em, 0.05em) rotate(35deg);
+	-moz-transform: translate(0.07em, 0.05em) rotate(35deg);
+	transform: translate(0.07em, 0.05em) rotate(35deg);
+	transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+
+transform-origin: center center;
+-webkit-transform-origin: center center;
+}
+
+.arrow .bar-right{
+	height:0.3em;
+-webkit-transform: translate(-0.07em, 0.05em) rotate(-35deg);
+	-moz-transform: translate(-0.07em, 0.05em) rotate(-35deg);
+	transform: translate(-0.07em, 0.05em) rotate(-35deg);
+		transition: transform 0.5s;
+-webkit-transition: -webkit-transform 0.5s;
+transform-origin: center center;
+-webkit-transform-origin: center center;
+}
+.category{
+	position:absolute;
+	bottom:2.5em;
+	display:inline-block;
+	float:right;
+	right: 1.5em;
+	width:13em;
+	text-align:left;
+}
+.category-text{
+	position: absolute;
+	right:0;
+	font-size:1.0em;
+	padding-top: 0.5em;
+
+}
+.menu-trigger {
+	float:right;
+	color:black;
+	text-align:right;
+/*	margin: 0px;
+	padding:0px;*/
+	font-size: 1.4em;
+	width:7em;
+}
+
+.menu-trigger:before {
+	top: 2px;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	box-shadow: 0 6px #333333e, 0 12px #fff, 0 18px #34495e, 0 24px #fff;
+	content: '';
+}
+.scroller {
+	overflow-y: scroll; 
+	height: 100%;
+	bottom:0;
+}
+
+.scroller,
+.scroller-inner {
+	position: relative;
+}
+
+.container {
+	position: relative;
+	overflow: hidden; 
+	background: #272727;
+}
+
+
+
+.mp-pusher {
+	top:7em;
+	position: relative;
+	left:200px;
+	width: calc(100% - 200px);
+	height: calc(100% - 7em);
+}
+
+.category-menu {
+	float: right;
+	position: absolute; /* we can't use fixed here :( */
+	top: 0em;
+	display:block;
+	right: 11em;
+	z-index: 1;
+	width: 11em;
+	height: 100%;
+	-webkit-transform: translate3d(100%, 0, 0);
+	-moz-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+.mp-level {
+	position: absolute;
+	top: 0;
+	right:0;
+	width: 100%;
+	height: 100%;
+	background: #262626;
+	-webkit-transform: translate3d(100%, 0, 0);
+	-moz-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+/* overlays for pusher and for level that gets covered */
+.mp-pusher::after,
+.mp-level::after,
+.mp-level::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	content: '';
+	opacity: 0;
+}
+
+.mp-pusher::after,
+.mp-level::after {
+	background: rgba(0,0,0,0.3);
+	-webkit-transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s;
+	-moz-transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s;
+	transition: opacity 0.3s, width 0.1s 0.3s, height 0.1s 0.3s;
+}
+
+.mp-level::after {
+	z-index: -1;
+}
+
+.mp-pusher.mp-pushed::after,
+.mp-level.mp-level-overlay::after {
+	right:0;
+	width: 100%;
+	height: 100%;
+
+	opacity: 1;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.mp-level.mp-level-overlay {
+	cursor: pointer;
+	overflow:hidden;
+
+}
+.mp-level-open{
+	opacity:1;
+
+}
+
+.mp-level.mp-level-overlay.mp-level::before {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	opacity: 1;
+	
+}
+
+.mp-pusher,
+.mp-level {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+/* overlap */
+.mp-overlap .mp-level.mp-level-open {
+	/* this translate ws 40px*/
+	box-shadow: 1px 0 2px rgba(0,0,0,0.2);
+	-webkit-transform: translate3d(20px, 0, 0);
+	-moz-transform: translate3d(20px, 0, 0);
+	transform: translate3d(20px, 0, 0);
+}
+.mp-level-open {
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+/* First level */
+
+
+.category-menu > .mp-level,
+.category-menu > .mp-level.mp-level-open,
+.category-menu.mp-overlap > .mp-level,
+.category-menu.mp-overlap > .mp-level.mp-level-open {
+	box-shadow: none;
+	-webkit-transform: translate3d(100%, 0, 0);
+	-moz-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+
+/* cover */
+.mp-cover .mp-level.mp-level-open {
+	-webkit-transform: translate3d(100%, 0, 0);
+	-moz-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+.mp-cover .mp-level.mp-level-open > ul > li > .mp-level:not(.mp-level-open) {
+	-webkit-transform: translate3d(100%, 0, 0);
+	-moz-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+}
+
+/* content style */
+.category-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height:100%;
+}
+
+.category-menu h2 {
+	margin: 0;
+	padding: 0.5em;
+	color: #ccc;
+	text-shadow: 0 0 1px rgba(0,0,0,0.1);
+	font-weight: 350;
+	font-size: 1.4em;
+	text-align: center;
+}
+7
+.category-menu.mp-overlap h2::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+/*	margin-right: 8px;*/
+	font-size: 75%;
+	line-height: 1.8;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.1s 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.1s 0.3s;
+	transition: opacity 0.3s, transform 0.1s 0.3s;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(-100%);
+}
+
+.category-menu.mp-cover h2 {
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 1em;
+	padding-left:0px;
+	text-align:left;
+}
+
+.mp-overlap .mp-level.mp-level-overlay > h2::before {
+	opacity: 1;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.category-menu ul li > a {
+	display: block;
+	padding: 0.3em 1em 0.3em 1em;
+	outline: none;
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+	text-shadow: 0 0 1px rgba(255,255,255,0.1);
+	font-size: 1.2em;
+	-webkit-transition: background 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, box-shadow 0.3s;
+}
+
+.category-menu ul li::before {
+	position: absolute;
+	left: 10px; 
+	z-index: -1;
+	color: rgba(0,0,0,0.2);
+	line-height: 3.5;
+}
+
+.mp-level > ul > li:first-child > a {
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2), inset 0 1px rgba(0,0,0,0.2);
+}
+
+.category-menu ul li a:hover,
+.mp-level > ul > li:first-child > a:hover {
+	background: rgba(0,0,0,0.2);
+	box-shadow: inset 0 -1px rgba(0,0,0,0);
+}
+
+.category-menu .mp-level.mp-level-overlay > ul > li > a,
+.mp-level.mp-level-overlay > ul > li:first-child > a {
+	box-shadow: inset 0 -1px rgba(0,0,0,0);
+}
+
+.mp-back {
+	background: rgba(0,0,0,0.1);
+	outline: none;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	display: block;
+	font-size: 0.8em;
+	padding: 1em;
+	position: relative;
+	box-shadow: inset 0 1px rgba(0,0,0,0.1);
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+}
+
+.mp-back::before {
+	font-family: 'fontello';
+/*	position: absolute;
+*/	content: "\e82f";
+	left: 10px;
+	margin-right: 1em;
+	font-size: 1.3em;
+	color: white;
+}
+
+.category-menu .mp-level.mp-level-overlay > .mp-back,
+.category-menu .mp-level.mp-level-overlay > .mp-back::after {
+	background: transparent;
+	box-shadow: none;
+	color: transparent;
+}
+
+.main-footer{
+display: block;
+width: 100%;
+height: 150px;
+background: grey;
+margin: 2em 0 0 0;
+
+}
+
+/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
+/* We'll show the first level only */
+.no-csstransforms3d .mp-pusher,
+.no-js .mp-pusher {
+/*	padding-left: 300px;*/
+}
+
+.no-csstransforms3d .category-menu .mp-level,
+.no-js .category-menu .mp-level {
+	display: none;
+}
+
+.no-csstransforms3d .category-menu > .mp-level,
+.no-js .category-menu > .mp-level {
+	display: block;
+}
+
+
+
+@media only screen and (max-width: 70em){
+
+#main-site{
+	display:inline-block;
+	float:left;
+	text-align:center;
+	width: 40em;
+	position:absolute;
+	bottom: -2em;
+	left:0;
+	border-bottom-right-radius: 2em;
+	background: grey;
+	margin: 0;
+
+
+}
+}
+
+@media only screen and (max-width: 40em){
+
+#main-site{
+
+	display:none;
+}
+}
+
+/** Search.css file */
+.share-search-wrapper{
+	position: absolute;
+	right:0;
+	top:0;
+	float:right;
+	width:19em;
+	background: #000;
+	border-bottom-left-radius:2em;	
+
+}
+.sb-search {
+	position: absolute;
+	top:0;
+	right:0;
+	width: 0%;
+	border-left: 1px solid grey;
+	min-width: 3.5em;
+	height: 4em;
+	max-width:30em;
+	float: right;
+	overflow: hidden;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+	-webkit-backface-visibility: hidden;
+}
+
+.sb-search-input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	outline: none;
+	background: #fff;
+	width: 100%;
+	height: 60px;
+	margin: 0;
+	z-index: 10;
+	padding: 20px 65px 20px 20px;
+	font-family: inherit;
+	font-size: 20px;
+	color: grey;
+}
+
+.sb-search-input::-webkit-input-placeholder {
+	color: #000;
+}
+
+.sb-search-input:-moz-placeholder {
+	color: #000;
+}
+
+
+.sb-search-input:-ms-input-placeholder {
+	color: #000;
+}
+
+.sb-icon-search,
+.sb-search-submit  {
+	width: 60px;
+	height: 60px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	line-height: 60px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.social-share{
+	margin-top:0.7em;
+	float:left;
+	color:grey;
+	font-size:1.4em;
+	width:11em;
+	height: 2em;
+}
+.social-share a{
+	margin: 0.5em 0.3em 0.5em 0.3em;
+
+}
+.icon-search:hover{
+	color:grey;
+}
+.icon-facebook:hover{	
+	color:#3b5998;
+}
+.icon-twitter:hover{
+
+	color:#00aced;
+}
+.icon-gplus:hover{
+	color:#dd4b39;
+}
+.icon-email:hover{
+	color:#808080;
+}
+.icon-rss:hover{
+	color: #FF6600;
+}
+.sb-search-submit {
+	background: #fff; /* IE needs this */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+    filter: alpha(opacity=0); /* IE 5-7 */
+    opacity: 0;
+	color: transparent;
+	border: none;
+	outline: none;
+	z-index: -1;
+}
+
+.sb-icon-search {
+	float:right;
+	color: #fff;
+	background: #000;
+	z-index: 90;
+	font-size: 1.4em;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	border-left: solid 1px grey;
+	border-color:grey;
+}
+
+.users{
+	display:block;
+	position: absolute;
+	right: 17.2em;
+	top:0;
+
+}
+.icon-user{
+	padding: 0.2em 3em 0.3em 0.2em;
+	display:block;
+	color:white;
+	border-bottom: solid 1px #000;
+	border-left: solid 1px #000;
+}
+.icon-user-add{
+	padding: 0.3em 3em 0.3em 0.2em;
+	color:white;
+	display: block;
+	border-bottom: solid 1px #000;
+	border-left: solid 1px #000;
+	border-bottom-left-radius: 1em;
+}
+
+/* Open state */
+.sb-search.sb-search-open,
+.no-js .sb-search {
+
+	width: 100%;
+}
+
+.sb-search.sb-search-open .sb-icon-search,
+.no-js .sb-search .sb-icon-search {
+	position:absolute;
+	background: #000;
+	color: #fff;
+	z-index: 11;
+}
+
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+	z-index: 90;
+}
+
+@media only screen and (max-width: 40em){
+
+.share-search-wrapper{
+
+	display:none;
+}
+
+}
+/* Nromalize.css */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
+audio,canvas,video{display:inline-block;}
+audio:not([controls]){display:none;height:0;}[hidden]{display:none;}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{margin:0;}
+a:focus{outline:thin dotted;}
+a:active,a:hover{outline:0;}
+h1{font-size:2em;margin:0.67em 0;}
+abbr[title]{border-bottom:1px dotted;}
+b,strong{font-weight:bold;}
+dfn{font-style:italic;}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}
+mark{background:#ff0;color:#000;}
+code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}
+pre{white-space:pre-wrap;}q{quotes:"\201C" "\201D" "\2018" "\2019";}
+small{font-size:80%;}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}sub{bottom:-0.25em;}
+img{border:0;}svg:not(:root){overflow:hidden;}
+figure{margin:0;}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}
+legend{border:0;padding:0;}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}
+button,input{line-height:normal;}button,select{text-transform:none;}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
+button[disabled],
+html input[disabled]{ cursor:default; }
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+textarea{overflow:auto;vertical-align:top;}
+table{border-collapse:collapse;border-spacing:0;}
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+body {background: #34495e; color: #fff; font-weight: 300; font-family: 'Lato', Calibri, Arial, sans-serif; }
+a {text-decoration: none; color: #f7f7f7; outline: none; }  /*this is what modifies a which may need to be changed @ some point*/
+a:hover, a:focus {color: #fff; outline: none; }
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after {display: table; content: " "; } .clearfix:after {clear: both; } .content {padding: 4em 2em; max-width: 1200px; margin: 0 auto; } .block {float: left; padding: 1em 3em; } .block-40 {width: 100%; }
+.block-60 {width: 60%; }
+.block p {margin: 0; padding: 0 1em 0.6em; font-size: 1.8em; line-height: 1.5;}
+@media screen and (max-width: 69em) {
+	.block {
+		float: none;
+		width: 100% !important;
+		padding: 1em;
+	}
+}
+
+@media screen and (max-width: 25em) {
+
+	body {
+		font-size: 85%;
+	}
+}
+/* LogoInNav.css css for the logo */
+/*=============================================================================================*/
+/*======================================= Scaling Cogs ========================================*/
+/*=============================================================================================*/
+
+.logo-wrapper {
+	-webkit-transform: scale(0.15);
+	-moz-transform: scale(0.15);
+	-o-transform: scale(0.15);
+	-ms-transform: scale(0.15);
+	transform: scale(0.15);
+}
+
+/*=============================================================================================*/
+/*======================================= Cog Container =======================================*/
+/*=============================================================================================*/
+
+.logo-wrapper{
+	position: absolute;
+	top: -19em;
+	left: -18em;
+	color:#262626;
+	width:45em;
+	height:45em;
+}
+.logo-wrapper::before{
+	font-family: 'fontello';
+	content: "\e86d";
+	left: 10px;
+	font-size: 39em;
+	color: black;
+}
+
+
+.cogContainer {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.cogContainer>[class^="cog"] {
+	background: #666;
+	width: 5.625em;
+	height: 5.625em;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 2;
+	border: 0.105em solid #666;
+	-webkit-box-shadow: 
+	inset 0px 0px 1px 1px rgba(0,0,0,0.5);
+	box-shadow: 
+	inset 0px 0px 1px 1px rgba(0,0,0,0.5);
+}
+
+
+/*=============================================================================================*/
+/*====================================== Special Functions ======================================*/
+/*=============================================================================================*/
+.band2light {
+	border: 0.2em solid grey;
+position: absolute;
+z-index: 10;
+width: 14.6em;
+height: 1.6em;
+left: 19.75em;
+top: 10.0em;
+border-radius: 12% 120% 87% 85% / 51% 61% 100% 50%;
+
+-webkit-transform: rotate(-16deg);
+	-moz-transform:rotate(-16deg);
+	-o-transform:rotate(-16deg);
+	-ms-transform:rotate(-16deg);
+	transform:rotate(-16deg);
+}
+.icon-lightbulb{
+font-size: 15em;
+position: absolute;
+	text-transform: none;
+left: 2.6em;
+top: 0em;
+	z-index: 100;
+	text-shadow: 0 0 3px #000;
+	color: #171717;
+	-webkit-animation: flicker 4s infinite alternate;
+}
+
+/*.icon-gauge{
+position: absolute;
+font-size: 3.5em;
+left: 9.8em;
+top: 2.8em;
+color: grey;
+z-index: 3;
+}
+*/
+
+
+
+
+
+/*=============================================================================================*/
+/*====================================== Individual Cogs ======================================*/
+/*=============================================================================================*/
+
+.cog1{
+	font-size:0.5em;
+top: 18.6em;
+left: 7.1em;
+
+}
+.cog2{
+top: 12em;
+left: 6em;
+}
+.cog3{
+top: 18.1em;
+left: 10.5em;
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+.cog4{
+top: 6em;
+left: 31em;
+	-webkit-transform: rotate(20deg) scale(0.5);
+	-moz-transform: rotate(20deg) scale(0.5);
+	-o-transform: rotate(20deg) scale(0.5);
+	-ms-transform: rotate(20deg) scale(0.5);
+	transform: rotate(20deg) scale(0.5);
+}
+.cog5{
+	left: 11.7em;
+	top: 10.25em;
+	font-size:1.5em;
+}
+.cog6{
+	left: 38.8em;
+	top: 28em;
+	-webkit-transform: rotate(20deg) scale(0.3);
+	-moz-transform: rotate(20deg) scale(0.3);
+	-o-transform: rotate(20deg) scale(0.3);
+	-ms-transform: rotate(20deg) scale(0.3);
+	transform: rotate(20deg) scale(0.3);
+}
+.cog8{
+	font-size:0.5em;
+	left: 67em;
+	top: 20em;
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+}
+.cog9{
+	font-size:0.5em;
+	left:38.5em;
+	top:22.5em;
+	-webkit-transform: rotate(-8deg);
+	-moz-transform: rotate(-8deg);
+	-o-transform: rotate(-8deg);
+	-ms-transform: rotate(-8deg);
+	transform: rotate(-8deg);
+}
+
+/*=============================================================================================*/
+/*====================================== Middle Circles =======================================*/
+/*=============================================================================================*/
+
+.outerCircle, .middleCircle, .innerCircle, .screw-hole{
+	border-radius:50%;
+	position: absolute;
+	z-index: 2;
+
+	-webkit-box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.4),
+	0px 0px 2px 0.5px rgba(0,0,0,0.2),
+	inset 0px 0px 0.5px 1px rgba(0,0,0,0.3),
+	0px 0px 20px 5px rgba(0,0,0,0.4),
+	0px 0px 40px 5px rgba(0,0,0,0.4);
+	box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.4),
+	0px 0px 2px 0.5px rgba(0,0,0,0.2),
+	inset 0px 0px 0.5px 1px rgba(0,0,0,0.3),
+	0px 0px 20px 5px rgba(0,0,0,0.4),
+	0px 0px 40px 5px rgba(0,0,0,0.4);
+}
+
+.outerCircle {
+
+	width: 4.688em;
+	height: 4.688em;
+
+	background: rgba(255, 255, 255, 0.2);
+
+	margin-left:8.5%;
+	margin-top: 8.5%;
+
+}
+
+.middleCircle {
+
+	width: 3.75em;
+	height: 3.75em;
+
+	background: rgba(6, 6, 6, 0.2);
+
+	margin-left: 17%;
+	margin-top: 17%;
+
+
+}
+
+.innerCircle {
+
+	width: 1.5em;
+	height: 1.5em;
+	border: .15em dashed rgba(102, 102, 102, 0.8);
+	border-radius: 50%;
+	background: rgba(33,33,33, 0.4);
+
+	color: #000;
+	margin-left:34%;
+	margin-top: 34%;
+}
+.screw-hole{
+	border-radius: 0;
+z-index: 4;
+	width: 0.075em;
+	height:1.08em;
+	background: #272323;
+	display: block;
+	position: absolute;
+	margin-left:48%;
+	margin-top:15%;
+
+}
+.chainCircle {
+
+	width: 2.5em;
+	height: 2.5em;
+	border: .3em dotted #000;
+	border-radius: 50%;
+	background: #171717;
+
+	color: #000;
+}
+/* Special adjustements on specific cogs */
+.cog .innerCircle{
+	-webkit-transform: rotate(33deg);
+	-moz-transform: rotate(33deg);
+	-ms-transform: rotate(33deg);
+}
+.cog4 .chainCircle{
+	margin-left: 36%;
+	margin-top: 36%;
+	font-size:0.5em;
+		border: .3em dashed #000;
+
+}
+.cog9 .chainCircle{
+width: 2.5em;
+height: 2.5em;
+border: .3em dotted #000;
+border-radius: 50%;
+background: #171717;
+color: #000;
+margin-left: 23%;
+margin-top: 23%;
+
+}
+.cog4 .screw-hole{
+	width: 0.15em;
+	height: 1.7em;
+	background: #272323;
+	display: block;
+	position: absolute;
+margin-left: 11%;
+margin-top: 4%;
+
+}
+.cog9 .screw-hole{
+
+	width: 0.15em;
+	height: 1.7em;
+	background: #272323;
+	display: block;
+	position: absolute;
+margin-left: 21%;
+margin-top: 8%;
+}
+
+
+/*=============================================================================================*/
+/*========================================= Cog Teeth =========================================*/
+/*=============================================================================================*/
+
+span[class*="Tooth"] {
+	border-radius: 25%;
+	background:	#666;
+	position: absolute;
+	z-index: 7;
+	width: 1.125em;
+	height: 1.5em;
+	-webkit-box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.2);
+	box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.2);
+
+}
+
+/*
+.topTooth, .topRightTooth, .bottomRightTooth,.bottomTooth, .bottomLeftTooth, .topLeftTooth {
+	width: 1.125em;
+	height: 1.5em;
+}*/
+
+/*.rightTooth, .leftTooth {
+	width: 1.5em;
+	height: 1.125em;
+}*/
+
+/*font size 1 teeth*/
+.topTooth {
+margin-left: 39%;
+margin-top: -27%;
+}
+
+.topRightTooth {
+	margin-left: 83%;
+	margin-top: -10%;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.rightTooth {
+		-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+margin-left: 104%;
+margin-top: 38%;
+}
+
+.bottomRightTooth {
+margin-left: 87%;
+margin-top: 80%;
+
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+.bottomTooth {
+margin-left: 41%;
+margin-top: 100%;
+}
+
+.bottomLeftTooth {
+	margin-left: -6%;
+	margin-top: 80%;
+
+	-webkit-transform: rotate(225deg);
+	-moz-transform: rotate(225deg);
+	-o-transform: rotate(225deg);
+	-ms-transform: rotate(225deg);
+	transform: rotate(225deg);
+}
+
+.leftTooth {
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+	margin-left: -24%;
+	margin-top: 40%;
+}
+
+.topLeftTooth {
+	margin-left: -6%;
+	margin-top: -8%;
+
+	-webkit-transform: rotate(315deg);
+	-moz-transform: rotate(315deg);
+	-o-transform: rotate(315deg);
+	-ms-transform: rotate(315deg);
+	transform: rotate(315deg);
+}
+
+/*font-size half teeth*/
+.half span[class*="Tooth"] {
+	font-size:2em;
+}
+.half .topTooth{
+	margin-left:30%;
+	margin-top:-51%;
+}
+.half .rightTooth{
+	margin-left:105%;
+	margin-top:25%;
+}
+.half .bottomTooth{
+	margin-left:30%;
+	margin-top:100%;
+}
+.half .leftTooth{
+	margin-left:-48%;
+	margin-top:25%;
+}
+.oneAndHalf span[class*="Tooth"] {
+font-size:0.666666666em;
+}	
+
+
+.oneAndHalf .leftTooth{
+margin-left:-17%;
+margin-top:42%;
+}
+.oneAndHalf .topTooth{
+margin-left:43%;
+margin-top:-18%;
+}
+.oneAndHalf .rightTooth{
+margin-left:103%;
+margin-top:42%;
+}
+.oneAndHalf .bottomTooth{
+margin-left:43%;
+margin-top:100%;
+}
+.rightToothTopTop{
+	margin-left:75%;
+	margin-top: -10%;
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+.rightToothTopBottom{
+		margin-left:97%;
+	margin-top: 13%;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+.rightToothBottomTop{
+			margin-left:97%;
+	margin-top: 69%;
+	-webkit-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-o-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	transform: rotate(120deg);
+}
+.rightToothBottomBottom{
+		margin-left:75%;
+	margin-top: 92%;
+	-webkit-transform: rotate(150deg);
+	-moz-transform: rotate(150deg);
+	-o-transform: rotate(150deg);
+	-ms-transform: rotate(150deg);
+	transform: rotate(150deg);
+}
+
+.leftToothTopTop{
+	margin-left:12%;
+	margin-top: -10%;
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+.leftToothTopBottom{
+		margin-left:-10%;
+	margin-top: 13%;
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+}
+
+.leftToothBottomTop{
+			margin-left:-10%;
+	margin-top: 69%;
+	-webkit-transform: rotate(-120deg);
+	-moz-transform: rotate(-120deg);
+	-o-transform: rotate(-120deg);
+	-ms-transform: rotate(-120deg);
+	transform: rotate(-120deg);
+}
+.leftToothBottomBottom{
+		margin-left:12%;
+	margin-top: 92%;
+	-webkit-transform: rotate(-150deg);
+	-moz-transform: rotate(-150deg);
+	-o-transform: rotate(-150deg);
+	-ms-transform: rotate(-150deg);
+	transform: rotate(-150deg);
+}
+/*=============================================================================================*/
+/*======================================== Center Nuts ========================================*/
+/*=============================================================================================*/
+
+.middleCircle > * {
+
+	background: #494949;
+	width: 0.375em;
+	height: 0.375em;
+	position: absolute;
+	border-radius: 100%;
+	font-size: 0.375em;
+	line-height: 0.3em;
+	text-align: center;
+	color: #3a3a3a;
+
+	-webkit-box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.4),
+	0px 0px 2px 0.5px rgba(0,0,0,0.2),
+	inset 0px 0px 0.5px 1px rgba(0,0,0,0.3);
+	box-shadow: 
+	0px 0px 1px 0.5px rgba(0,0,0,0.4),
+	0px 0px 2px 0.5px rgba(0,0,0,0.2),
+	inset 0px 0px 0.5px 1px rgba(0,0,0,0.3);
+
+}
+
+.nutTop {
+
+	margin-left: 45%;		
+}
+
+.nutTopRight {
+/*	margin-top: 30px;
+	margin-left: 155px;
+*/	margin-top: 15%;
+	margin-left: 77%;
+}
+
+.nutRight {
+	margin-top: 45%;
+	margin-left: 90%;
+
+}
+
+.nutBottomRight {
+
+	margin-top: 77%;
+	margin-left: 75%;
+}
+
+.nutBottom {
+
+	margin-top: 89%;
+	margin-left: 45%;
+}
+
+.nutBottomLeft {
+
+	margin-top: 77%;
+	margin-left: 15%;
+}
+
+.nutLeft {
+
+	margin-top: 45%;
+	margin-left: 0%;
+}
+
+.nutTopLeft {
+
+	margin-top: 15%;
+	margin-left: 15%;
+}
+
+/*=============================================================================================*/
+/*====================================== Navigation Bar =======================================*/
+/*=============================================================================================*/
+.cog1{
+   -webkit-animation: rotate-left 4.5s linear infinite;
+	-moz-animation: rotate-left 4.5s linear infinite;
+
+}
+.cog2{
+   -webkit-animation: rotate-right 9s linear infinite;
+	-moz-animation: rotate-right 9s linear infinite;
+}
+.cog3{
+   -webkit-animation: rotate-left 9s linear infinite;
+   -moz-animation: rotate-left 9s linear infinite;
+}
+.cog4{
+   -webkit-animation: rotate-left-keep-scale-zero-point-five 2.25s linear infinite;
+   -moz-animation: rotate-left-keep-scale-zero-point-five 2.25s linear infinite;
+
+}
+.cog5{
+   -webkit-animation: rotate-right 13.5s linear infinite;
+   -moz-animation: rotate-right 13.5s linear infinite;
+}
+
+.cog8{
+   -webkit-animation: rotate-right-keep-scale-zero-point-five 1.125s linear infinite;
+   -moz-animation: rotate-right-keep-scale-zero-point-five 1.125s linear infinite;
+}
+.cog9{
+   -webkit-animation: rotate-left 4.5s linear infinite;
+   -moz-animation: rotate-left 4.5s linear infinite;
+}
+
+
+/*=============================================================================================*/
+/*============================== Navigation Bar Hover Animation ===============================*/
+/*=============================================================================================*/
+
+
+/*Rotate right standard*/
+
+@-webkit-keyframes rotate-right
+{
+  from { -webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate-right
+{
+  from { -moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+
+
+/*rotate right with scale of 0.3*/
+@-webkit-keyframes rotate-right-keep-scale-zero-point-three
+{
+  from { -webkit-transform: scale(0.3) rotate(0deg);}
+  to {-webkit-transform: scale(0.3) rotate(360deg);}
+}
+@-moz-keyframes rotate-right-keep-scale-zero-point-three
+{
+  from { -moz-transform: scale(0.3) rotate(0deg);}
+  to {-moz-transform: scale(0.3) rotate(360deg);}
+}
+
+/*rotate right with scale 0.5*/
+@-webkit-keyframes rotate-right-keep-scale-zero-point-five
+{
+  from { -webkit-transform: scale(0.5) rotate(0deg);}
+  to {-webkit-transform: scale(0.5) rotate(360deg);}
+}
+@-moz-keyframes rotate-right-keep-scale-zero-point-five
+{
+  from { -moz-transform: scale(0.5) rotate(0deg);}
+  to {-moz-transform: scale(0.5) rotate(360deg);}
+}
+
+
+
+
+/*Rotate left standard*/
+
+@-webkit-keyframes rotate-left
+{
+  from { -webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(-360deg);}
+}
+@-moz-keyframes rotate-left
+{
+   from { -moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(-360deg);}
+}
+/*Rotate left with scale 0.3*/
+
+@-webkit-keyframes rotate-left-keep-scale-zero-point-five
+{
+  from { -webkit-transform: scale(0.3) rotate(0deg);}
+  to {-webkit-transform: scale(0.3) rotate(-360deg);}
+}
+@-moz-keyframes rotate-left-keep-scale-zero-point-five
+{
+  from { -moz-transform: scale(0.3) rotate(0deg);}
+  to {-moz-transform: scale(0.3) rotate(-360deg);}
+}
+/*Rotate left with scale 0.5*/
+@-webkit-keyframes rotate-left-keep-scale-zero-point-five
+{
+  from { -webkit-transform: scale(0.5) rotate(0deg);}
+  to {-webkit-transform: scale(0.5) rotate(-360deg);}
+}
+@-moz-keyframes rotate-left-keep-scale-zero-point-five
+{
+  from { -moz-transform: scale(0.5) rotate(0deg);}
+  to {-moz-transform: scale(0.5) rotate(-360deg);}
+}
+
+
+
+@-webkit-keyframes flicker {
+  0% { 
+  	text-shadow: 0 0 3px #000;
+		color: #171717;
+  }
+	1% { 
+		text-shadow: 0 0 300px #CCC; 
+		color: #CCC;
+	}
+  2% { 
+  	text-shadow: 0 0 3px #000;
+		color: #171717;
+  }
+  3% { 
+		text-shadow:  0 0 300px #FFF; 
+		color: #DDD;
+	}
+	15% { 
+		text-shadow: 0 0 300px #FFF; 
+		color: #DDD;
+	}
+	16% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+	25% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+	26% { 
+		text-shadow: 0 0 300px #FFF; 
+		color: #DDD;
+	}
+	39% { 
+		text-shadow:  0 0 300px #FFF; 
+		color: #DDD;
+	}
+	40% { 
+		text-shadow:  0 0 130px #CCC; 
+		color: #CCC;
+	}
+	45% { 
+		text-shadow: 0 0 130px #CCC; 
+		color: #CCC;
+	}
+	46% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+	77% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+	78% { 
+		text-shadow: 0 0 130px #CCC; 
+		color: #CCC;
+	}
+	79% { 
+		text-shadow: 0 0 130px #CCC; 
+		color: #CCC;
+	}
+	80% { 
+		text-shadow: 0 0 3px #000;
+		color: #171717;
+	}
+}

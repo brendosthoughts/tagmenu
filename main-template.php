@@ -115,10 +115,14 @@
 					
 				</div><!-- /scroller -->
 				<!-- category-menu -->					
-			         <?php  
-                            		include 'display_tags.php';
-                                      	print_tag_nav();
-                                 ?>
+			        <?php  
+						/*   THIS IS FOR LIVE SITE
+                          	include 'display_tags.php';
+                           	print_tag_nav();
+                         */
+                        /* THIS IS FOR TESTING WITH NO db.class.php*/
+                        include 'testing.php';
+                    ?>
 		                <!-- end of category-menu -->
 
 			</div><!-- /pusher -->

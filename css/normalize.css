@@ -50,11 +50,6 @@ a:hover, a:focus {color: #fff; outline: none; }
 @media screen and (max-width: 25em) {
 
 	body {
-		font-size: 80%;
+		font-size: 85%;
 	}
-
-	.codrops-icon span {
-		display: none;
-	}
-
 }
