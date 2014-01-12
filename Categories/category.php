@@ -1,6 +1,8 @@
 <h2> </h2>
 <div class="videos">
+<?php print_r($_GET['content']) ?>
 <ul>
+
     <li class="item link">
     <div class="vidInfo">
       <div class="left">
