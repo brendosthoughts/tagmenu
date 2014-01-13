@@ -1,11 +1,12 @@
 <?php
 include '../db.class.php';
 $subTemplate="home.php";
+$toRoot = "";
 include 'header.php';
 include 'main-template.php';
-print_header($subTemplate);
-
-print_main_template($subTemplate);
 include 'tail.php';
+print_header($subTemplate, $toRoot);
+print_main_template($subTemplate, $toRoot);
+print_tail($subTemplate, $toRoot);
 
 ?>

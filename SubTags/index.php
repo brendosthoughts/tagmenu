@@ -1,6 +1,6 @@
 <?php
 include '../../db.class.php';
-$subTemplate="category.php";
+$subTemplate="subtag.php";
 $toRoot = "../";
 
 include '../header.php';

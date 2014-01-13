@@ -1,4 +1,7 @@
-<?php function print_main_template($subTemplate){ ob_start(); ?>
+<?php
+require_once 'display_components.php';
+
+ function print_main_template($subTemplate, $toRoot){ ob_start(); ?>
 <body >
 		<div class="container">
 				<!-- Top Navigation -->
@@ -116,13 +119,12 @@
 				</div><!-- /scroller -->
 				<!-- category-menu -->					
 			        <?php  
-						/*   THIS IS FOR LIVE SITE
-                          	include 'display_tags.php';
-                           	print_tag_nav();
-                        */ 
+						/*   THIS IS FOR LIVE SITE */
+                           	print_tag_nav($toRoot);
+                        
                         /* THIS IS FOR TESTING WITH NO db.class.php
-                       */ include 'testing.php';
-                       
+                        include 'testing.php';
+                       */
                     ?>
 		                <!-- end of category-menu -->
 

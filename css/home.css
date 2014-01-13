@@ -54,6 +54,7 @@ height: 18em;
 }
 .main .item .left img{
   width: 15em;
+  max-height: 11em;
   margin: 0.5em 2.5em;
 
 }
