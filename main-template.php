@@ -16,37 +16,37 @@ require_once 'display_components.php';
 				<nav id="main-site" >
 					<ul>
 						<li>
-							<a href="#"><i class="icon-video"></i>Documentaries</a>
+							<a href="<?=$toRoot?>Documentaries/"><i class="icon-video"></i>Documentaries</a>
 						</li>			
 						<li class="main-dropdown" id="main-nav-talks">
 							<a href="#"><i class="icon-comment"></i>Talks <i class="icon-angle-circled-down"> </i></a>
 							<ul >
 								<li>
-									<a href="#"><i class="icon-ellipsis-vert"></i>All</a>
+									<a href="<?=$toRoot?>Talks/"><i class="icon-ellipsis-vert"></i>All</a>
 								</li>
 								<li>
-									<a href="#"><i class="icon-users"></i>Confrences</a>
+									<a href="<?=$toRoot?>Confrences"><i class="icon-users"></i>Confrences</a>
 								</li>
 								<li>
-									<a href="#"><i class="icon-chat"></i>Debates</a>
+									<a href="<?=$toRoot?>Debates"><i class="icon-chat"></i>Debates</a>
 								</li>
 								<li>
-									<a href="#"><i class="icon-graduation-cap-1"></i>Lectures</a>
+									<a href="<?=$toRoot?>Lectures"><i class="icon-graduation-cap-1"></i>Lectures</a>
 								</li>								
 							</ul>
 						</li>
 						<li>
-							<a href="#"><i class="icon-podcast"></i>Webcasts</a>
+							<a href="<?=$toRoot?>Webcasts"><i class="icon-podcast"></i>Webcasts</a>
 						</li>
 
 						<li class="main-dropdown" id="main-nav-more">
 							<a href="#"><i class="icon-plus"></i>More<i  class="icon-angle-circled-down"></i></a>
 							<ul>
 								<li>
-									<a href="#"><i class="icon-videocam"></i>Producers</a>
+									<a href="<?=$toRoot?>Producers"><i class="icon-videocam"></i>Producers</a>
 								</li>
 								<li>
-									<a href="#"><i class="icon-heart"></i>Social Good</a>
+									<a href="<?=$toRoot?>SocialGood"><i class="icon-heart"></i>Social Good</a>
 								</li>
 							</ul>
 						</li>						
