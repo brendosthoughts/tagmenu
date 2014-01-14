@@ -121,11 +121,7 @@ require_once 'display_components.php';
 			        <?php  
 						/*   THIS IS FOR LIVE SITE */
                            	print_tag_nav($toRoot);
-                        
-                        /* THIS IS FOR TESTING WITH NO db.class.php
-                        include 'testing.php';
-                       */
-                    ?>
+		                ?>
 		                <!-- end of category-menu -->
 
 			</div><!-- /pusher -->
