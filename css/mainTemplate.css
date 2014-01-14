@@ -53,6 +53,150 @@ a:hover, a:focus {color: #fff; outline: none; }
 html, body, .container {
 	height: 100%;
 }
+.vidInfo
+ {
+  display: block;
+    display: block;
+  background: grey;
+  padding: 10px;
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+	height: 100%;
+}
+.vidInfo .left {
+  display:table-cell;
+  width: 20em;
+}
+.vidInfo .left img{
+  width: 15em;
+  max-height: 11em;
+  margin: 0.5em 2.5em;
+
+}
+
+.vidInfo .left .vidCategories a{
+  background: #c9c9c9;
+  border-radius: 1em;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-shadow: none;
+  padding: 0.1em 0.2em;
+  margin: 0em 0.05em;
+}
+.vidInfo .left .vidSubtags{
+  max-height: 4.5em;
+
+}
+.vidInfo .left .vidSubtags a{
+background: #272727;
+border-radius: 1em;
+color: #FFF;
+font-weight: 400;
+text-shadow: none;
+padding: 0.1em 0.5em;
+font-size: 0.8em;
+line-height: 1.5em;
+
+}
+.vidInfo .left .playTime{
+position: absolute;
+left: 13em;
+bottom: 5em;
+
+}
+.vidInfo .text {
+  margin-left: 1em;
+  display: table-cell;
+  width: calc(100% - 20em);
+  color: #FFF;
+}
+.vidInfo .text h3{
+text-align: center;
+font-size: 2em;
+text-decoration: underline;
+font-weight: 600;
+}
+.vidInfo .text p{
+  text-align: left;
+  font-weight: 400;
+  padding-right: 2.5em;
+  max-height: 12em;
+  overflow: hidden;
+  text-overflow : ellipsis;
+
+}
+
+.vidInfo .text .otherInfo{
+display: block;
+position: absolute;
+bottom: 0em;
+right: 0;
+text-align: right;
+color: white;
+background: #000;
+padding: 0.3em 1em 1.5em 1em;
+line-height: 1.3em;
+border-top-left-radius: 1em;
+border-bottom-right-radius: 3px;
+margin-bottom: 5px;
+margin-right: 5px;
+height: 1em;
+}
+
+.vidInfo .text .otherInfo span{
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+}
+.vidInfo .icon-play-circled{
+  font-size: 9em;
+position: absolute;
+top: 25%;
+left: 0.5em;
+color: rgba(255, 255, 255, 0.5);
+
+}
+
+.vidInfo .bullshit-bar{
+ display:block;
+ position: absolute;
+right: 0;
+top:0;
+width: 2em;
+height: calc(100% - 39px);
+background: #fff;
+margin:5px 5px 0px 5px;
+border-top-right-radius: 3px;
+}
+.vidInfo .bullshit-bar span{
+  position: absolute;
+  bottom: 0;
+  border-top-right-radius: 0.2em;
+  border-top-left-radius: 0.2em;
+  display:block;
+  width: 100%;
+  height: 60%;
+  background: orange;
+}
+.vidInfo .rating-widget{
+position: absolute;
+right: 2.3em;
+bottom: 36px;
+display:block;
+width: 7.5em;
+color: yellow;
+letter-spacing: -0.5em;
+text-shadow: 2px 2px 2px #000; 
+}
+.vidInfo .rating-widget .total_vote{
+padding-left: 0.5em;
+}
+
 .add-left{
 	display: inline-block;
 
