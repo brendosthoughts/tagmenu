@@ -39,7 +39,7 @@ print_r($e);
 }
 ?>
 
-<h2><?=$result[0]['sub_tag_name'] ?></h2>
+<h2><?=$videos[0]['sub_tag_name'] ?></h2>
 
 <?php echo $tag_cloud ?>
 <div class="videos">

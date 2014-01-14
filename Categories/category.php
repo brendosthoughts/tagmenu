@@ -17,7 +17,7 @@ try{
         {
             if  ($subtag['sub_tag_name']!=="unknown") // || ($subtag['sub_tag_name'] !=="random") )
             {
-               $tag_cloud .= '<a class="tag_in_cloud" href="subTag.php?id='.  $subtag['sub_tag_name'] . '">'. $subtag['sub_tag_name'] . '</a>';
+               $tag_cloud .= ' <a class="tag_in_cloud" href="../SubTags/?id='.  $subtag['sub_tag_id'] . '">'. $subtag['sub_tag_name'] . '</a>';
             }
         }
 	$tag_cloud .= '</div>';
