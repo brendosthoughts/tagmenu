@@ -101,7 +101,7 @@ function print_tag_nav($toRoot){
 		 {
 		    if  ($subtag['sub_tag_name']!=="unknown") // || ($subtag['sub_tag_name'] !=="random") )
 		    {
-		      $msg .= '<li><a href="' . $toRoot . 'SubTags/?id='. $subtag['sub_tag_name']. '">'. $subtag['sub_tag_name'] . '</a></li> ';
+		      $msg .= '<li><a href="' . $toRoot . 'SubTags/?id='. $subtag['sub_tag_id']. '">'. $subtag['sub_tag_name'] . '</a></li> ';
 		    }
 		 }
 		 $msg .= '</ul>
