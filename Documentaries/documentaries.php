@@ -14,7 +14,7 @@ try{
     $tag_pages->items_total = $count[0]['COUNT(*)'];
     $tag_pages->mid_range = 9;
     $tag_pages->paginate();
-    $sql = "SELECT DISTINCT content_id, pub_id, title, src_link, cover_img, src_page, description, series, pub_date, season_num, play_time, ep_num, rating, num_views
+    $sql = "SELECT *
         FROM phpro_tag_types types
         INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
         INNER JOIN content c ON targets.tag_target_id = c.tag_target_id
@@ -45,6 +45,6 @@ print_r($e);
 }
 ?>
 </ul>
-<div id='paginator_btns'></div>;
-
+<?php echo "<div id='paginator_btns' >" . $tag_pages->display_pages() . "</div>";
+ ?>
 </div>

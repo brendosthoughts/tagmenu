@@ -13,8 +13,8 @@ function print_header($subTemplate, $toRoot){ ob_start(); ?>
 	<?php if ($subTemplate == "home.php"){ ?>
 		<link rel="stylesheet" href="<?= $toRoot ?> css/home.css">
 		<script src="<?= $toRoot ?>js/owl.carousel.min.js"></script>
-	<?php }else if(($subTemplate == "category.php") || ($subTemplate == "subtag.php")){ ?>
-  		<link rel="stylesheet" href="<?=$toRoot?>css/category.css"> 
+	<?php }else{ ?>
+  		<link rel="stylesheet" href="<?=$toRoot?>css/vidList.css"> 
   	<?php }	?>
 
 		<script src="<?= $toRoot ?>js/modernizr.custom.js"></script><style type="text/css"></style>
