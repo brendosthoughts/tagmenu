@@ -1,6 +1,11 @@
 h2 {
 text-align: center;
 }
+.vidCategories{
+ margin: 0 auto;
+ text-align: center;
+ display:inline-block;	
+}
 .tagsInCategory{
 width: 90%;
 margin: 1em 5% 1em 5%;
@@ -40,9 +45,10 @@ line-height: 2em;
 	width: 100%;
 }
 
- .item .left {
+.item .left {
   display:table-cell;
   width: 20em;
+  height: 100%;
 }
 
  .item .left img{

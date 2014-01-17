@@ -13,7 +13,10 @@ function print_header($subTemplate, $toRoot){ ob_start(); ?>
 	<?php if ($subTemplate == "home.php"){ ?>
 		<link rel="stylesheet" href="<?= $toRoot ?> css/home.css">
 		<script src="<?= $toRoot ?>js/owl.carousel.min.js"></script>
-	<?php }else{ ?>
+	<?php }else if($subTemplate =="playvideo.php"){
+		
+	}
+	else{ ?>
   		<link rel="stylesheet" href="<?=$toRoot?>css/vidList.css"> 
   	<?php }	?>
 

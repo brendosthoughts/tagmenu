@@ -178,11 +178,11 @@ padding-left: 0.5em;
 }
 
 .sub .item img{
-width: 80%;
-margin: 0 10% 1em 10%;
-left: 0px;
-bottom: 0px;
-position: absolute;
+max-width: 90%;
+max-height: 7em;
+margin: 0 auto;
+bottom: 0.5em;
+position: relative;
 display: block;
 }
 .sub .item h3{
