@@ -13,10 +13,13 @@ function print_header($subTemplate, $toRoot){ ob_start(); ?>
 	<?php if ($subTemplate == "home.php"){ ?>
 		<link rel="stylesheet" href="<?= $toRoot ?> css/home.css">
 		<script src="<?= $toRoot ?>js/owl.carousel.min.js"></script>
-	<?php }else if($subTemplate =="playvideo.php"){
+	<?php }else if($subTemplate =="playvideo.php"){ ?>
+<link href='<?=$toRoot ?>js/videojs-youtube-master/lib/video-js.css' rel='stylesheet'>
+<script src='<?=$toRoot ?>js/videojs-youtube-master/lib/video.js'></script>
+<script src='<?=$toRoot ?>js/videojs-youtube-master/vjs.youtube.js'></script>
 		
-	}
-	else{ ?>
+	<?php
+	}else{ ?>
   		<link rel="stylesheet" href="<?=$toRoot?>css/vidList.css"> 
   	<?php }	?>
 
