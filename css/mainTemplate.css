@@ -1,5 +1,5 @@
 /* Nromalize.css */
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
+aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
 audio,canvas,video{display:inline-block;}
 audio:not([controls]){display:none;height:0;}[hidden]{display:none;}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
@@ -216,7 +216,7 @@ padding-left: 0.5em;
 	width:100%;
 	left:0;
 	height:7%;
-	z-index:100;
+	z-index:105;
 	min-height:7em;
 	display: inline-block;
 	background:grey;
@@ -717,6 +717,7 @@ width: 100%;
 height: 150px;
 background: grey;
 margin: 2em 0 0 0;
+float: left;
 
 }
 
@@ -960,6 +961,13 @@ margin: 2em 0 0 0;
 	transform: scale(0.15);
 }
 
+.larger{
+	-webkit-transform: scale(0.4);
+	-moz-transform: scale(0.4);
+	-o-transform: scale(0.4);
+	-ms-transform: scale(0.4);
+	transform: scale(0.4);
+}
 /*=============================================================================================*/
 /*======================================= Cog Container =======================================*/
 /*=============================================================================================*/
@@ -971,6 +979,15 @@ margin: 2em 0 0 0;
 	color:#262626;
 	width:45em;
 	height:45em;
+}
+.logo-wrapper .icon-comment{
+	color: white;
+   	display:none;
+font-size: 30em;
+position: absolute;
+bottom: 30%;
+left: 90%;
+
 }
 .logo-wrapper::before{
 	font-family: 'fontello';
@@ -1264,6 +1281,7 @@ span[class*="Tooth"] {
 	0px 0px 1px 0.5px rgba(0,0,0,0.2);
 
 }
+
 
 /*
 .topTooth, .topRightTooth, .bottomRightTooth,.bottomTooth, .bottomLeftTooth, .topLeftTooth {
@@ -1575,13 +1593,26 @@ margin-top:100%;
    -webkit-animation: rotate-left 4.5s linear infinite;
    -moz-animation: rotate-left 4.5s linear infinite;
 }
+/* to scale size of logo up */
+.larger{
+	-webkit-animation: scaleUp 2.5s ease-in ;
+   -moz-animation:  scaleUp 2.5s ease-in ;
 
-
+}
 /*=============================================================================================*/
 /*============================== Navigation Bar Hover Animation ===============================*/
 /*=============================================================================================*/
 
-
+@-webkit-keyframes scaleUp
+{
+  from { -webkit-transform: scale(0.15);}
+  to {-webkit-transform: scale(0.4);}
+}
+@-moz-keyframes scaleUp
+{
+  from { -moz-transform: scale(0.15);}
+  to {-moz-transform: scale(0.4);}
+}
 /*Rotate right standard*/
 
 @-webkit-keyframes rotate-right

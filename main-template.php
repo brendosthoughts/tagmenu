@@ -120,7 +120,8 @@ require_once 'display_components.php';
 				<!-- category-menu -->					
 			        <?php  
 						/*   THIS IS FOR LIVE SITE */
-                           	print_tag_nav($toRoot);
+                        /*   	print_tag_nav($toRoot);*/
+                        include "testing.php";
 		                ?>
 		                <!-- end of category-menu -->
 

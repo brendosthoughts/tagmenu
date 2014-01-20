@@ -9,11 +9,12 @@ function print_header($subTemplate, $toRoot){ ob_start(); ?>
 		<link rel="stylesheet" type="text/css" href="<?= $toRoot ?>css/mainTemplate.css">
 		<link rel="stylesheet" href="<?= $toRoot ?>fonts/css/fontello.css">
 		<link rel="stylesheet" href="<?= $toRoot ?>fonts/css/animation.css">
-               <script src="<?= $toRoot ?>js/jquery-1.10.2.min.js"></script>
+        <script src="<?= $toRoot ?>js/jquery-1.10.2.min.js"></script>
 	<?php if ($subTemplate == "home.php"){ ?>
 		<link rel="stylesheet" href="<?= $toRoot ?> css/home.css">
 		<script src="<?= $toRoot ?>js/owl.carousel.min.js"></script>
 	<?php }else if($subTemplate =="playvideo.php"){ ?>
+	<link rel="stylesheet" href="<?= $toRoot ?>css/playvideo.css">
 <link href='<?=$toRoot ?>js/videojs-youtube-master/lib/video-js.css' rel='stylesheet'>
 <script src='<?=$toRoot ?>js/videojs-youtube-master/lib/video.js'></script>
 <script src='<?=$toRoot ?>js/videojs-youtube-master/vjs.youtube.js'></script>

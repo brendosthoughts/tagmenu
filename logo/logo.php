@@ -159,6 +159,6 @@
 				</div>
 				<span class="band2light"></span>
 			</div>
-			<i class="icon-gauge"></i>
 			<i class="icon-lightbulb"></i>
+			<i class="icon-comment"></i>
 		</div>
