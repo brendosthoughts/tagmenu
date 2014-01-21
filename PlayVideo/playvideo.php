@@ -1,19 +1,73 @@
+<?php
+try
+{
+        db::getInstance()->beginTransaction();
+        $sql = "SELECT *
+        FROM content c
+        INNER JOIN phpro_tag_targets targets  ON c.tag_target_id = targets.tag_target_id
+        INNER JOIN phpro_tag_types types ON targets.tag_type_id = types.tag_type_id
+        INNER JOIN phpro_tags tags ON targets.tag_id = tags.tag_id
+        INNER JOIN publisher p ON c.pub_id = p.pub_id
+        WHERE content_id=:content_id";
+        $stmt = db::getInstance()->prepare($sql);
+        $stmt->bindParam(':content_id', $_GET['videoID']);
+        $stmt->execute();
+        $vid = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $tags = "SELECT *  FROM phpro_tag_targets targets
+                INNER JOIN  sub_tags ON targets.sub_tag_id=sub_tags.sub_tag_id
+                INNER JOIN phpro_tags tags ON targets.tag_id=tags.tag_id
+                INNER JOIN phpro_tag_types types ON targets.tag_type_id = types.tag_type_id
+                WHERE tag_target_id='{$vid['tag_target_id']}'";
+            $stmt = db::getInstance()->prepare($tags);
+            $stmt->execute();
+            $tagging_info = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $tags= array();
+        $sub_tags=array();
+	$i=0;
+	foreach ( $tagging_info as $value ){
+            $tags[$i]['tag_name'] = $value['tag_name'];
+	    $tags[$i]['tag_id']=  $value['tag_id'];
+            $sub_tags[$i]['sub_tag_name'] = $value['sub_tag_name'];
+            $sub_tags[$i]['sub_tag_id'] = $value['sub_tag_id'];
+	    $i++;
+        }
+//make each value unique as only need to display once not multiple times
+	$temp_array = array();
+	foreach ($tags as &$v) {
+	    if (!isset($temp_array[$v['tag_name']]))
+	        $temp_array[$v['tag_name']] =& $v;
+	}
+        $tags = array_values($temp_array);
+
+        foreach ($sub_tags as &$v) {
+            if (!isset($temp_array[$v['sub_tag_id']]))
+                $temp_array[$v['sub_tag_id']] =& $v;
+        }
+        $sub_tags = array_values($temp_array);
 
 
-<h2 class="vid_title">Video Titles go in the header </h2>
+}catch(Exception $e){
+	echo "umm something went wrong your video must have hit a blackhole and been transported to an alternate direction";
+	print_r($e);
+	echo "<br> maybe try accesing this page from mars or try another link!";
+}
+
+?>
+<h2 class="vid_title"><?=$vid['title']?></h2>
 
 	<div class="vid_cats">
-		<a href=# class="vid_cat">Category 1 </a>
-		<a href=# class="vid_cat">Category 2 </a>
-		<a href=# class="vid_cat">Category 3 </a>
+		<?php foreach($tags as $tag){
+			echo '<a href="' .$toRoot. 'Categories/?id=' .$tag['tag_id']. '" class="vid_cat" title="Video Category">'.$tag['tag_name'] .' </a>';
+		}?>
 	</div>
 
 <div class="page_center">
 	<div class="vid_holder">
 		<div class="vid_maker_info">
-			<span class="vid_type"><a href="#">Documentary</a> </span>
-			 Made by : <span class="vid_publisher">BBC / Vice </span> 
-			on <span class="pub_date"> DATE 
+			<span class="vid_type"><a href="#"><?=$vid['tag_type_name']?></a> </span>
+			 Made by : <span class="vid_publisher"><?=$vid['pub_name']?> </span> 
+			on <span class="pub_date"><?=$vid['pub_date'] ?> 
 			</span>
 		</div>
 		<div id="video_wrapper">
@@ -24,21 +78,16 @@
 		      height= "264"
 		      width= "600"
 		      preload="auto"
-		      poster="https://i1.ytimg.com/vi/DuGpw0-B9-s/default.jpg"
-		      data-setup='{"techOrder":["youtube"], "src":"http://www.youtube.com/watch?v=KMui1QZB5yw"}'>
+		      poster="<?=$vid['cover_img'] ?>"
+		      data-setup='{"techOrder":["youtube"], "src":"<?=$vid['src_link']?>"}'>
 		</video></div>
 
 	</div>
 	<div class="vid_right">
 		<article class="vid_description">
 			<h4> Description: </h4>
-			the xdescription of the video will go in here hopefuly<br> this will ben enough room breaking ..... 
-			.........jkjvbaru the z <br>...article overlow will be hidden
-			<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope
-			<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope
-			<br>.......seed i hope last
+				<?=$vid['description'] ?>
 		</article>
-
 	</div>
 	<div class= "vid_sharing">
 		<div id="r1" class="rate_widget">  

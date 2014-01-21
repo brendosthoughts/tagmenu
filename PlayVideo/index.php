@@ -1,6 +1,6 @@
 <?php
-/*include '../../db.class.php';
-*/$subTemplate="playvideo.php";
+include '../../db.class.php';
+$subTemplate="playvideo.php";
 $toRoot = "../";
 
 include '../header.php';
