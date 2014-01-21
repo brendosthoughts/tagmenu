@@ -7,7 +7,7 @@ require_once 'display_components.php';
 				<!-- Top Navigation -->
 			<header class="main-header">
 				<div class="site-title">
-				<a href="#">
+				<a href="<?=$toRoot?>">
 				<?php	include 'logo/logo.php'; ?>
 					<h1>Mind-Knowledge.com</h1><span class="sub-header">Watch ... Think, Learn, Do!</span>
 

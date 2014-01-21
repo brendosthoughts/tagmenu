@@ -1,5 +1,5 @@
 <?php 
-function display_video($vid){
+function display_video($vid, $toRoot){
 try{
         $sql = "SELECT `tag_name`,`sub_tag_name`,`tag_type_name` FROM phpro_tag_targets targets
                 INNER JOIN  sub_tags ON targets.sub_tag_id=sub_tags.sub_tag_id
@@ -30,7 +30,7 @@ try{
                 }
                 ?>
         </span>
-        <a href="#" title="Play Video">
+        <a href="<?php echo $toRoot . "PlayVideo/?videoID="  . $vid['content_id']; ?>" title="Play Video">
         <img src="<?=$vid['cover_img']?>" alt="img title">
         <i class="icon-play-circled"></i>
         <span class="playTime"><?= $vid['play_time'] ?></span>

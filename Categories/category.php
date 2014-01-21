@@ -1,6 +1,6 @@
 <?php 
 require_once("../../paginator.class.php");
-
+$toRoot="../";
 try{
  if (isset($_GET['id'])){
 	$category_id = $_GET['id'];
@@ -66,7 +66,7 @@ print_r($e);
 <?php foreach($videos as $vid){ 
 ?> 
     <li class="item link">
-	<?php display_video($vid); ?>
+	<?php display_video($vid, $toRoot); ?>
    </li>
 
 <?php 

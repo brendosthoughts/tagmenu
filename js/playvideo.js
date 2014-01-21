@@ -11,6 +11,8 @@
 
       // Set width to fill parent element, Set height
       myPlayer.width(width).height( width * aspectRatio );
+      //make the description same height as the video
+      document.getElementById("vid_description").style.height= $(".vid_holder").outerHeight();
     }
 
     resizeVideoJS(); // Initialize the function
@@ -42,7 +44,6 @@ $(".share_link").click(function() {
   var sharePage = encodeURIComponent(window.location);
   var shareTitle= encodeURIComponent($(".vid_title").text());
   var vidDescription = $(".vid_description").text();
-    // Animation complete.
   
     if(shareType.id =="twitter"){
      openWin("http://twitter.com/intent/tweet?text="+ shareTitle+"&url="+ sharePage +"&via=TWITTER-HANDLE" , 700, 500);
@@ -61,6 +62,35 @@ $(".share_link").click(function() {
 });
 
 $(document).ready(function() {
+	
+//set up nav  menus
+                function hasClass(element, cls) {
+                   return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+                }
+                function handleDropDown() {
+                        if (hasClass(this, 'open')){
+                                classie.remove(this, 'open');
+                        }else{
+                                classie.add(this, 'open');
+                        }
+
+                }
+                new UISearch( document.getElementById( 'sb-search' ) );
+                new mlPushMenu( document.getElementById( 'category-menu' ), document.getElementById( 'trigger' ), document.getElementById('menu-icon') );
+                var more = document.getElementById("main-nav-more");
+                more.addEventListener("click", handleDropDown, false);
+                var talks = document.getElementById("main-nav-talks");
+                talks.addEventListener("click", handleDropDown, false);
+		$('.more').click( function(){
+			$('.vid_description').css("overflow-y", "scroll");
+			$('.more').css("display","none");;
+			
+
+		});
+		
+
+//rating widget 
+
     
     $('.rate_widget').each(function(i) {
         var widget = this;
@@ -130,3 +160,4 @@ function set_votes(widget) {
   $(widget).find('.star_' + avg).nextAll().removeClass('ratings_vote'); 
   $(widget).find('.total_votes').text( votes + ' votes (rating: ' + exact + ')' );
 } 
+ 

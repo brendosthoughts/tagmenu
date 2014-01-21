@@ -28,24 +28,23 @@ try
 	foreach ( $tagging_info as $value ){
             $tags[$i]['tag_name'] = $value['tag_name'];
 	    $tags[$i]['tag_id']=  $value['tag_id'];
-            $sub_tags[$i]['sub_tag_name'] = $value['sub_tag_name'];
-            $sub_tags[$i]['sub_tag_id'] = $value['sub_tag_id'];
+            $sub_tags[$i] = $value;
 	    $i++;
         }
-//make each value unique as only need to display once not multiple times
+//make each value unique as tags(categories) only need to display once not multiple times
 	$temp_array = array();
 	foreach ($tags as &$v) {
 	    if (!isset($temp_array[$v['tag_name']]))
 	        $temp_array[$v['tag_name']] =& $v;
 	}
         $tags = array_values($temp_array);
-
+/*
         foreach ($sub_tags as &$v) {
             if (!isset($temp_array[$v['sub_tag_id']]))
                 $temp_array[$v['sub_tag_id']] =& $v;
         }
         $sub_tags = array_values($temp_array);
-
+*/
 
 }catch(Exception $e){
 	echo "umm something went wrong your video must have hit a blackhole and been transported to an alternate direction";
@@ -58,16 +57,23 @@ try
 
 	<div class="vid_cats">
 		<?php foreach($tags as $tag){
+			echo '<div class="vidCategory">';
 			echo '<a href="' .$toRoot. 'Categories/?id=' .$tag['tag_id']. '" class="vid_cat" title="Video Category">'.$tag['tag_name'] .' </a>';
+			foreach($sub_tags as $subtag){
+				if($subtag['tag_id']==$tag['tag_id']){
+					echo '<a href="'.$toRoot. 'SubTag/?id=' .$subtag['sub_tag_id'].'" class="subtag" title="subtag of the video">' .$subtag['sub_tag_name']. '</a>';
+				}
+			}
+			echo '</div>';
 		}?>
 	</div>
 
 <div class="page_center">
 	<div class="vid_holder">
 		<div class="vid_maker_info">
-			<span class="vid_type"><a href="#"><?=$vid['tag_type_name']?></a> </span>
-			 Made by : <span class="vid_publisher"><?=$vid['pub_name']?> </span> 
-			on <span class="pub_date"><?=$vid['pub_date'] ?> 
+			<span class="vid_type"><?=$vid['tag_type_name']?></span>
+			  made by : <span class="vid_publisher"><?=$vid['pub_name']?> </span> 
+			from <span class="pub_date"><?=$vid['pub_date'] ?> 
 			</span>
 		</div>
 		<div id="video_wrapper">
@@ -81,29 +87,31 @@ try
 		      poster="<?=$vid['cover_img'] ?>"
 		      data-setup='{"techOrder":["youtube"], "src":"<?=$vid['src_link']?>"}'>
 		</video></div>
+	    <div id="vid_social_bar" class= "vid_sharing">
+                <div id="r1" class="rate_widget">
+                   <span class="star_1 ratings_stars"></span>
+                   <span class="star_2 ratings_stars"></span>
+                   <span class="star_3 ratings_stars"></span>
+                   <span class="star_4 ratings_stars"></span>
+                   <span class="star_5 ratings_stars"></span>
+                   <span class="total_votes">vote data</span>
+                </div>
+                <button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
+                <button class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i>Facebook</button>
+                <button class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i>Google+</button>
+                <button class="share_link" id="linkedin" ><i>in</i>LinkedIn</button>
+                <button class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i>StumbleUpon</button>
+                <button class="share_link" id="reddit"> <i class="icon-reddit"></i> reddit </button>
+            </div>
+
 
 	</div>
-	<div class="vid_right">
+	<div id="vid_description" class="vid_right">
 		<article class="vid_description">
 			<h4> Description: </h4>
 				<?=$vid['description'] ?>
 		</article>
-	</div>
-	<div class= "vid_sharing">
-		<div id="r1" class="rate_widget">  
-	    	<span class="star_1 ratings_stars"></span>  
-	        <span class="star_2 ratings_stars"></span>  
-	        <span class="star_3 ratings_stars"></span>  
-	        <span class="star_4 ratings_stars"></span>  
-	        <span class="star_5 ratings_stars"></span>  
-	        <span class="total_votes">vote data</span>  
-	    </div>
-		<button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
-		<button class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i>Facebook</button>
-	    <button class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i>Google+</button>
-	    <button class="share_link" id="linkedin" ><i>in</i>LinkedIn</button>    
-		<button class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i>StumbleUpon</button>
-		<button class="share_link" id="reddit"> <i class="icon-reddit"></i> reddit </button>
+		<button id="full_description" class="more">...more</button>
 	</div>
 
 </div>
@@ -118,15 +126,6 @@ try
 	<div class="bullshit_bar bullshit_rating" >
 
 
-	</div>
-
-	<div class="vid_subtags" >
-		<a href="vid_subtag">subtag1 </a>
-		<a href="vid_subtag">subtag2 </a>
-		<a href="vid_subtag">subtag3 </a>
-		<a href="vid_subtag">subtag4 </a>
-		<a href="vid_subtag">subtag5 </a>
-		<a href="vid_subtag">subtag5 </a>
 	</div>
 
 	<div class="similar_videos">
