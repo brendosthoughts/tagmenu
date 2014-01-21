@@ -38,7 +38,10 @@
 			<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope<br>.......seed i hope
 			<br>.......seed i hope last
 		</article>
-		<div id="r2" class="rate_widget">  
+
+	</div>
+	<div class= "vid_sharing">
+		<div id="r1" class="rate_widget">  
 	    	<span class="star_1 ratings_stars"></span>  
 	        <span class="star_2 ratings_stars"></span>  
 	        <span class="star_3 ratings_stars"></span>  
@@ -46,21 +49,26 @@
 	        <span class="star_5 ratings_stars"></span>  
 	        <span class="total_votes">vote data</span>  
 	    </div>
+		<button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
+		<button class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i>Facebook</button>
+	    <button class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i>Google+</button>
+	    <button class="share_link" id="linkedin" ><i>in</i>LinkedIn</button>    
+		<button class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i>StumbleUpon</button>
+		<button class="share_link" id="reddit"> <i class="icon-reddit"></i> reddit </button>
 	</div>
-	<div class= "vid_sharing">
-			<button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
-			<button class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i>Facebook</button>
-		    <button class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i>Google+</button>
-		    <button class="share_link" id="linkedin" ><i>in</i>LinkedIn</button>    
-			<button class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i>StumbleUpon</button>
-			<button class="share_link" id="reddit"> <i class="icon-reddit"></i> reddit </button>
-		</div>
 
 </div>
+<div class= "add_below_vid">
+		<span class="single_add">advertise with us </span>
+		<span class="single_add">ur add here</span>
+		<span class="single_add">advertise with us </span>		
+		<span class="single_add">ur add here</span>
+</div>
 <div class="below_vid"> 
-	<div class="rating_widget">
-	</div>
+
 	<div class="bullshit_bar bullshit_rating" >
+
+
 	</div>
 
 	<div class="vid_subtags" >
