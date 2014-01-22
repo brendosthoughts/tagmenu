@@ -88,21 +88,14 @@ try
 		      data-setup='{"techOrder":["youtube"], "src":"<?=$vid['src_link']?>"}'>
 		</video></div>
 	    <div id="vid_social_bar" class= "vid_sharing">
-                <div id="<?=$vid['content_id']?>" class="rate_widget">
-                   <span class="star_1 ratings_stars"></span>
-                   <span class="star_2 ratings_stars"></span>
-                   <span class="star_3 ratings_stars"></span>
-                   <span class="star_4 ratings_stars"></span>
-                   <span class="star_5 ratings_stars"></span>
-                   <span class="total_votes">vote data</span>
-                </div>
+                <div class="ratingWidget" data-average="7.5"></div>
                 <button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
                 <button class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i>Facebook</button>
                 <button class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i>Google+</button>
                 <button class="share_link" id="linkedin" ><i>in</i>LinkedIn</button>
                 <button class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i>StumbleUpon</button>
                 <button class="share_link" id="reddit"> <i class="icon-reddit"></i> reddit </button>
-            </div>
+         </div>
 
 
 	</div>
