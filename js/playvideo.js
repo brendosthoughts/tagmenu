@@ -64,43 +64,44 @@ $(".share_link").click(function() {
 $(document).ready(function() {
 	
 //set up nav  menus
-              function hasClass(element, cls) {
-                   return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-                }
-                function handleDropDown() {
-                        if (hasClass(this, 'open')){
-                                classie.remove(this, 'open');
-                        }else{
-                                classie.add(this, 'open');
-                        }
+    function hasClass(element, cls) {
+      return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    }
+    function handleDropDown() {
+      if (hasClass(this, 'open')){
+              classie.remove(this, 'open');
+      }else{
+              classie.add(this, 'open');
+      }
 
-                }
-                new UISearch( document.getElementById( 'sb-search' ) );
-                new mlPushMenu( document.getElementById( 'category-menu' ), document.getElementById( 'trigger' ), document.getElementById('menu-icon') );
-                var more = document.getElementById("main-nav-more");
-                more.addEventListener("click", handleDropDown, false);
-                var talks = document.getElementById("main-nav-talks");
-                talks.addEventListener("click", handleDropDown, false);
-		$('.more').click( function(){
-			$('.vid_description').css("overflow-y", "scroll");
-			$('.more').css("display","none");;
-			
-      //rating widget 
-      $('.ratingWidget').jRating({
-        length:5,
-        decimalLength:1,
-        rateMax:10,
-        onSuccess : function(){
-          alert('Success : your rate has been saved :)');
-        },
-        onError : function(){
-          alert('Error : please retry');
-        }
-      });
+    }
+    new UISearch( document.getElementById( 'sb-search' ) );
+    new mlPushMenu( document.getElementById( 'category-menu' ), document.getElementById( 'trigger' ), document.getElementById('menu-icon') );
+    var more = document.getElementById("main-nav-more");
+    more.addEventListener("click", handleDropDown, false);
+    var talks = document.getElementById("main-nav-talks");
+    talks.addEventListener("click", handleDropDown, false);
+    $('.more').click( function(){
+		    $('.vid_description').css("overflow-y", "scroll");
+		    $('.more').css("display","none");;
+    });
+		
+    //rating widget 
+    $('.ratingWidget').jRating({
+      length:5,
+      decimalLength:1,
+      rateMax:10,
+      onSuccess : function(){
+        alert('Success : your rate has been saved :)');
+      },
+      onError : function(){
+        alert('Error : please retry');
+      }
+    });
 
 
 
-		});
+});
 		
 
 
