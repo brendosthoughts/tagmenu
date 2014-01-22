@@ -33,55 +33,11 @@ foreach ( $tagging_info as $value )
     $tags = array_unique( $tags );
     $sub_tags = array_unique( $sub_tags );
 }
-?>
-  <div class="item link">
-    <div class="vidInfo">
-      <div class="left">
-      <span class="vidCategories">
-		<?php
-		foreach($tags as $tag){
-			echo '<a href="'.$tag.'">' .$tag. '</a>';
-		}
-		?>
-	</span>
-        <a href="#" title="Play Video"> 
-        <img src="<?=$vid['cover_img']?>" alt="img title">
-        <i class="icon-play-circled"></i>
-        <span class="playTime"><?=$vid['play_time']?></span>
-        </a>
-        <span class="vidSubtags">
-		<?php
-		foreach($sub_tags as $subtag){
-			echo '<a href="'.$subtag.'">' .$subtag. '</a>';
-		}
-        	?>
-	</span>
-      </div>
-      <div class="text">
-       <a href="#"><h3><?=$vid['title']?></h3></a>
-        <p>
-		<?=$vid['description']?>
-        </p>
-        <span class="otherInfo">
-          <a href="#"><?=$tagging_info[0]['tag_type_name']?></a> From <a href=""><?=$vid['pub_name']?></a> In <?=$vid['pub_date']?>     
-        </span>
-        <div class="rating-widget"> 
-
-          <span class="star_1 icon-star"></span>  
-          <span class="star_2 icon-star"></span>  
-          <span class="star_3 icon-star-half-alt"></span>  
-          <span class="star_4 icon-star-empty"></span>  
-          <span class="star_5 icon-star-empty"></span>  
-          <span class="total_votes">  #</span>   
-        </div>
-      </div>
-      <div class="bullshit-bar">
-        <span class="percentage">60%</span> 
-      </div>
-    </div> 
-  </div>
   
-<?php 
+
+  display_video($vid, $toRoot); 
+
+ 
 }//end of foreach loop 
 ?>
 </div>

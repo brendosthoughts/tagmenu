@@ -88,7 +88,7 @@ try
 		      data-setup='{"techOrder":["youtube"], "src":"<?=$vid['src_link']?>"}'>
 		</video></div>
 	    <div id="vid_social_bar" class= "vid_sharing">
-                <div id="r1" class="rate_widget">
+                <div id="<?=$vid['content_id']?>" class="rate_widget">
                    <span class="star_1 ratings_stars"></span>
                    <span class="star_2 ratings_stars"></span>
                    <span class="star_3 ratings_stars"></span>
