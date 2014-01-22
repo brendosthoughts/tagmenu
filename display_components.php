@@ -22,6 +22,7 @@ try{
 
 }
 ?>
+<div class="vidInfo">
  <div class="left">
       <span class="vidCategories">
                 <?php
@@ -64,7 +65,7 @@ try{
       <div class="bullshit-bar">
         <span class="percentage">60%</span>
       </div>
-
+</div>
 <?php
 }
 function print_tag_nav($toRoot){

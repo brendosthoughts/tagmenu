@@ -53,6 +53,15 @@ a:hover, a:focus {color: #fff; outline: none; }
 html, body, .container {
 	height: 100%;
 }
+.videos ul li {
+    display: block;
+    vertical-align: top;
+    width: 90%;
+    height: 18em;
+    margin: 1em 5% 1em 5%;
+    background-color: #858585;
+    position: relative;
+}
 .vidInfo
  {
   display: block;
@@ -74,35 +83,39 @@ html, body, .container {
 }
 .vidInfo .left img{
   width: 15em;
-  max-height: 11em;
+  max-height: 12em;
   margin: 0.5em 2.5em;
 
 }
 
 .vidInfo .left .vidCategories a{
   background: #c9c9c9;
-  border-radius: 1em;
+  border-radius: 0.3em;
   color: #000;
   font-size: 1.2em;
   font-weight: 600;
   text-shadow: none;
   padding: 0.1em 0.2em;
-  margin: 0em 0.05em;
+  margin: 0em 0.1em;
+  white-space:nowrap;
 }
 .vidInfo .left .vidSubtags{
   max-height: 4.5em;
+display:block;
 
 }
 .vidInfo .left .vidSubtags a{
 background: #272727;
-border-radius: 1em;
+border-radius: 0.4em;
 color: #FFF;
 font-weight: 400;
 text-shadow: none;
-padding: 0.1em 0.5em;
+padding: 0.1em 0.3em;
 font-size: 0.8em;
+  margin: 0.1em 0.1em;
+display: inline-block;
 line-height: 1.5em;
-
+white-space: nowrap;
 }
 .vidInfo .left .playTime{
 position: absolute;
@@ -119,8 +132,10 @@ bottom: 5em;
 .vidInfo .text h3{
 text-align: center;
 font-size: 2em;
+
 text-decoration: underline;
 font-weight: 600;
+line-height: 0.2em
 }
 .vidInfo .text p{
   text-align: left;
