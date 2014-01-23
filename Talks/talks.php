@@ -1,13 +1,12 @@
 <?php 
 require_once("../../paginator.class.php");
-$toRoot="../";
 try{
 	
     $sql = "SELECT COUNT(*)
         FROM phpro_tag_types types
         INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
         INNER JOIN content c ON targets.tag_target_id = c.tag_target_id
-        WHERE types.tag_type_id=21";
+        WHERE types.tag_type_id=17";
     $stmt = db::getInstance()->prepare($sql);
     $stmt->execute();
     $count = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -19,7 +18,7 @@ try{
         FROM phpro_tag_types types
         INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
         INNER JOIN content c ON targets.tag_target_id = c.tag_target_id
-        WHERE types.tag_type_id=21
+        WHERE types.tag_type_id=17
         ORDER BY update_time DESC
         $tag_pages->limit";
     $stmt = db::getInstance()->prepare($sql);
@@ -31,7 +30,7 @@ print_r($e);
 }
 ?>
 
-<h2>Documentaries</h2>
+<h2>Talks</h2>
 
 <div class="videos">
 
@@ -39,7 +38,7 @@ print_r($e);
 <?php foreach($videos as $vid){ 
 ?> 
     <li class="item link">
-	<?php display_video($vid, $toRoot); ?>
+	<?php display_video($vid); ?>
    </li>
 
 <?php 

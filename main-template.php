@@ -19,14 +19,14 @@ require_once 'display_components.php';
                                                         <a href="<?=$toRoot?>Documentaries/"><i class="icon-video"></i>Documentaries</a>
                                                 </li>
                                                 <li>
-                                                        <a href="#"><i class="icon-comment"></i>Talks <i class="icon-angle-circled-down"> </i></a>
+                                                        <a href="<?=$toRoot?>Talks"><i class="icon-comment"></i>Talks</a>
                                                 </li>
 						<li>
 							<a href="<?=$toRoot?>Debates"><i class="icon-chat"></i>Debates</a>
 						</li>
 
 						<li class="main-dropdown" id="main-nav-more">
-							<a href="#"><i class="icon-plus"></i>More<i  class="icon-angle-circled-down"></i></a>
+							<a href="#"><i class="icon-plus"></i>More</i></a>
 							<ul>
 								<li>
 									<a href="<?=$toRoot?>Producers"><i class="icon-videocam"></i>Producers</a>
