@@ -124,7 +124,7 @@ text-align:center;
 	border-top-right-radius: 0.3em;
 	border-top-left-radius: 0.3em;
 }
-.rate_widget {  
+.ratingWidget {  
 	display:inline-block; 
     overflow:   visible;   
     width:      8em;  
@@ -134,34 +134,7 @@ text-align:center;
     font-size:0.7em;
     font-size: 1.0vw;
 }  
-.ratings_stars {  
-	padding-top:0.5em;
-    float:      left;  
 
-}  
-.ratings_stars::before{
-	font-family: 'fontello';
-	content: "\e804";
-	left: 5px;
-	font-size: 1.3em;
-	color: #000;
-
-}
-.ratings_vote::before {  
-  	font-family: 'fontello';
-	content: "\e803";
-	left: 5px; 
-	color: gold;
-	padding-bottom: 0.3em;
-
-}  
-.ratings_over::before { 
-  	font-family: 'fontello';
-	content: "\e803";
-	left: 5px;
-	color: grey;
-	padding-bottom: 0.3em;
-}
 .total_votes {
     font-size: 0.8em;
     font-weight: 100;

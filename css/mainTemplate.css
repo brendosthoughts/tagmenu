@@ -290,6 +290,7 @@ bottom: 0;
 	padding: 0;
 	list-style: none;
 	font-size:1.5em;
+	font-size: 1.5vw;
 }
 #main-site ul li {
 	padding:0.25em .5em 0em .5em;
@@ -1781,7 +1782,7 @@ margin-top:100%;
 
 /*Rating system default css*/
 .jRatingAverage {
-	background-color:#f62929;
+	background-color:#f62929;;
 	position:relative;
 	top:0;
 	left:0;
@@ -1798,7 +1799,10 @@ margin-top:100%;
 }
 
 /** Div containing the stars **/
+
 .jStar {
+	display: inline-block;
+	width: 7em;
 	position:relative;
 	left:0;
 	z-index:3;

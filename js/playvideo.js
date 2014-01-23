@@ -87,15 +87,22 @@ $(document).ready(function() {
     });
 		
     //rating widget 
-    $('.ratingWidget').jRating({
+    $('.ratingStars').jRating({
       length:5,
       decimalLength:1,
       rateMax:10,
+      bigStarsPath:'../js/icons/stars.png',
+      rateInfosX:10,
+      rateInfoY:0,	
+      phpPath:'jRating.php',
       onSuccess : function(){
-        alert('Success : your rate has been saved :)');
+	jSuccess('Success : your rate has been saved :)',{
+		  HorizontalPosition:'center',
+		  VerticalPosition:'top'
+		});
       },
       onError : function(){
-        alert('Error : please retry');
+	jError('Error : please retry');
       }
     });
 

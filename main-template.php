@@ -15,28 +15,14 @@ require_once 'display_components.php';
 				</div>
 				<nav id="main-site" >
 					<ul>
+                                                <li>
+                                                        <a href="<?=$toRoot?>Documentaries/"><i class="icon-video"></i>Documentaries</a>
+                                                </li>
+                                                <li>
+                                                        <a href="#"><i class="icon-comment"></i>Talks <i class="icon-angle-circled-down"> </i></a>
+                                                </li>
 						<li>
-							<a href="<?=$toRoot?>Documentaries/"><i class="icon-video"></i>Documentaries</a>
-						</li>			
-						<li class="main-dropdown" id="main-nav-talks">
-							<a href="#"><i class="icon-comment"></i>Talks <i class="icon-angle-circled-down"> </i></a>
-							<ul >
-								<li>
-									<a href="<?=$toRoot?>Talks/"><i class="icon-ellipsis-vert"></i>All</a>
-								</li>
-								<li>
-									<a href="<?=$toRoot?>Confrences"><i class="icon-users"></i>Confrences</a>
-								</li>
-								<li>
-									<a href="<?=$toRoot?>Debates"><i class="icon-chat"></i>Debates</a>
-								</li>
-								<li>
-									<a href="<?=$toRoot?>Lectures"><i class="icon-graduation-cap-1"></i>Lectures</a>
-								</li>								
-							</ul>
-						</li>
-						<li>
-							<a href="<?=$toRoot?>Webcasts"><i class="icon-podcast"></i>Webcasts</a>
+							<a href="<?=$toRoot?>Debates"><i class="icon-chat"></i>Debates</a>
 						</li>
 
 						<li class="main-dropdown" id="main-nav-more">

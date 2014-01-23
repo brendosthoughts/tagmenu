@@ -88,8 +88,10 @@ try
 		      data-setup='{"techOrder":["youtube"], "src":"<?=$vid['src_link']?>"}'>
 		</video></div>
 	    <div id="vid_social_bar" class= "vid_sharing">
-                <div class="ratingWidget" data-average="7.5"></div>
-                <button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
+		<div class="ratingWidget">
+                	<div class="ratingStars <?php if(!$vid[num_ratings]){echo 'noRating';}?>" data-average="<?= $vid['rating']/$vid['num_ratings'] ?>" data-id="<?=$vid['content_id']?>"></div><span class="num_ratings"><?=$vid['num_ratings']?></span>
+                </div>
+		<button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
                 <button class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i>Facebook</button>
                 <button class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i>Google+</button>
                 <button class="share_link" id="linkedin" ><i>in</i>LinkedIn</button>
