@@ -1,4 +1,12 @@
 <?php 
+function clean_url($string){
+   $string = preg_replace( '/[«»""!?,.!@£$%^&*{};:()]+/', '', $string );
+   $string = strtolower($string);
+   $slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
+   return $slug;
+}
+
+
 function display_video($vid, $toRoot){
 try{
         $sql = "SELECT `tag_name`,`sub_tag_name`,`tag_type_name` FROM phpro_tag_targets targets

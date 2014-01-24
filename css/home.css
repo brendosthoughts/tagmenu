@@ -14,10 +14,10 @@ margin: 1em 10% 3em 10%;
 height: 18em;
 }
 #recentSub{
-  height: 9em;
+  height: 10em;
 }
 #popularSub{
-  height: 9em; 
+  height: 10em; 
 }
 .sub .item{
     background: #C9C9C9;
@@ -35,17 +35,26 @@ height: 18em;
   background: red;
 }
 
+.sub .item .sub_img_wrapper{
+width: 90%;
+height: 7em;
+bottom: 0.3em;
+position: absolute;
+left:5%;
+overflow:hidden;
+}
+
 .sub .item img{
-max-width: 90%;
-max-height: 7em;
-margin: 0 auto;
-bottom: 0.5em;
-position: relative;
-display: block;
+width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
 }
 .sub .item h3{
   font-size: 1em;
   color: #000;
+  line-height: 0.9em;
+  padding: 7px;
 }
 
 .sub .item i {
@@ -53,6 +62,7 @@ display: block;
 position: absolute;
 right: 9%;
 bottom: 8%;
+color: rgba(255, 255, 255, 0.7);
 font-size: 1.3em
 }
 

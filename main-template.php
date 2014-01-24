@@ -46,11 +46,9 @@ require_once 'display_components.php';
 			
 				<div class="share-search-wrapper">		
 					<div class="social-share">
-						<a href="#" class="icon-facebook"></a>					
-						<a href="#" class="icon-twitter"></a>
-						<a href="#" class="icon-gplus"></a>
-
-						<a href="#" class="icon-email"></a>
+						<a href="https://www.facebook.com/pages/mind-knowledgecom/269878006504760" title="Follow us on Facebook" class="icon-facebook"></a>					
+						<a href="https://twitter.com/mindknowledge" class="icon-twitter"></a>
+						<a href="" class="icon-gplus"></a>
 						<a href="#" class="icon-rss"></a>
 					</div>			
 					<div id="sb-search" class="sb-search">		

@@ -24,6 +24,7 @@
 		    itemsTablet       : [768,8],
 		    itemsMobile       : [479,4],
 		    pagination:false,
+		    itemsCustom: [[0,0],[360,3],[480,4],[600,5],[720,6],[840,7],[960,8],[1080, 9],[1200, 10],[1320, 11],[1440,12],[1560,13],[1680,14]],
 		    responsiveRefreshRate : 100,
 		    afterInit : function(el){
 		      el.find(".owl-item").eq(0).addClass("synced");
@@ -91,16 +92,18 @@
 		  });
 		 
 		  recentSub.owlCarousel({
-		    items : 8,
-		    itemsDesktop      : [1199,8],
-		    itemsDesktopSmall     : [979,7],
-		    itemsTablet       : [768,5],
-		    itemsMobile       : [479,3],
-		    pagination:false,
-		    responsiveRefreshRate : 100,
-		    afterInit : function(el){
-		      el.find(".owl-item").eq(0).addClass("synced");
-		    }
+                    autoHeight : false,
+                    items : 8,
+                    itemsDesktop      : [1199,10],
+                    itemsDesktopSmall     : [979,10],
+                    itemsTablet       : [768,8],
+                    itemsMobile       : [479,4],
+                    pagination:false,
+                    itemsCustom: [[0,0],[360,2],[480,2],[600,3],[720,4],[840,5],[960,6],[1080,7],[1200,8],[1320, 9],[1440,10],[1560,11],[1680,12]],
+                    responsiveRefreshRate : 100,
+                    afterInit : function(el){
+                      el.find(".owl-item").eq(0).addClass("synced");
+                    }
 		  });
 		 
 		  function syncPosition(el){

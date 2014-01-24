@@ -44,7 +44,7 @@ foreach ( $tagging_info as $value )
 <div id="recentSub" class="owl-carousel sub">
 <?php    foreach($result as $vid){
 ?>
-  <div class="item"><h3><?=$vid['title']?></h3> <img src="<?=$vid['cover_img']?>" alt="<?=$vid['title']?>"> <i class="icon-video"></i></div>
+  <div class="item"><h3><?=$vid['title']?></h3> <div class="sub_img_wrapper"><img src="<?=$vid['cover_img']?>" alt="<?=$vid['title']?>"> </div><i class="icon-video"></i></div>
 
 <?php 
 }

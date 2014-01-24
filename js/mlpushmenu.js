@@ -119,8 +119,10 @@
 				ev.preventDefault();
 				if( self.open ) {
 					self._resetMenu();
+					document.getElementById('category-menu').style.display = "none";
 				}
 				else {
+				        document.getElementById('category-menu').style.display = "block";
 					self._openMenu();
 					// the menu should close if clicking somewhere on the body (excluding clicks on the menu)
 					document.addEventListener( self.eventtype, function( ev ) {
