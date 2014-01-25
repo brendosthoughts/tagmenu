@@ -39,7 +39,7 @@ try{
                 }
                 ?>
         </span>
-        <a class="img-link"  href="<?php echo $toRoot . "PlayVideo/?videoID="  . $vid['content_id']; ?>" title="Play Video">
+        <a class="img-link"  href="<?php echo clean_url($vid['title']); ?>" title="Play Video">
         <img src="<?=$vid['cover_img']?>" alt="img title">
         <i class="icon-play-circled"></i>
         <span class="playTime"><?= $vid['play_time'] ?></span>

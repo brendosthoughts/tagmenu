@@ -79,8 +79,6 @@ $(document).ready(function() {
     new mlPushMenu( document.getElementById( 'category-menu' ), document.getElementById( 'trigger' ), document.getElementById('menu-icon') );
     var more = document.getElementById("main-nav-more");
     more.addEventListener("click", handleDropDown, false);
-    var talks = document.getElementById("main-nav-talks");
-    talks.addEventListener("click", handleDropDown, false);
     $('.more').click( function(){
 		    $('.vid_description').css("overflow-y", "scroll");
 		    $('.more').css("display","none");;
