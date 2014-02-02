@@ -1,7 +1,7 @@
 <?php
 try
 {
-        db::getInstance()->beginTransaction();
+      //  db::getInstance()->beginTransaction();
         $sql = "SELECT *
         FROM content c
         INNER JOIN phpro_tag_targets targets  ON c.tag_target_id = targets.tag_target_id
