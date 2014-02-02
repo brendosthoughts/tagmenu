@@ -22,6 +22,10 @@ function print_header($subTemplate, $toRoot, $meta){ ob_start(); ?>
 <script src='<?=$toRoot ?>js/videojs-youtube-master/vjs.youtube.js'></script>
 		
 	<?php
+	}else if($subTemplate == "producers.php"){
+	?>
+		<link rel="stylesheet" href="<?= $toRoot ?>css/producers.css">
+	<?php	
 	}else{ ?>
   		<link rel="stylesheet" href="<?=$toRoot?>css/vidList.css"> 
   	<?php }	?>

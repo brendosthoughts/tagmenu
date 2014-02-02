@@ -1,6 +1,6 @@
 <?php
 include '../../db.class.php';
-$subTemplate="talks.php";
+$subTemplate="socialgood.php";
 $toRoot = "../";
 
 include '../header.php';
