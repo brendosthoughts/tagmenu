@@ -9,7 +9,7 @@ function clean_url($string){
 
 function display_video($vid, $toRoot){
 try{
-        $sql = "SELECT `tag_name`,`sub_tag_name`,`tag_type_name` FROM phpro_tag_targets targets
+        $sql = "SELECT `tag_name`,`sub_tag_name`,`tag_type_name`  FROM phpro_tag_targets targets
                 INNER JOIN  sub_tags ON targets.sub_tag_id=sub_tags.sub_tag_id
                 INNER JOIN phpro_tags tags ON targets.tag_id=tags.tag_id
                 INNER JOIN phpro_tag_types types ON targets.tag_type_id = types.tag_type_id
@@ -35,11 +35,20 @@ try{
       <span class="vidCategories">
                 <?php
                 foreach($tags as $tag){
-                        echo '<a href="'.$tag.'">' .$tag. '</a>';
+                        echo '<a href="'. $toRoot .'Category/'. clean_url($tag) .'">' .$tag. '</a>';
                 }
                 ?>
         </span>
-        <a class="img-link"  href="<?php echo clean_url($vid['title']); ?>" title="Play Video">
+        <a class="img-link"  href="<?php
+		if($toRoot == ""){ 
+			if($tagging_info[0]['tag_type_name']=="Documentary" ){
+				echo  "Documentaries/" . clean_url($vid['title']);
+			}else if($tagging_info[0]['tag_type_name']=="Debate" ){
+				echo  "Debates/".clean_url($vid['title']);
+			}else if($tagging_info[0]['tag_type_name']=="Talk" ){
+                                echo  "Talks/".clean_url($vid['title']);
+			}
+		}else{ echo clean_url($vid['title']);} ?>" title="Play Video">
         <img src="<?=$vid['cover_img']?>" alt="img title">
         <i class="icon-play-circled"></i>
         <span class="playTime"><?= $vid['play_time'] ?></span>
@@ -47,32 +56,33 @@ try{
         <span class="vidSubtags">
                 <?php
                 foreach($sub_tags as $tag){
-                        echo '<a href="'.$tag.'">' .$tag. '</a>';
+                        echo '<a href="'. $toRoot .'SubTag/'. clean_url($tag) .'">' .$tag. '</a>';
                 }
                 ?>
         </span>
       </div>
       <div class="text">
-       <a href="#"><h3><?=$vid['title']?></h3></a>
-        <p>
-        <?=$vid['description']?>
-        </p>
-        <span class="otherInfo">
-          <a href="#">Documentary</a> From <a href="">Vice/Discovery</a> In 2012
-        </span>
-        <div class="rating-widget">
+	<div class="text-right">
+           <a href="#"><h3><?=$vid['title']?></h3></a>
+           <p>
+           <?=$vid['description']?>
+           </p>
 
-          <span class="star_1 icon-star"></span>
-          <span class="star_2 icon-star"></span>
-          <span class="star_3 icon-star-half-alt"></span>
-          <span class="star_4 icon-star-empty"></span>
-          <span class="star_5 icon-star-empty"></span>
-          <span class="total_votes">  #</span>
-        </div>
+           <span class="otherInfo">
+              <a href="#"><?=$tagging_info[0]['tag_type_name']?></a> By <a href=""><?=$vid['pub_name']?></a> From <?=$vid['pub_date']?>
+           </span>
+         <div class="rating-widget">
+
+           <span class="star_1 icon-star"></span>
+           <span class="star_2 icon-star"></span>
+           <span class="star_3 icon-star-half-alt"></span>
+           <span class="star_4 icon-star-empty"></span>
+           <span class="star_5 icon-star-empty"></span>
+           <span class="total_votes">  #</span>
+         </div>
+	</div>
       </div>
-      <div class="bullshit-bar">
-        <span class="percentage">60%</span>
-      </div>
+
 </div>
 <?php
 }
@@ -95,7 +105,7 @@ function print_tag_nav($toRoot){
 	         $msg .= '<li class="icon icon-arrow-left">
 			    <a class="icon icon-display" href="#">' . $val['tag_name'] . '</a>
 			    <div class="mp-level">
-			        <a class="category-all" href="' . $toRoot . 'Categories/?id=' . $val['tag_id']  .  '"><h2 class="icon icon-display">' . $val['tag_name'] . '</h2></a>
+			        <a class="category-all" href="' . $toRoot . 'Category/' .clean_url($val['tag_name'])  .  '"><h2 class="icon icon-display">' . $val['tag_name'] . '</h2></a>
 			        <a class="mp-back" href="#">back</a>
 				<ul>';
 		 $sql = "SELECT * FROM phpro_tag_targets targets 
@@ -110,7 +120,7 @@ function print_tag_nav($toRoot){
 		 {
 		    if  ($subtag['sub_tag_name']!=="unknown") // || ($subtag['sub_tag_name'] !=="random") )
 		    {
-		      $msg .= '<li><a href="' . $toRoot . 'SubTags/?id='. $subtag['sub_tag_id']. '">'. $subtag['sub_tag_name'] . '</a></li> ';
+		      $msg .= '<li><a href="' . $toRoot . 'SubTag/'.clean_url( $subtag['sub_tag_name']). '">'. $subtag['sub_tag_name'] . '</a></li> ';
 		    }
 		 }
 		 $msg .= '</ul>

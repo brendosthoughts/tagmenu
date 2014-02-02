@@ -128,26 +128,30 @@ left: 13em;
 bottom: 5em;
 
 }
+.vidInfo .text-right{
+  max-height: 14em;
+  overflow: hidden;
+  width: 100%;
+}
 .vidInfo .text {
   margin-left: 1em;
   display: table-cell;
   width: calc(100% - 20em);
   color: #FFF;
+
 }
 .vidInfo .text h3{
 text-align: center;
 font-size: 2em;
-
+margin: 0 1em 0 1em;
 text-decoration: underline;
 font-weight: 600;
-line-height: 0.2em
+line-height: 1.0em
 }
 .vidInfo .text p{
   text-align: left;
   font-weight: 400;
   padding-right: 2.5em;
-  max-height: 12em;
-  overflow: hidden;
   text-overflow : ellipsis;
 
 }

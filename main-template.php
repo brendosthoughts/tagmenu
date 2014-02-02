@@ -104,8 +104,7 @@ require_once 'display_components.php';
 				<!-- category-menu -->					
 			        <?php  
 						/*   THIS IS FOR LIVE SITE */
-                        /*   	print_tag_nav($toRoot);*/
-                        include "testing.php";
+                          	print_tag_nav($toRoot);
 		                ?>
 		                <!-- end of category-menu -->
 
