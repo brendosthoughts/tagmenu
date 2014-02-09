@@ -3,10 +3,13 @@ require_once("../../paginator.class.php");
 try{
 	
     $sql = "SELECT COUNT(*)
-        FROM phpro_tag_types types
-        INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
-        INNER JOIN content c ON targets.tag_target_id = c.tag_target_id
-        WHERE types.tag_type_id=17";
+FROM content c
+WHERE tag_target_id IN (
+    SELECT DISTINCT tag_target_id
+    FROM phpro_tag_types types
+    INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
+    WHERE types.tag_type_id=17)";
+
     $stmt = db::getInstance()->prepare($sql);
     $stmt->execute();
     $count = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -14,12 +17,15 @@ try{
     $tag_pages->items_total = $count[0]['COUNT(*)'];
     $tag_pages->mid_range = 9;
     $tag_pages->paginate();
-    $sql = "SELECT DISTINCT content_id, pub_id, title, src_link, cover_img, src_page, description, series, pub_date, season_num, play_time, ep_num, rating, num_views
-        FROM phpro_tag_types types
-        INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
-        INNER JOIN content c ON targets.tag_target_id = c.tag_target_id
-        WHERE types.tag_type_id=17
-        ORDER BY update_time DESC
+    $sql = "SELECT *
+FROM content c
+WHERE tag_target_id IN (
+    SELECT DISTINCT tag_target_id
+    FROM phpro_tag_types types
+    INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
+    WHERE types.tag_type_id=17
+)
+ORDER BY update_time DESC
         $tag_pages->limit";
     $stmt = db::getInstance()->prepare($sql);
     $stmt->execute();

@@ -1,10 +1,10 @@
 h2{
-  padding-top: 2em;
   text-align:center;
+  margin-bottom:0em;
 }
 #recentMain{
 width: 80%;
-margin: 1em 10% 3em 10%;
+margin: 0.5em 10% 0em 10%;
 height: 18em;
 
 }
@@ -32,7 +32,7 @@ height: 18em;
 }
  .sub .synced .item{
   color: white;
-  background: red;
+  background: #4ae371;
 }
 
 .sub .item .sub_img_wrapper{
@@ -396,3 +396,30 @@ margin: 2em 0;
 @keyframes scaleUpTo {
   to { opacity: 0; transform: scale(1.5); }
 }
+
+
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+ 
+
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: -45px;
+  top: 9em; 
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: -45px;
+  top: 9em;
+}
+ 
+#recentSub .owl-controls .owl-buttons .owl-prev{
+  left: 20px;
+  top: 90px; 
+}
+ 
+#recentSub .owl-controls .owl-buttons .owl-next{
+  right: 20px;
+  top: 90px;
+}
+ 

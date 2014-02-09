@@ -1,5 +1,3 @@
-
-
 		$(document).ready(function() {
 
 		var popularMain = $("#popularMain");
@@ -94,11 +92,12 @@
 		  recentSub.owlCarousel({
                     autoHeight : false,
                     items : 8,
+		    navigation: true,
                     itemsDesktop      : [1199,10],
                     itemsDesktopSmall     : [979,10],
                     itemsTablet       : [768,8],
                     itemsMobile       : [479,4],
-                    pagination:false,
+                    pagination: true,
                     itemsCustom: [[0,0],[360,2],[480,2],[600,3],[720,4],[840,5],[960,6],[1080,7],[1200,8],[1320, 9],[1440,10],[1560,11],[1680,12]],
                     responsiveRefreshRate : 100,
                     afterInit : function(el){

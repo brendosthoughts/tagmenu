@@ -4,10 +4,14 @@ $toRoot= "../";
 try{
 	
     $sql = "SELECT COUNT(*)
-        FROM phpro_tag_types types
-        INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
-        INNER JOIN content c ON targets.tag_target_id = c.tag_target_id
-        WHERE types.tag_type_id=14";
+FROM content c
+WHERE tag_target_id IN (
+    SELECT DISTINCT tag_target_id
+    FROM phpro_tag_types types
+    INNER JOIN phpro_tag_targets targets ON types.tag_type_id=targets.tag_type_id
+    WHERE types.tag_type_id=14
+)";
+
     $stmt = db::getInstance()->prepare($sql);
     $stmt->execute();
     $count = $stmt->fetchAll(PDO::FETCH_ASSOC);
