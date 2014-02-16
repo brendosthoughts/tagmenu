@@ -10,8 +10,9 @@ try
     $stmt = db::getInstance()->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$vid_type=array();
+$vid_num=0;
     foreach($result as $vid){
-
 /*
         INNER JOIN phpro_tag_targets targets ON targets.tag_target_id=c.tag_target_id
         INNER JOIN phpro_tag_types types ON targets.tag_type_id = types.tag_type_id
@@ -33,27 +34,29 @@ foreach ( $tagging_info as $value )
     $tags = array_unique( $tags );
     $sub_tags = array_unique( $sub_tags );
 }
-  
+$vid_type[$vid_num]= $value['tag_type_name'];
 
-  display_video($vid, $toRoot); 
+  display_video($vid, $toRoot, ""); 
 
- 
+ $vid_num++;
 }//end of foreach loop 
 ?>
 </div>
 <div id="recentSub" class="owl-carousel sub">
-<?php    foreach($result as $vid){
+<?php 
+   $vid_num=0;
+   foreach($result as $vid){
 ?>
   <div class="item"><h3><?=$vid['title']?></h3> <div class="sub_img_wrapper"><img src="<?=$vid['cover_img']?>" alt="<?=$vid['title']?>"> </div>
 	<?php
-	 if($vid['tag_type_name']=="Documentary"){
+	 if($vid_type[$vid_num]=="Documentary"){
 		echo '<i class="icon-video"></i>';
-	}else if($vid['tag_type_name']=="Talk"){
+	}else if($vid_type[$vid_num]=="Talk"){
 		echo '<i class="icon-comment"></i>';
 	}else{
 		echo '<i class="icon-chat"></i>';
 	}
-
+	$vid_num++;
 	?>
    </div>
 
@@ -64,10 +67,10 @@ foreach ( $tagging_info as $value )
 
 
 <div class="centerhorizontaladd">
-  <span> far left </span>
-  <span> middle left</span>
-  <span> middle right</span>
-  <span> far left</span>
+  <span> far left <i class="icon-money"></i></span>
+  <span> middle left <i class="icon-money"></i></span>
+  <span> middle right<i class="icon-money"></i></span>
+  <span> far left<i class="icon-money"></i></span>
 </div>
 
 <?php 

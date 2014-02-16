@@ -229,8 +229,53 @@ padding-left: 0.5em;
 	top: 7em;
 	width: 200px;
 	height: 100%;
-	background: red;
+	background:grey;
 	z-index: 100;
+}
+.add-left .icon-cc-nc{
+	position:absolute;
+	font-size: 1.5em;
+	padding: 0.2em 0em 0.2em 0em;
+	color:white;
+	top: 0;
+	right:0;
+	display:block;
+	z-index: 100;
+	background: rgba(51, 51, 51, 0.6);
+}
+.icon-money{
+        position:absolute;
+        font-size: 1.5em;
+        padding: 0.2em 0em 0.2em 0em;
+        color:white;
+        top: 0;
+        right:0;
+        display:block;
+        z-index: 100;
+        background: rgba(51, 51, 51, 0.6);
+}
+.add-left span{
+ float:left;
+ width:90%;
+  display:block;
+ margin: 2.5% 5% 2.5% 5%;
+ position: relative;
+ height: 20%;
+ border: groove 0.5em #333333;
+ overflow:hidden;
+}
+.add-left a{
+ float:left;
+ width:90%;
+ display:block;
+ position:relative;
+ margin: 2.5% 5% 2.5% 5%;
+ height: 20%;
+ border: none;
+ overflow:hidden;
+}
+.add-left a img{
+width: 100%;
 }
 .main-header{
 	color:black;
@@ -831,7 +876,7 @@ float: left;
 	border: none;
 	outline: none;
 	background: #fff;
-	width: 100%;
+	width: 145%;
 	height: 60px;
 	margin: 0;
 	z-index: 10;
@@ -917,6 +962,7 @@ float: left;
 	background: #000;
 	z-index: 90;
 	font-size: 1.4em;
+	padding-top:0.7em;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -935,14 +981,14 @@ float: left;
 
 }
 .icon-user{
-	padding: 0.2em 3em 0.3em 0.2em;
+	padding: 0.3em 3em 0.3em 0.2em;
 	display:block;
 	color:white;
 	border-bottom: solid 1px #000;
 	border-left: solid 1px #000;
 }
 .icon-user-add{
-	padding: 0.3em 3em 0.3em 0.2em;
+	padding: 0.4em 3em 0.3em 0.2em;
 	color:white;
 	display: block;
 	border-bottom: solid 1px #000;

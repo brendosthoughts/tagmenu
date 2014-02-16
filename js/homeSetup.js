@@ -79,6 +79,7 @@
 		  var recentSub = $("#recentSub");
 		 
 		  recentMain.owlCarousel({
+                    navigationText: ["",""],
 		    singleItem : true,
 		    slideSpeed : 1000,
 		    navigation: true,
@@ -92,6 +93,7 @@
 		  recentSub.owlCarousel({
                     autoHeight : false,
                     items : 8,
+		    navigationText: ["",""],
 		    navigation: true,
                     itemsDesktop      : [1199,10],
                     itemsDesktopSmall     : [979,10],
@@ -104,7 +106,25 @@
                       el.find(".owl-item").eq(0).addClass("synced");
                     }
 		  });
-		 
+                  
+		  $('#recentMain').find('.owl-next').mouseover(function(){
+		       recentMain.trigger('owl.next');
+                       recentMain.trigger('owl.play', 12000);
+
+                  }).mouseout(function(){
+                       recentMain.trigger('owl.stop');
+
+                  });
+
+		  $('#recentSub').find('.owl-next').mouseover(function(){
+			recentSub.trigger('owl.play', 1200);
+
+		  }).mouseout(function(){
+                       recentSub.trigger('owl.stop');
+
+                  });
+
+
 		  function syncPosition(el){
 		    var current = this.currentItem;
 		    $("#recentSub")
@@ -173,4 +193,5 @@
 		var more = document.getElementById("main-nav-more");
 		more.addEventListener("click", handleDropDown, false);
  
+
 });
