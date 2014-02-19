@@ -100,7 +100,7 @@
                     itemsTablet       : [768,8],
                     itemsMobile       : [479,4],
                     pagination: true,
-                    itemsCustom: [[0,0],[360,2],[480,2],[600,3],[720,4],[840,5],[960,6],[1080,7],[1200,8],[1320, 9],[1440,10],[1560,11],[1680,12]],
+                    itemsCustom: [[0,0],[360,3],[480,4],[720,5],[840,5],[960,7],[1080,8],[1200,9],[1320, 10],[1440,11],[1560,12],[1680,13]],
                     responsiveRefreshRate : 100,
                     afterInit : function(el){
                       el.find(".owl-item").eq(0).addClass("synced");

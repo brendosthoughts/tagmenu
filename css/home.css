@@ -441,3 +441,10 @@ margin: 2em 0;
   top: 50px;
 }
  
+
+@media only screen and (max-width: 78em){
+#recentMain{
+  width: 90%;
+  margin: 0 auto;
+}
+}

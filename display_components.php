@@ -64,7 +64,7 @@ try{
       <div class="text">
 	<div class="text-right">
            <a href="#"><h3><?=$vid['title']?></h3></a>
-           <p>
+           <p class="vidDescription">
            <?=$vid['description']?>
            </p>
 
@@ -82,6 +82,17 @@ try{
          </div>
 	</div>
       </div>
+
+    <a class="vidPlay"  href="<?php
+    if(($toRoot == "") || ($referer =="subtag") || ($referer =="category")){ 
+      if($tagging_info[0]['tag_type_name']=="Documentary" ){
+        echo $toRoot. "Documentaries/" . clean_url($vid['title']);
+      }else if($tagging_info[0]['tag_type_name']=="Debate" ){
+        echo  $toRoot. "Debates/".clean_url($vid['title']);
+      }else if($tagging_info[0]['tag_type_name']=="Talk" ){
+        echo $toRoot. "Talks/".clean_url($vid['title']);
+      }
+    }else{ echo clean_url($vid['title']);} ?>" title="Play Video">Play</a>
 
 </div>
 <?php

@@ -14,7 +14,8 @@ require_once 'display_components.php';
 				</a>
 				</div>
 				<nav id="main-site" >
-					<ul>
+					<div class="main-dropdown"> </div>
+					<ul class="main-navigation">
                                                 <li>
                                                         <a href="<?=$toRoot?>Documentaries/"><i class="icon-video"></i>Documentaries</a>
                                                 </li>
@@ -25,7 +26,7 @@ require_once 'display_components.php';
 							<a href="<?=$toRoot?>Debates"><i class="icon-chat"></i>Debates</a>
 						</li>
 
-						<li class="main-dropdown" id="main-nav-more">
+						<li class="more-dropdown" id="main-nav-more">
 							<a href="#"><i class="icon-plus"></i>More</i></a>
 							<ul>
 								<li>
@@ -84,36 +85,46 @@ require_once 'display_components.php';
 	'<a href="https://www.eff.org/helpout" title="Support the EFF!"><img src="'.$toRoot.'images/eff.jpg" alt="support the eff"> <i class="icon-cc-nc"></i></a>', 
 	'<a href="http://www.kiva.org/" title="loan some cash to thos he can use it"><img src="'. $toRoot.'images/kiva-logo.png" alt="Microloans to move people forward"><i class="icon-cc-nc"></i></a>',
 	'<a href="http://www.givingwhatwecan.org/why-give/myths-about-aid" title="info how to donate to charity"><img src="'.$toRoot.'images/what-we-can.jpg" alt=""> <i class="icon-cc-nc"></i></a>',      
-        '<a href="http://projecthealthychildren.org/" title="Project Healthy Children"><img src="'.$toRoot.'images/phc-logo.jpg" alt=""> <i class="icon-cc-nc"></i></a>',
-        '<a href="http://www.againstmalaria.com/"><img src="'.$toRoot.'images/a-g-f-logo.jpg" alt="charity working to fight malaria globally"> <i class="icon-cc-nc"></i></a>',
-        '<a href="http://www.givedirectly.org/"><img src="' .$toRoot .'images/givedirectly.jpg" alt="charity working with some of poorest poeple in the world"> <i class="icon-cc-nc"></i></a>',
-        '<a href="https://www.khanacademy.org/about"><img src="'.$toRoot.'images/khan-academy.jpg" alt="Khan academy provdes free education to any one with the internet"> <i class="icon-cc-nc"></i></a>'
+    '<a href="http://projecthealthychildren.org/" title="Project Healthy Children"><img src="'.$toRoot.'images/phc-logo.jpg" alt=""> <i class="icon-cc-nc"></i></a>',
+    '<a href="http://www.againstmalaria.com/"><img src="'.$toRoot.'images/a-g-f-logo.jpg" alt="charity working to fight malaria globally"> <i class="icon-cc-nc"></i></a>',
+    '<a href="http://www.givedirectly.org/"><img src="' .$toRoot .'images/givedirectly.jpg" alt="charity working with some of poorest poeple in the world"> <i class="icon-cc-nc"></i></a>',
+    '<a href="https://www.khanacademy.org/about"><img src="'.$toRoot.'images/khan-academy.jpg" alt="Khan academy provdes free education to any one with the internet"> <i class="icon-cc-nc"></i></a>'
 
 	 );
 ?>
+				<span class="charity">
 				<?=$adds[mt_rand(0,6)]?>
-                                <span><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- left-adds -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9470638740363065"
-     data-ad-slot="5153912635"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
- <i class="icon-money"></i></span>
+				</span>
+            	<span class="paid">
+	            	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- left-adds
+					<ins class="adsbygoogle"
+					     style="display:block"
+					     data-ad-client="ca-pub-9470638740363065"
+					     data-ad-slot="5153912635"
+					     data-ad-format="auto"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>  --!>
+					 <i class="icon-money"></i>
+				</span>
+				<span class="charity">
 				<?=$adds[mt_rand(0,6)]?>
-                                <span>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9470638740363065"
-     data-ad-slot="5153912635"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script><i class="icon-money"></i></span>
+				</span>
+				<span class="paid">
+				<!-- left-adds
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<ins class="adsbygoogle"
+					     style="display:block"
+					     data-ad-client="ca-pub-9470638740363065"
+					     data-ad-slot="5153912635"
+					     data-ad-format="auto"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					--!>
+					<i class="icon-money"></i>
+				</span>
 			</div>
 			<!-- Push Wrapper -->
 			<div class="mp-pusher" id="mp-pusher" style="-webkit-transform: translate3d(0, 0, 0);">
