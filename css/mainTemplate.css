@@ -382,8 +382,6 @@ border-left:solid 1px #ccc;
 }
 
 #main-site li:hover{
-	border-top-right-radius: 1em;
-	border-top-left-radius: 1em;
 	background: rgba(0, 0, 0, 0.6);
 }
 #main-site li .main-dropdown a:after{
@@ -396,8 +394,7 @@ border-left:solid 1px #ccc;
 }
 
 #main-site li ul li:last-child{
-	border-bottom-right-radius: 1em;
-	border-bottom-left-radius: 1em;
+
 }
 #menu-icon{
 	border-radius: 0.2em;
@@ -1999,7 +1996,17 @@ font-size:1.2em;
 		width: 335%;
 	}
 	.category{
-		display:none;
+		display: none;
+		position: static;
+		font-size: 1rem;
+	}
+
+	#menu-icon span{
+		background: white;
+	}
+	.category-text{
+		color:white;
+		position:static;
 	}
 	.main-dropdown{
 		display:block;

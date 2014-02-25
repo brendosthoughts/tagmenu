@@ -1,4 +1,4 @@
-<h2> Most Recent </h2>
+<h2 id="page-title"> Most Recent </h2>
 <div id="recentMain" class="owl-carousel main">
 <?php
 try
@@ -67,10 +67,16 @@ $vid_type[$vid_num]= $value['tag_type_name'];
 
 
 <div class="centerhorizontaladd">
-  <span> far left <i class="icon-money"></i></span>
-  <span> middle left <i class="icon-money"></i></span>
-  <span> middle right<i class="icon-money"></i></span>
-  <span> far left<i class="icon-money"></i></span>
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-9470638740363065"
+               data-ad-slot="5153912635"
+               data-ad-format="auto"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script> 
 </div>
 
 <?php 

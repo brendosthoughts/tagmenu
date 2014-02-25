@@ -92,12 +92,12 @@ require_once 'display_components.php';
 
 	 );
 ?>
-				<span class="charity">
+				<span class="charity" id="charity-1">
 				<?=$adds[mt_rand(0,6)]?>
 				</span>
-            	<span class="paid">
+            	<span class="paid" id="left-paid-1">
 	            	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!-- left-adds
+				 	
 					<ins class="adsbygoogle"
 					     style="display:block"
 					     data-ad-client="ca-pub-9470638740363065"
@@ -105,14 +105,12 @@ require_once 'display_components.php';
 					     data-ad-format="auto"></ins>
 					<script>
 					(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>  --!>
-					 <i class="icon-money"></i>
+					</script> 
 				</span>
-				<span class="charity">
+				<span class="charity" id="charity-2">
 				<?=$adds[mt_rand(0,6)]?>
 				</span>
-				<span class="paid">
-				<!-- left-adds
+				<span class="paid" id="left-paid-2">
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<ins class="adsbygoogle"
 					     style="display:block"
@@ -122,8 +120,6 @@ require_once 'display_components.php';
 					<script>
 					(adsbygoogle = window.adsbygoogle || []).push({});
 					</script>
-					--!>
-					<i class="icon-money"></i>
 				</span>
 			</div>
 			<!-- Push Wrapper -->
