@@ -122,31 +122,21 @@ require_once 'display_components.php';
 					</script>
 				</span>
 			</div>
-			<!-- Push Wrapper -->
-			<div class="mp-pusher" id="mp-pusher" style="-webkit-transform: translate3d(0, 0, 0);">
-				<!-- scroller -->
-				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
-					<div class="scroller-inner">
-						<?php include $subTemplate; ?>
-							
-						<footer class="main-footer"> 
-							<ul class="about"><a href="#"> About </a>
-							  <li> <a href="#"> </a></li>
-							</ul>
-						<footer>
-
-					</div><!-- /scroller-inner -->
-					
-				</div><!-- /scroller -->
+			<!-- main-content-->
+			<div class="main-wrapper">
+				<?php include $subTemplate; ?>
 				<!-- category-menu -->					
-			        <?php  
-						/*   THIS IS FOR LIVE SITE */
-                          	print_tag_nav($toRoot);
-		                ?>
+		        <?php  
+					/*   THIS IS FOR LIVE SITE */
+                      	print_tag_nav($toRoot);
+	                ?>
+		    </div>
+		    <footer class="main-footer"> 
+				<ul class="about"><a href="#"> About </a>
+				  <li> <a href="#"> </a></li>
+				</ul>
+			<footer>
 		                <!-- end of category-menu -->
-
-			</div><!-- /pusher -->
-
 		</div><!-- /container -->
 <?php
     return ob_end_flush();

@@ -1,6 +1,7 @@
 <?php 
 function print_tail($subTemplate, $toRoot){ ob_start(); ?>
-		<script src="<?=$toRoot?>js/mlpushmenu.js"></script>
+    <script src="js/jquery.simplemodal.js"></script>
+		<script src="<?=$toRoot?>js/modal.js"></script>
 		<script src="<?=$toRoot?>js/uisearch.js"></script>
 		<script src="<?=$toRoot?>js/nav-dropdown.js"></script>
         <script src="<?=$toRoot?>js/classie.js"></script>

@@ -74,23 +74,9 @@ font-size: 1.3em
 
 .centerhorizontaladd{
   display:block;
-width: 100%;
-height: 150px;
-background: grey;
-margin: 2em 0;
-}
-
-.centerhorizontaladd span{
-  float: left;
-  position:relative;
-  display: block;
-  width: 22%;
-  height: 100%;
-  border: blue;
-  margin: 0 1%;
-  background: #ccc;
-  border: 0.5em #333333 inset;
-  color: black;
+  width: 100%;
+  height: 150px;
+  margin: 2em 0;
 }
 /* =============================================================================================================================
   Owl Carousel Owl Demo Theme v1.24
@@ -406,8 +392,7 @@ margin: 2em 0;
 
 .owl-theme .owl-controls .owl-buttons div {
   position: absolute;
-  font-size: 3em;
-}
+  font-size: 3em}
  .owl-theme .owl-controls .owl-buttons .owl-prev{
   left: -50px;
   top: 110px; 
@@ -426,18 +411,17 @@ margin: 2em 0;
 }
  .owl-theme .owl-controls .owl-buttons .owl-next::before{
   font-family: 'fontello';
-  position: absolute;
   content: "\e82e";
   font-size: 1.3em;
   color: white;
 }
 #recentSub .owl-controls .owl-buttons .owl-prev{
-  left: 29px;
+  left: -10px;
   top: 50px; 
 }
  
 #recentSub .owl-controls .owl-buttons .owl-next{
-  right: 29px;
+  right: -10px;
   top: 50px;
 }
  

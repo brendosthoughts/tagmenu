@@ -108,17 +108,17 @@ function print_tag_nav($toRoot){
         /*** loop over the array and create the listing ***/
   	$msg = '    <nav id="category-menu" class="category-menu">
                                         <div class="mp-level">
-                                                <ul>
+                                                <ul class="main-category-list">
 		';
         foreach($res as $val)
         {
 	   if($val['tag_name']!=="unlisted"){
-	         $msg .= '<li class="icon icon-arrow-left">
-			    <a class="icon icon-display" href="#">' . $val['tag_name'] . '</a>
+	         $msg .= '<li class="single-category">
+			    <a href="#" class="category-link">' . $val['tag_name'] . '</a>
 			    <div class="mp-level">
-			        <a class="category-all" href="' . $toRoot . 'Category/' .clean_url($val['tag_name'])  .  '"><h2 class="icon icon-display">' . $val['tag_name'] . '</h2></a>
-			        <a class="mp-back" href="#">back</a>
-				<ul>';
+			        <a class="category-all" href="' . $toRoot . 'Category/' .clean_url($val['tag_name'])  .  '"><h4>' . $val['tag_name'] . '<span>all videos</span></h4></a>
+			        <a class="mp-back" href="#">Back</a>
+				<ul class="subtag-list">';
 		 $sql = "SELECT * FROM phpro_tag_targets targets 
 		 INNER JOIN sub_tags ON targets.sub_tag_id = sub_tags.sub_tag_id
 		 WHERE tag_id=".$val['tag_id']. "
