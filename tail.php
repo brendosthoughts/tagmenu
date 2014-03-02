@@ -1,16 +1,14 @@
 <?php 
 function print_tail($subTemplate, $toRoot){ ob_start(); ?>
-    <script src="js/jquery.simplemodal.js"></script>
-		<script src="<?=$toRoot?>js/modal.js"></script>
+
 		<script src="<?=$toRoot?>js/uisearch.js"></script>
 		<script src="<?=$toRoot?>js/nav-dropdown.js"></script>
-        <script src="<?=$toRoot?>js/classie.js"></script>
+
         <script src="<?=$toRoot?>js/jRating.jquery.min.js"></script>
 
         <?php if($subTemplate =="home.php"){ ?>
                 <script src="<?=$toRoot?>js/homeSetup.js"></script>
         <?php }else if($subTemplate=="playvideo.php"){ ?>
-  <script src="<?=$toRoot?>js/jquery.jnotify.min.js"></script>
 
   <script src="<?=$toRoot?>js/playvideo.js"></script>
 

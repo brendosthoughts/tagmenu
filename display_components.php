@@ -151,3 +151,21 @@ function print_tag_nav($toRoot){
 
 ?>
 
+<?php 
+function centerhorizontaladd(){
+  ?>
+<div class="centerhorizontaladd paid">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-9470638740363065"
+               data-ad-slot="5153912635"
+               data-ad-format="auto"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script> 
+</div>
+<?php 
+}
+ ?>

@@ -1713,10 +1713,13 @@ font-size:1.2em;
 		left:8%;
 	}
 	.paid{
-		    width: 730px;
+		    width: 100%;
 		    height:90px;
 		    display:block;
 		    margin: 1em auto;
+	}
+	.paid:before{
+		content: 'Advertisement';
 	}
 
 }

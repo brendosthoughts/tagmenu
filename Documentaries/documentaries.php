@@ -44,15 +44,30 @@ print_r($e);
 <div class="videos">
 
 <ul>
-<?php foreach($videos as $vid){ 
+<?php 
+$video_num= 0;
+foreach($videos as $vid){ 
 ?> 
     <li class="item link">
-	<?php display_video($vid, $toRoot); ?>
+	<?php display_video($vid, $toRoot); 
+    ?>
    </li>
 
+
 <?php 
+        if($vid_num++ == 7){
+            centerhorizontaladd();
+        }
 }
 ?>
+
+<script>
+if ( $(window).width() <  800){
+    $('.item').eq(3).before($('#left-paid-1'));
+    $('.item').eq(10).before($('#left-paid-2'));
+}
+
+</script>
 </ul>
 <?php echo "<div id='paginator_btns' >" . $tag_pages->display_pages() . "</div>";
  ?>
