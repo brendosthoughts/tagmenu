@@ -24,3 +24,26 @@ line-height: 2em;
 }
 	
 
+#paginator_btns{
+	width: 24em;
+	margin: 0 auto;
+	text-align: center;		
+	font-size: 1.3em;
+}
+#paginator_btns .inactive{
+	display: none;
+}
+.paginate{
+	width: 1.3em;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	border: #fff solid 1px;
+	color: #000;
+	padding:0.3em;
+}
+.current{
+	background: transparent;
+	color: white;
+	text-decoration: underline;
+	padding: 0.3em;
+}

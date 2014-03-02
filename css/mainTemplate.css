@@ -504,7 +504,8 @@ transform-origin: center center;
 
 .container {
 	width:100%;
-
+	overflow-x:hidden;
+	height:auto;
 	background: #272727;
 }
 
@@ -1676,11 +1677,8 @@ font-size:1.2em;
 .vidInfo .text p {
 	padding-right: 1em;
 }
-.add-left a:first-child{
+.add-left:first-child{
 	display:none;
-}
-.add-left span{
-	height: 25%;
 }
 
 }
@@ -1703,6 +1701,7 @@ font-size:1.2em;
 	} 
 	.add-left{
 		display:none;
+		/*these adds are handeled by javascript for where they are placed on a page from this width down*/
 	}
 	.mp-pusher{
 		width:100%;
@@ -1713,11 +1712,22 @@ font-size:1.2em;
 		top: 8%;
 		left:8%;
 	}
+	.paid{
+		    width: 730px;
+		    height:90px;
+		    display:block;
+		    margin: 1em auto;
+	}
 
 }
 
 
 @media only screen and (max-width: 46em){  /*736px*/
+	  .paid{
+    	width: 470px;
+    	height:60px;
+  	}
+
 	.share-search-wrapper{
 		font-size: 80%;
 	}
@@ -1958,4 +1968,11 @@ font-size:1.2em;
 		width: 98%;
 		margin-left:1%;
 	}
+}
+@media only screen and (max-width: 25em){ /*400px*/
+  .paid{
+
+    width:320px;
+    height: 50px;
+  }
 }

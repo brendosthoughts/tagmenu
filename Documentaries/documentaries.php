@@ -17,7 +17,7 @@ WHERE tag_target_id IN (
     $count = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $tag_pages = new Paginator;
     $tag_pages->items_total = $count[0]['COUNT(*)'];
-    $tag_pages->mid_range = 9;
+    $tag_pages->mid_range = 7;
     $tag_pages->paginate();
     $sql = "SELECT *
 FROM content c
@@ -39,6 +39,7 @@ print_r($e);
 ?>
 
 <h2>Documentaries</h2>
+
 
 <div class="videos">
 

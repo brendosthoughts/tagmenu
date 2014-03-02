@@ -66,7 +66,7 @@ $vid_type[$vid_num]= $value['tag_type_name'];
 </div>
 
 
-<div class="centerhorizontaladd">
+<div class="centerhorizontaladd paid">
  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           
           <ins class="adsbygoogle"
@@ -78,6 +78,13 @@ $vid_type[$vid_num]= $value['tag_type_name'];
           (adsbygoogle = window.adsbygoogle || []).push({});
           </script> 
 </div>
+<script>
+if ( $(window).width() <  800){
+    $('#left-paid-2').remove();
+    $('#page-title').before($('#left-paid-1'));
+}
+
+</script>
 
 <?php 
   }catch(exception $e){
