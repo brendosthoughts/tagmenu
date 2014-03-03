@@ -89,7 +89,16 @@ try
 		</video></div>
 	    <div id="vid_social_bar" class= "vid_sharing">
 		<div class="ratingWidget">
-                	<div class="ratingStars <?php if(!$vid[num_ratings]){echo 'noRating';}?>" data-average="<?= $vid['rating']/$vid['num_ratings'] ?>" data-id="<?=$vid['content_id']?>"></div><span class="num_ratings"><?=$vid['num_ratings']?></span>
+                	<div class="ratingStars 
+                	data-average="
+                	<?php if($vid[num_ratings]==0){echo 2.5;}                	
+                	else{
+                		echo $vid['rating']/$vid['num_ratings']; 
+                	}
+                	?>" 
+                	data-id="<?=$vid['content_id'] ?>">
+                	</div>
+                	<span class="num_ratings"><?=$vid['num_ratings'] ?></span>
                 </div>
 		<button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
                 <button class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i>Facebook</button>

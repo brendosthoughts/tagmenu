@@ -4,8 +4,8 @@ function print_tail($subTemplate, $toRoot){ ob_start(); ?>
 		<script src="<?=$toRoot?>js/uisearch.js"></script>
 		<script src="<?=$toRoot?>js/nav-dropdown.js"></script>
 
-        <script src="<?=$toRoot?>js/jRating.jquery.min.js"></script>
-
+        <script src="<?=$toRoot?>js/jquery.simplemodal.js"></script>
+        <script src="<?=$toRoot?>js/modal.js"></script>
         <?php if($subTemplate =="home.php"){ ?>
                 <script src="<?=$toRoot?>js/homeSetup.js"></script>
         <?php }else if($subTemplate=="playvideo.php"){ ?>

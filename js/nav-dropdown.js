@@ -5,28 +5,15 @@ $(document).ready(function(){
 		$('.main-navigation').slideToggle( "slow" );
 	});
 
-	oldSize=$(window).width();
-	if(oldSize < 850){
-		large2mediumScreen();
-	}
-	if(oldSize < 512){
-		change2smallScreen();
-	}
-
+	initialSize=$(window).width();
 	$(window).resize(function(){
 		windowSize= $(window).width();
-		if( ( windowSize< 850)&&(oldSize < 512) ){
-			small2mediumScreen();
-			oldSize=750; // set to a random window size inbetween 800 and 512 exact number is not necesary
-		}else if( (windowSize > 850 )&&(oldSize < 850) ){
-			medium2largeScreen();
+		if( ( windowSize > 800)&&(initialSize < 800) ){ /*smaller to bigger screen add left comes into size*/
+			small2largeScreen();
+			oldSize=750; 
+		}else if( (windowSize < 800 )&&(initialSize > 800) ){/*bigger to smaller screen add left leaves the screen*/
+			large2smallScreen();
 			oldSize=900;
-		}else if ( (windowSize < 850 )&&(oldSize > 850) ){
-			large2mediumScreen();
-			oldSize=750;
-		}else if( (windowSize < 512)&&(oldSize>512) ){
-			change2smallScreen();
-			oldSize=500;
 		}
 	});
 	var previousTarget=null;

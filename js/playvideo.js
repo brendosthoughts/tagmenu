@@ -76,7 +76,6 @@ $(document).ready(function() {
 
     }
     new UISearch( document.getElementById( 'sb-search' ) );
-    new mlPushMenu( document.getElementById( 'category-menu' ), document.getElementById( 'trigger' ), document.getElementById('menu-icon') );
     var more = document.getElementById("main-nav-more");
     more.addEventListener("click", handleDropDown, false);
     $('.more').click( function(){
@@ -85,7 +84,7 @@ $(document).ready(function() {
     });
 		
     //rating widget 
-    $('.ratingStars').jRating({
+    /*$('.ratingStars').jRating({
       length:5,
       decimalLength:1,
       rateMax:10,
@@ -102,7 +101,7 @@ $(document).ready(function() {
       onError : function(){
 	jError('Error : please retry');
       }
-    });
+    });*/
 
 
 

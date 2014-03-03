@@ -17,13 +17,14 @@ function print_header($subTemplate, $toRoot, $meta){ ob_start(); ?>
 		<link rel="stylesheet" href="<?= $toRoot ?> css/home.css">
 		<script src="<?= $toRoot ?>js/owl.carousel.min.js"></script>
 	<?php }else if($subTemplate =="playvideo.php"){ ?>
-	<title><?= $meta['tag_type_name'] . ' | ' . $meta['title'] ?> </title>
-	<meta name="description" content="<?=substr($meta['description'], 0, 145) . '...' ?>">
-	<link rel="stylesheet" href="<?= $toRoot ?>css/playvideo.css">
-<link href='<?=$toRoot ?>js/videojs-youtube-master/lib/video-js.css' rel='stylesheet'>
-<script src='<?=$toRoot ?>js/videojs-youtube-master/lib/video.js'></script>
-<script src='<?=$toRoot ?>js/videojs-youtube-master/vjs.youtube.js'></script>
-		
+		<title><?= $meta['tag_type_name'] . ' | ' . $meta['title'] ?> </title>
+		<meta name="description" content="<?=substr($meta['description'], 0, 145) . '...' ?>">
+		<link rel="stylesheet" href="<?= $toRoot ?>css/playvideo.css">
+		<link rel="stylesheet" href="<?=$toRoot?>js/videoJS/video-js.css">
+		<link href='<?=$toRoot ?>js/videojs-youtube-master/lib/video-js.css' rel='stylesheet'>
+		<script src='<?=$toRoot ?>js/videoJS/video.js'></script>
+		<script src='<?=$toRoot ?>js/videoJS-youtube/vjs.youtube.js'></script>
+	
 	<?php
 	}else if($subTemplate == "producers.php"){
 	?>
