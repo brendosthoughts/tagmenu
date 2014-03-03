@@ -131,8 +131,7 @@ text-align:center;
     height:     2.5em;  
     position:relative;
     top:0.5em;
-    font-size:0.7em;
-    font-size: 1.0vw;
+    font-size:0.8em;
 }  
 
 .total_votes {
@@ -176,55 +175,12 @@ text-align:center;
 	border-bottom-right-radius: 1em;
 
 }
-.vid_sharing button{
-	display:inline-block;
-	white-space: nowrap;
-	margin: 0.5em 0em 0.5em 0em;
-	padding:0.4em;
-	color: white;
-	font-size:0.9em;
-	font-size: 1.0vw;
-	border-radius: 0.3em;
-}
 .vid_sharing i{
-   border-right: 1px solid white;
-   margin-right: 5px;
+	font-size: 2em;
+	color: rgba(255, 255, 255, 0.7);
 }
+
 .vid_sharing i::hover{
 	color:white;
 }
-#twitter{
-	  background-color: #41b7d8;
-  border-color: #41b7d8;
-}
-#facebook{
-	  background-color: #3b5997;
-  border-color: #3b5997;
-}
-#gplus{
-  background-color: #d64937;
-  border-color: #d64937;
-}
-#linkedin{
-  background-color: #0073b2;
-  border-color: #0073b2;
-}
-#linkedin i{
-	padding-right: 5px;
-}
-#stumbleupon{
-	background-color: #FC3D2F;
-  	border-color: #FC3D2F;
-}
-#stumbleupon i{
-	padding-right: 5px;
-}
-#reddit{
-	background-color: #CEE3F8;
-	border-color: #CEE3F8;
-	color:black;
-}
-#reddit i{
-	padding-right: 5px;
-	border-color: black;
-}
+

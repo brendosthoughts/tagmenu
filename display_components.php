@@ -46,7 +46,7 @@ try{
 			}else if($tagging_info[0]['tag_type_name']=="Debate" ){
 				echo  $toRoot. "Debates/".clean_url($vid['title']);
 			}else if($tagging_info[0]['tag_type_name']=="Talk" ){
-                                echo $toRoot. "Talks/".clean_url($vid['title']);
+        echo $toRoot. "Talks/".clean_url($vid['title']);
 			}
 		}else{ echo clean_url($vid['title']);} ?>" title="Play Video">
         <img src="<?=$vid['cover_img']?>" alt="img title">

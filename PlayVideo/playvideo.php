@@ -100,12 +100,15 @@ try
                 	</div>
                 	<span class="num_ratings"><?=$vid['num_ratings'] ?></span>
                 </div>
-		<button class="share_link" id="twitter"><i class="icon-twitter-1"></i>Twitter</button>
-                <button class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i>Facebook</button>
-                <button class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i>Google+</button>
-                <button class="share_link" id="linkedin" ><i>in</i>LinkedIn</button>
-                <button class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i>StumbleUpon</button>
-                <button class="share_link" id="reddit"> <i class="icon-reddit"></i> reddit </button>
+                <a href="#" title="share page to facebook" class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i></a>
+				<a href="#" title="share page to twitter" class="share_link" id="twitter"><i class="icon-twitter-1"></i></a>
+                <a href="#" title="share page to google plus" class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i></a>
+                <a href="#" title="share page to Tumblr" class="share_link" id="tumblr"> <i class="icon-tumblr-1"></i></a>
+                <a href="#" title="share page to linkedin" class="share_link" id="linkedin" ><i>in</i></a>
+                <a href="#" title="share page to stumbleupon" class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i></a>
+                <a href="#" title="share page to reddit" class="share_link" id="reddit"> <i class="icon-reddit"></i></a>
+                <a href="#" title="share page via email" class="share_link" id="email"> <i class="icon-mail-alt"></i></a>
+
          </div>
 
 

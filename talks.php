@@ -1,5 +1,6 @@
 <?php 
 require_once("../../paginator.class.php");
+$toRoot='../';
 try{
 	
     $sql = "SELECT COUNT(*)
@@ -38,7 +39,7 @@ print_r($e);
 <?php foreach($videos as $vid){ 
 ?> 
     <li class="item link">
-	<?php display_video($vid); ?>
+	<?php display_video($vid, $toRoot); ?>
    </li>
 
 <?php 

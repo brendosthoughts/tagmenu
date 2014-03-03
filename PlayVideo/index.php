@@ -24,6 +24,8 @@ try{
         $vid = $stmt->fetch(PDO::FETCH_ASSOC);
 	$meta_data=$vid;
 }catch(Exception $e){
+        echo "something terrible has happened ... sorry about this";
+        exit();
 
 }
 
