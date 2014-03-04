@@ -68,9 +68,6 @@ try
 		}?>
 	</div>
 
-	<div class="vid_holder">
-
-		<div id="video_wrapper">
 			<div class="vid_overlay">
 				<h2 class="vid_title"><?=$vid['title']?></h2>
 				<div class="vid_maker_info">
@@ -80,6 +77,9 @@ try
 					</span>
 				</div>
 			</div>
+	<div class="vid_holder">
+
+		<div id="video_wrapper">
 			<video id="feature_video"
 			      class="video-js vjs-mk-skin"
 			      controls
