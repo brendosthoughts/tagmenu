@@ -39,6 +39,8 @@ function openWin(url, w, h) {
     }
 }
 
+
+
 $(".share_link").click(function() {
   var shareType= this;
   var sharePage = encodeURIComponent(window.location);
@@ -62,6 +64,8 @@ $(".share_link").click(function() {
 });
 
 $(document).ready(function() {
+  $('.vjs-poster').append( $('.vid_overlay') );
+  $('.vid_overlay').css('display', 'block');
 	
 //set up nav  menus
     function hasClass(element, cls) {
@@ -78,10 +82,7 @@ $(document).ready(function() {
     new UISearch( document.getElementById( 'sb-search' ) );
     var more = document.getElementById("main-nav-more");
     more.addEventListener("click", handleDropDown, false);
-    $('.more').click( function(){
-		    $('.vid_description').css("overflow-y", "scroll");
-		    $('.more').css("display","none");;
-    });
+
 		
     //rating widget 
     /*$('.ratingStars').jRating({

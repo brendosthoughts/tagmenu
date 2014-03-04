@@ -53,7 +53,7 @@ try
 }
 
 ?>
-<h2 class="vid_title"><?=$vid['title']?></h2>
+
 
 	<div class="vid_cats">
 		<?php foreach($tags as $tag){
@@ -68,84 +68,88 @@ try
 		}?>
 	</div>
 
-<div class="page_center">
 	<div class="vid_holder">
-		<div class="vid_maker_info">
-			<span class="vid_type"><?=$vid['tag_type_name']?></span>
-			  made by : <span class="vid_publisher"><?=$vid['pub_name']?> </span> 
-			from <span class="pub_date"><?=$vid['pub_date'] ?> 
-			</span>
-		</div>
+
 		<div id="video_wrapper">
-
-		<video id="feature_video"
-		      class="video-js vjs-default-skin"
-		      controls
-		      height= "264"
-		      width= "600"
-		      preload="auto"
-		      poster="<?=$vid['cover_img'] ?>"
-		      data-setup='{"techOrder":["youtube"], "src":"<?=$vid['src_link']?>"}'>
-		</video></div>
-	    <div id="vid_social_bar" class= "vid_sharing">
-		<div class="ratingWidget">
-                	<div class="ratingStars 
-                	data-average="
-                	<?php if($vid[num_ratings]==0){echo 2.5;}                	
-                	else{
-                		echo $vid['rating']/$vid['num_ratings']; 
-                	}
-                	?>" 
-                	data-id="<?=$vid['content_id'] ?>">
-                	</div>
-                	<span class="num_ratings"><?=$vid['num_ratings'] ?></span>
-                </div>
-                <a href="#" title="share page to facebook" class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i></a>
-				<a href="#" title="share page to twitter" class="share_link" id="twitter"><i class="icon-twitter-1"></i></a>
-                <a href="#" title="share page to google plus" class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i></a>
-                <a href="#" title="share page to Tumblr" class="share_link" id="tumblr"> <i class="icon-tumblr-1"></i></a>
-                <a href="#" title="share page to linkedin" class="share_link" id="linkedin" ><i>in</i></a>
-                <a href="#" title="share page to stumbleupon" class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i></a>
-                <a href="#" title="share page to reddit" class="share_link" id="reddit"> <i class="icon-reddit"></i></a>
-                <a href="#" title="share page via email" class="share_link" id="email"> <i class="icon-mail-alt"></i></a>
-
-         </div>
-
-
-	</div>
-	<div id="vid_description" class="vid_right">
-		<article class="vid_description">
-			<h4> Description: </h4>
-				<?=$vid['description'] ?>
-		</article>
-		<button id="full_description" class="more">...more</button>
-	</div>
-
-</div>
-<div class= "add_below_vid">
-		<span class="single_add">advertise with us </span>
-		<span class="single_add">ur add here</span>
-		<span class="single_add">advertise with us </span>		
-		<span class="single_add">ur add here</span>
-</div>
-<div class="below_vid"> 
-
-	<div class="bullshit_bar bullshit_rating" >
-
-
-	</div>
-
-	<div class="similar_videos">
-		<div class="type_similar">
-		    similar videos in an owl carousel of the same video type
+			<div class="vid_overlay">
+				<h2 class="vid_title"><?=$vid['title']?></h2>
+				<div class="vid_maker_info">
+					<span class="vid_type"><?=$vid['tag_type_name']?></span>
+					  made by : <span class="vid_publisher"><?=$vid['pub_name']?> </span> 
+					from <span class="pub_date"><?=$vid['pub_date'] ?> 
+					</span>
+				</div>
+			</div>
+			<video id="feature_video"
+			      class="video-js vjs-mk-skin"
+			      controls
+			      height= "264"
+			      width= "600"
+			      preload="auto"
+			      poster="<?=$vid['cover_img'] ?>"
+			      data-setup='{"techOrder":["youtube"], "src":"<?=$vid['src_link']?>"}'>
+			</video>
 		</div>
-		<div class="other_types_similar">
-			similar videos in an owl carousel off other types
+	</div>
+	<div class="vid_info">
+		<div id="vid_social_bar" class= "vid_sharing">
+			<div class="ratingWidget">
+		        <div class="ratingStars 
+		        	data-average="
+		        	<?php if($vid[num_ratings]==0){echo 2.5;}                	
+		        	else{
+		        		echo $vid['rating']/$vid['num_ratings']; 
+		        	}
+		        	?>" 
+		        	data-id="<?=$vid['content_id'] ?>">
+		        </div>
+	        	<span class="num_ratings"><?=$vid['num_ratings'] ?></span>
+	      	</div>
+        	<a href="#" title="share page to facebook" class="share_link" id="facebook"><i class="icon-facebook" target="_blank"></i></a>
+			<a href="#" title="share page to twitter" class="share_link" id="twitter"><i class="icon-twitter-1"></i></a>
+        	<a href="#" title="share page to google plus" class="share_link" id="gplus"><i class="icon-gplus" target="_blank"></i></a>
+        	<a href="#" title="share page to Tumblr" class="share_link" id="tumblr"> <i class="icon-tumblr-1"></i></a>
+        	<a href="#" title="share page to linkedin" class="share_link" id="linkedin" ><i class="icon-linked-in">in</i></a>
+        	<a href="#" title="share page to stumbleupon" class="share_link" id="stumbleupon"> <i class="icon-stumbleupon"></i></a>
+        	<a href="#" title="share page to reddit" class="share_link" id="reddit"> <i class="icon-reddit"></i></a>
+        	<a href="#" title="share page via email" class="share_link" id="email"> <i class="icon-mail-alt"></i></a>
+    	</div>
+
+    	<article class="vid_description">
+    		<span class="text-title">Description:</span>
+			<?=$vid['description'] ?>
+		</article>	
+		<div class= "paid">
+			 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	          <ins class="adsbygoogle"
+	               style="display:block"
+	               data-ad-client="ca-pub-9470638740363065"
+	               data-ad-slot="5153912635"
+	               data-ad-format="auto"></ins>
+	          <script>
+	          (adsbygoogle = window.adsbygoogle || []).push({});
+	          </script> 
 		</div>
-	</div>	
-</div>
-<div class="comments">
-	
-</div>
+	</div>
+
+	<div class="below_vid"> 
+
+		<div class="bullshit_bar bullshit_rating" >
+
+
+		</div>
+
+		<div class="similar_videos">
+			<div class="type_similar">
+			    similar videos in an owl carousel of the same video type
+			</div>
+			<div class="other_types_similar">
+				similar videos in an owl carousel off other types
+			</div>
+		</div>	
+	</div>
+	<div class="comments">
+		
+	</div>
 
 
