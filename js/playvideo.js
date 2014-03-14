@@ -1,7 +1,7 @@
  // credit to Dave Rupbert for videojs resizing
  // he kick's ass at life and everything to do with web development!
  // Once the video is ready
-  videojs("feature_video").ready(function(){
+/*  videojs("feature_video").ready(function(){
 
     var myPlayer = this;    // Store the video object
     var aspectRatio = 9/16; // Make up an aspect ratio
@@ -18,7 +18,7 @@
     resizeVideoJS(); // Initialize the function
     window.onresize = resizeVideoJS; // Call the function on resize
   });
-
+*/
 //credit below function to Tony Mancini of stack overflow with originial credit to 
 // http://www.xtf.dk/2011/08/center-new-popup-window-even-on.html
 function openWin(url, w, h) {

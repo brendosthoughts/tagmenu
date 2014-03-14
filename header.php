@@ -20,9 +20,9 @@ function print_header($subTemplate, $toRoot, $meta){ ob_start(); ?>
 		<title><?= $meta['tag_type_name'] . ' | ' . $meta['title'] ?> </title>
 		<meta name="description" content="<?=substr($meta['description'], 0, 145) . '...' ?>">
 		<link rel="stylesheet" href="<?= $toRoot ?>css/playvideo.css">
-		<link rel="stylesheet" href="<?=$toRoot?>js/videoJS/mk-video.css">
-		<script src='<?=$toRoot ?>js/videoJS/video.js'></script>
-		<script src='<?=$toRoot ?>js/videoJS-youtube/vjs.youtube.js'></script>
+		<link rel="stylesheet" href="<?=$toRoot?>js/video.js/dist/video-js/video-js.css">
+		<script src='<?=$toRoot ?>js/video.js/dist/video-js/video.js'></script>
+		<script src='<?=$toRoot ?>js/video.js/bower_components/videojs-youtube/vjs.youtube.js'></script>
 	
 	<?php
 	}else if($subTemplate == "producers.php"){

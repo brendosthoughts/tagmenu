@@ -81,20 +81,21 @@ try
 
 		<div id="video_wrapper">
 			<video id="feature_video"
-			      class="video-js vjs-mk-skin"
+			      class="video-js vjs-default-skin"
 			      controls
 			      height= "264"
 			      width= "600"
+			      src=""
 			      preload="auto"
 			      poster="<?=$vid['cover_img'] ?>"
-			      data-setup='{"techOrder":["youtube"], "src":"<?=$vid['src_link']?>"}'>
+			      data-setup='{"techOrder": ["youtube"], "src":"<?=$vid['src_link']?>"}'>
 			</video>
 		</div>
 	</div>
 	<div class="vid_info">
 		<div id="vid_social_bar" class= "vid_sharing">
 			<div class="ratingWidget">
-		        <div class="ratingStars 
+		        <div class="ratingStars
 		        	data-average="
 		        	<?php if($vid[num_ratings]==0){echo 2.5;}                	
 		        	else{
