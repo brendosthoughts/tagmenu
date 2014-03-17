@@ -20,7 +20,7 @@ function print_header($subTemplate, $toRoot, $meta){ ob_start(); ?>
 		<title><?= $meta['tag_type_name'] . ' | ' . $meta['title'] ?> </title>
 		<meta name="description" content="<?=substr($meta['description'], 0, 145) . '...' ?>">
 		<link rel="stylesheet" href="<?= $toRoot ?>css/playvideo.css">
-		<link rel="stylesheet" href="<?=$toRoot?>js/videojs-mk/dist/video-js/video-js.css">
+		<link rel="stylesheet" href="<?=$toRoot?>css/vjs-mk.css">
 		<script src='<?=$toRoot ?>js/videojs-mk/dist/video-js/video.js'></script>
 		<script src='<?=$toRoot ?>js/videojs-mk/bower_components/videojs-youtube/vjs.youtube.js'></script>
 	

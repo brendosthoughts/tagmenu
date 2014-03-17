@@ -85,7 +85,7 @@ $(document).ready(function() {
 
 		
     //rating widget 
-    $('.ratingStars').jRating({
+/*    $('.ratingStars').jRating({
       length:5,
       decimalLength:1,
       rateMax:10,
@@ -103,7 +103,7 @@ $(document).ready(function() {
 	jError('Error : please retry');
       }
     });
-
+*/
 
 
 });
