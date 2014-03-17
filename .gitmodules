@@ -1,0 +1,3 @@
+[submodule "js/videojs-mk"]
+	path = js/videojs-mk
+	url = https://github.com/brendosthoughts/videojs-mk.git
