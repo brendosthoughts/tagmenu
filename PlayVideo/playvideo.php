@@ -55,21 +55,22 @@ try
 ?>
 
 
-	<div class="vid_cats">
-		<?php foreach($tags as $tag){
-			echo '<div class="vidCategory">';
-			echo '<a href="' .$toRoot. 'Categories/?id=' .$tag['tag_id']. '" class="vid_cat" title="Video Category">'.$tag['tag_name'] .' </a>';
-			foreach($sub_tags as $subtag){
-				if($subtag['tag_id']==$tag['tag_id']){
-					echo '<a href="'.$toRoot. 'SubTag/?id=' .$subtag['sub_tag_id'].'" class="subtag" title="subtag of the video">' .$subtag['sub_tag_name']. '</a>';
-				}
-			}
-			echo '</div>';
-		}?>
-	</div>
+	
 
 			<div class="vid_overlay">
 				<h2 class="vid_title"><?=$vid['title']?></h2>
+				<div class="vid_cats">
+					<?php foreach($tags as $tag){
+						echo '<div class="vidCategory">';
+						echo '<a href="' .$toRoot. 'Categories/?id=' .$tag['tag_id']. '" class="vid_cat" title="Video Category">'.$tag['tag_name'] .' </a>';
+						foreach($sub_tags as $subtag){
+							if($subtag['tag_id']==$tag['tag_id']){
+								echo '<a href="'.$toRoot. 'SubTag/?id=' .$subtag['sub_tag_id'].'" class="subtag" title="subtag of the video">' .$subtag['sub_tag_name']. '</a>';
+							}
+						}
+						echo '</div>';
+					}?>
+				</div>
 				<div class="vid_maker_info">
 					<span class="vid_type"><?=$vid['tag_type_name']?></span>
 					  made by : <span class="vid_publisher"><?=$vid['pub_name']?> </span> 
@@ -83,9 +84,9 @@ try
 			<video id="feature_video"
 			      class="video-js vjs-default-skin"
 			      controls
-			      height= "264"
-			      width= "600"
-			      src=""
+			      height="480"
+			      width:"600"
+			      src=" "
 			      preload="auto"
 			      poster="<?=$vid['cover_img'] ?>"
 			      data-setup='{"techOrder": ["youtube"], "src":"<?=$vid['src_link']?>"}'>

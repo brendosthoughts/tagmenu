@@ -12,7 +12,7 @@ videojs("feature_video").ready(function(){
       // Set width to fill parent element, Set height
       myPlayer.width(width).height( width * aspectRatio );
       //make the description same height as the video
-      document.getElementById("vid_description").style.height= $(".vid_holder").outerHeight();
+
     }
 
     resizeVideoJS(); // Initialize the function
@@ -65,6 +65,7 @@ $(".share_link").click(function() {
 
 $(document).ready(function() {
   $('.vjs-poster').append( $('.vid_overlay') );
+
   $('.vid_overlay').css('display', 'block');
 	
 //set up nav  menus

@@ -13,17 +13,6 @@ width: 100%;
 display:inline-block;
 float: left;
 }
-.vidCategory{
-   float: left;
-   display:block;
-   width: 15em;
-   padding-top: 0.5em;
-   margin: 0 2em;
-}
-.vidCategory:first-child{
-margin-left: calc(50% - 27em);
-text-align:center;
-}
 
 .vid_overlay{
 	width:100%;
@@ -37,6 +26,7 @@ text-align:center;
 	margin-top:0;
 	text-align: center;
 	position: relative;
+	display:block;
 	font-size:3em;
 	color:#ffffff;
 	z-index: 100;
@@ -48,33 +38,43 @@ text-align:center;
 	padding: 0.5em 1em;
 	background: rgba(33, 33, 33, 0.7);
 }
-}
+
 .vid_cats{
-	display:block;
-	width: 100%;
-	text-align:center;
-	display:block;
+	display: inline-block;
+	margin: auto;
+	position: absolute;
+	font-size: 1.1em;
+	bottom: 9em;
+	font-size: 0.9vw;
+}
+.vidCategory{
+position: absolute;
+display: inline-block;
+width: 15em;
+left: -7.5em;
+padding-top: 0.5em;
+margin: 0 auto;
 }
 .vid_cat {
   width:100%;
 display:block;
 font-size: 1.3em;
   padding-top: 0.2em;
-  border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
+  border-color: rgba(50, 50, 50 0.8);
+  border-radius: 0.3em;
   color:white;
-  background: grey;
+  background: rgba(50, 50, 50 ,0.7);
 }
 .vid_overlay{
 	display: none;
 }
 .subtag{
 display:inline-block;
-padding: 0.2em;
+padding: 0.3em;
 font-size: 0.9em;
 margin:0.4em 0.2em 0.2em 0.2em;
-background: grey;
-border-radius: 0.3em;
+background: rgba(50, 50, 50 ,0.7);
+border-radius: 0.5em;
 text-align:center;
 }
 .page_center{
