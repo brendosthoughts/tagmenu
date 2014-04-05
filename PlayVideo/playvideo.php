@@ -26,11 +26,11 @@ try
         $sub_tags=array();
 	$i=0;
 	foreach ( $tagging_info as $value ){
-            $tags[$i]['tag_name'] = $value['tag_name'];
+        $tags[$i]['tag_name'] = $value['tag_name'];
 	    $tags[$i]['tag_id']=  $value['tag_id'];
-            $sub_tags[$i] = $value;
+        $sub_tags[$i] = $value;
 	    $i++;
-        }
+    }
 //make each value unique as tags(categories) only need to display once not multiple times
 	$temp_array = array();
 	foreach ($tags as &$v) {
@@ -60,16 +60,24 @@ try
 			<div class="vid_overlay">
 				<h2 class="vid_title"><?=$vid['title']?></h2>
 				<div class="vid_cats">
-					<?php foreach($tags as $tag){
+			<?php 
+					$search_tags = array();
+					$search_subtags=array();
+					$tag_index=0;
+					$sub_tag_index=0;
+					foreach($tags as $tag){
+						$search_tags[$tag_index++] = $tag['tag_id']; 
 						echo '<div class="vidCategory">';
 						echo '<a href="' .$toRoot. 'Categories/?id=' .$tag['tag_id']. '" class="vid_cat" title="Video Category">'.$tag['tag_name'] .' </a>';
 						foreach($sub_tags as $subtag){
 							if($subtag['tag_id']==$tag['tag_id']){
+								$search_subtags[$sub_tag_index++] = $subtag['sub_tag_id']; 
 								echo '<a href="'.$toRoot. 'SubTag/?id=' .$subtag['sub_tag_id'].'" class="subtag" title="subtag of the video">' .$subtag['sub_tag_name']. '</a>';
 							}
 						}
 						echo '</div>';
-					}?>
+					}
+			?>
 				</div>
 				<div class="vid_maker_info">
 					<span class="vid_type"><?=$vid['tag_type_name']?></span>
@@ -134,6 +142,43 @@ try
 		</div>
 	</div>
 
+
+
+<?php 
+/*subtags search and compare*/
+	$values = implode(',', $search_subtags);
+    $sql ="SELECT tag_target_id, targets.tag_id, tag_name, sub_tag_name FROM phpro_tag_targets targets
+    	INNER JOIN  sub_tags ON targets.sub_tag_id=sub_tags.sub_tag_id
+        INNER JOIN phpro_tags tags ON targets.tag_id=tags.tag_id
+    	WHERE targets.sub_tag_id IN ($values)
+    	GROUP BY tag_target_id;
+    	";
+
+    $stmt = db::getInstance()->prepare($sql);
+    $stmt->execute();
+    $video = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo "<div class='similar_videos'>";        
+    $z=0;
+        foreach($video as $vid){
+          	echo "vid ". $z++ . " -->";
+          	print_r($vid);
+
+        	echo "<br> tag_target: " .$vid['tag_target_id'] . " tag_id->" . $vid['tag_id'] ."  sub_tag_name: " . $vid['sub_tag_name'] ;
+        	echo "<br>";
+        }
+
+        /*foreach($video as $vid){
+        	$z++;
+        	print_r($vid);
+        	echo "<br>". $z . "-->";
+        	if($z>10){
+        		break;
+        	}
+        }*/
+        echo "</div>";
+
+
+?>
 	<div class="below_vid"> 
 
 		<div class="bullshit_bar bullshit_rating" >
@@ -143,7 +188,7 @@ try
 
 		<div class="similar_videos">
 			<div class="type_similar">
-			    similar videos in an owl carousel of the same video type
+			
 			</div>
 			<div class="other_types_similar">
 				similar videos in an owl carousel off other types
@@ -153,5 +198,3 @@ try
 	<div class="comments">
 		
 	</div>
-
-

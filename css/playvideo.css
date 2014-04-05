@@ -40,31 +40,40 @@ float: left;
 }
 
 .vid_cats{
-	display: inline-block;
+	display: table;
+	width: 100%;
 	margin: auto;
 	position: absolute;
 	font-size: 1.1em;
-	bottom: 9em;
-	font-size: 0.9vw;
+	bottom: 6em;
+	font-size: 1.1vw;
+
 }
 .vidCategory{
-position: absolute;
-display: inline-block;
-width: 15em;
-left: -7.5em;
-padding-top: 0.5em;
-margin: 0 auto;
+	display: table-cell;
+	width: 15em;
+	left: -7.5em;
+	padding-top: 0.5em;
+	margin: 0 auto;
 }
 .vid_cat {
-  width:100%;
-display:block;
-font-size: 1.3em;
-  padding-top: 0.2em;
+  width:70%;
+  max-width:17em;
+  max-width: 17vw;
+  margin:0 auto;
+  display:block;
+  font-size: 1.3em;
+  height: 2.5em;
+  height: 2.5vw;
+  padding-top: 0.4em;
+  padding-top: 0.4vw;
+  text-decoration: underline;
   border-color: rgba(50, 50, 50 0.8);
   border-radius: 0.3em;
   color:white;
   background: rgba(50, 50, 50 ,0.7);
 }
+
 .vid_overlay{
 	display: none;
 }
@@ -89,6 +98,7 @@ text-align:center;
 	right:0;
 	padding:0.3em 0.5em 0.3em 1em;
 	font-size: 1.7em;
+	font-size:1.5vw;
 	border-top-left-radius:1.5em;
 	text-align:right;
 	background: black;
@@ -105,7 +115,7 @@ text-align:center;
 }
 .vid_info{
 	display:block;
-	padding:0em 1em 0em 1em;
+	padding:0em 1em 3em 1em;
 	width: 90%;
 	margin: 0 auto;
 	overflow: hidden;
@@ -113,7 +123,7 @@ text-align:center;
 }
 .vid_description{
 	display: inline-block;
-	width:calc(100% - 360px);
+	width:calc(100% - 280px);
 }
 .vid_info .text-title{
 	font-size:1.3em;
@@ -126,8 +136,9 @@ text-align:center;
 }
 .vid_info .paid{
 	float:right;
-	width:350px;
-	height:350px;
+	width:275px;
+	height:275px;
+	margin: 0 auto;
 	display:inline-block;
 	margin-top: 2.5em;
 }

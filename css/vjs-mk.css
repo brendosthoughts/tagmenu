@@ -365,6 +365,7 @@ easily in the skin designer. http://designer.videojs.com/
   left: calc(50% - 2em);
   top: calc(50% - 1.3em);
   font-size: 3em;
+  font-size: 3vw;
   display: block;
   z-index: 2;
   position: absolute;

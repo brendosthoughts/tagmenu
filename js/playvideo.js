@@ -18,6 +18,18 @@ videojs("feature_video").ready(function(){
     resizeVideoJS(); // Initialize the function
     window.onresize = resizeVideoJS; // Call the function on resize
   });
+videojs.Youtube.prototype.onError = function(error){
+this.player_.error = error;
+this.player_.trigger('error');
+//check the error code from YouTube
+//https://developers.google.com/youtube/iframe_api_reference
+if(error == 100 || error == 101 || error == 150){
+this.player_.bigPlayButton.hide();
+this.player_.loadingSpinner.hide();
+this.player_.posterImage.hide();
+this.iframeblocker.style.display = '';
+}
+};
 
 //credit below function to Tony Mancini of stack overflow with originial credit to 
 // http://www.xtf.dk/2011/08/center-new-popup-window-even-on.html
@@ -41,32 +53,34 @@ function openWin(url, w, h) {
 
 
 
-$(".share_link").click(function() {
-  var shareType= this;
-  var sharePage = encodeURIComponent(window.location);
-  var shareTitle= encodeURIComponent($(".vid_title").text());
-  var vidDescription = $(".vid_description").text();
-  
-    if(shareType.id =="twitter"){
-     openWin("http://twitter.com/intent/tweet?text="+ shareTitle+"&url="+ sharePage +"&via=TWITTER-HANDLE" , 700, 500);
-    }else if(this.id =="facebook"){
-     openWin("https://www.facebook.com/sharer/sharer.php?u=" + sharePage, 700, 500);
-    }else if(this.id =="gplus"){
-     openWin("https://plus.google.com/share?url="+sharePage, 700, 500);
-    }else if(this.id =="linkedin"){
-     openWin("https://www.linkedin.com/shareArticle?mini=true&url="+ sharePage+"L&title="+shareTitle +"&summary=YOUR-SUMMARY&source=YOUR-URL", 800, 500);
-    }else if(this.id =="stumbleupon"){
-     openWin("http://www.stumbleupon.com/submit?url=" + sharePage, 850, 550);
-    }else if(this.id =="reddit"){
-     openWin("http://www.reddit.com/submit?url=" + sharePage, 850, 500);
-    }
-
-});
 
 $(document).ready(function() {
   $('.vjs-poster').append( $('.vid_overlay') );
 
   $('.vid_overlay').css('display', 'block');
+
+
+  $(".share_link").click(function() {
+    var shareType= this;
+    var sharePage = encodeURIComponent(window.location);
+    var shareTitle= encodeURIComponent($(".vid_title").text());
+    var vidDescription = $(".vid_description").text();
+    
+      if(shareType.id =="twitter"){
+       openWin("http://twitter.com/intent/tweet?text="+ shareTitle+"&url="+ sharePage +"&via=TWITTER-HANDLE" , 700, 500);
+      }else if(this.id =="facebook"){
+       openWin("https://www.facebook.com/sharer/sharer.php?u=" + sharePage, 700, 500);
+      }else if(this.id =="gplus"){
+       openWin("https://plus.google.com/share?url="+sharePage, 700, 500);
+      }else if(this.id =="linkedin"){
+       openWin("https://www.linkedin.com/shareArticle?mini=true&url="+ sharePage+"L&title="+shareTitle +"&summary=YOUR-SUMMARY&source=YOUR-URL", 800, 500);
+      }else if(this.id =="stumbleupon"){
+       openWin("http://www.stumbleupon.com/submit?url=" + sharePage, 850, 550);
+      }else if(this.id =="reddit"){
+       openWin("http://www.reddit.com/submit?url=" + sharePage, 850, 500);
+      }
+
+  });
 	
 //set up nav  menus
     function hasClass(element, cls) {
@@ -84,7 +98,9 @@ $(document).ready(function() {
     var more = document.getElementById("main-nav-more");
     more.addEventListener("click", handleDropDown, false);
 
-		
+	$('.type_similar').load(window.location+ '&extra=type_similar', function() {
+    $.getScript('js/another.js');
+  });
     //rating widget 
 /*    $('.ratingStars').jRating({
       length:5,
