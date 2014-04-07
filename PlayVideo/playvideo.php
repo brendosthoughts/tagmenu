@@ -105,7 +105,7 @@ try
 			<div class="ratingWidget">
 		        <div class="ratingStars
 		        	data-average="
-		        	<?php if($vid[num_ratings]==0){echo 2.5;}                	
+		        	<?php if($vid['num_ratings']==0){echo 2.5;}                	
 		        	else{
 		        		echo $vid['rating']/$vid['num_ratings']; 
 		        	}
@@ -178,8 +178,9 @@ try
 	</div>
 <?php
 
-	        $sql = "UPDATE content SET num_views= num_views + 1 WHERE content_id=:content_id";
+	        $sql = "UPDATE content SET num_views = num_views + 1 WHERE content_id=:content_id";
         $stmt = db::getInstance()->prepare($sql);
         $stmt->bindParam(':content_id', $vid['content_id']);
-        db::getInstance()->commit();
+        $stmt->execute();
+  
 ?>

@@ -19,4 +19,8 @@ function print_tail($subTemplate, $toRoot){ ob_start(); ?>
 		</body></html>
 <?php
     return ob_end_flush();
-} ?>
+
+} 
+
+
+?>

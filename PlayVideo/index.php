@@ -29,7 +29,7 @@ try{
 
 }
 
-        if($_GET['extra']=='type_similar'){
+        if(isset($_GET['extra'])){
                         $tags = "SELECT *  FROM phpro_tag_targets targets
                 INNER JOIN  sub_tags ON targets.sub_tag_id=sub_tags.sub_tag_id
                 INNER JOIN phpro_tags tags ON targets.tag_id=tags.tag_id
@@ -89,4 +89,5 @@ try{
         print_tail($subTemplate, $toRoot);
         }
 }
+      db::getInstance()->commit();
 ?>
