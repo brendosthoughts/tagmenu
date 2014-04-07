@@ -2,12 +2,13 @@
 
 <div class="intro-good">
 	<p>
-		Here at Mind-Knowledge.com I believe that the world's a strange awe inspiring crazy place, and the best way you can help make it better is learn , and pass on your knowledge. 
-		With that said there's a lot of places in the world that with for a lack of a better term are fucked up! If you have some extra cash helping people less fortunate then you is pretty honourable in are books. 
-		Whether you choose to donate your time or resource's closer to home or further away we respect that. Here are a list of companies we think are doing some of the best and most innovative work in some of the worst are ont his rock we've named earth. 		 
+		Mind-Knowledge.com in its current state is just me one dude who loves watching anything that makes me think or opens a new perspective on the roc we call earth.
+		 I believe that the world's a strange and awe inspiring crazy place, and the best way you can help make it better is learn , and pass on your knowledge and ideas to others. 
+		With that said there's a lot of places and idealogoies in the world that with for a lack of a better term are fucked up! If you have some extra cash helping people less fortunate or doing helping to improve the earth for all of us is pretty honourable in my books. 
+		Whether you choose to donate your time or resource's closer to home or further away I respect that. Here are a list of companies I think are doing some of the most reputable charity organizations on the face of the planet. 		 
 	</p>
-	<p>We are not saying that charity is the only way to improve the world, not being an asshole goes along way by itself, but if your looking to help some people out check out these great organizations. 
-	<span>Please note that mind-knowledge.com is not in any way affiliated with any of these organisations , but merely think they're doing some awesome work!</span>
+	<p>I'm not saying that charity is the only way to improve the world, not being an asshole goes along way by itself! But if your looking to help some people out check out these great organizations. 
+	<span>Please note that mind-knowledge.com is not in any way affiliated with any of these organisations , but merely think they're doing some awesome work! These organizations have not paid me any money or given me another incentive to recomend them!</span>
 	</p>
 </div>	
 <ul>

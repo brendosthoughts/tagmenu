@@ -165,9 +165,9 @@ try
 		    $video = $stmt->fetchAll(PDO::FETCH_ASSOC);
        
 		    $z=0;
-		        foreach($video as $vid){
+		        foreach($video as $related_vid){
 		          	echo "vid ". $z++ . " -->";
-		        	echo "<br> tag_target: " .$vid['tag_target_id'] . " tag_id->" . $vid['tag_id'] ."  sub_tag_name: " . $vid['sub_tag_name'] ;
+		        	echo "<br> tag_target: " .$related_vid['tag_target_id'] . " tag_id->" . $related_vid['tag_id'] ."  sub_tag_name: " . $related_vid['sub_tag_name'] ;
 		        	echo "<br>";
 		        }
 		       
@@ -177,3 +177,11 @@ try
 <div class="comments">
 		
 	</div>
+<?php
+
+	        $sql = "UPDATE content SET num_views + 1 WHERE content_id=:content_id";
+        $stmt = db::getInstance()->prepare($sql);
+        $stmt->bindParam(':content_id', $vid['content_id']);
+        $stmt->execute();
+
+?>
