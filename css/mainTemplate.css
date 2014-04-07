@@ -2,11 +2,13 @@
 aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}
 audio,canvas,video{display:inline-block;}
 audio:not([controls]){display:none;height:0;}[hidden]{display:none;}
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+html{font-family: 'Nunito', sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 body{margin:0;}
 a:focus{outline:thin dotted;}
 a:active,a:hover{outline:0;}
 h1{font-size:2em;margin:0.67em 0;}
+h2{	font-size:2em; font-family: 'Life Savers', cursive;
+}
 abbr[title]{border-bottom:1px dotted;}
 b,strong{font-weight:bold;}
 dfn{font-style:italic;}
@@ -14,13 +16,9 @@ hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}
 mark{background:#ff0;color:#000;}
 code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}
 pre{white-space:pre-wrap;}q{quotes:"\201C" "\201D" "\2018" "\2019";}
-small{font-size:80%;}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
 sup{top:-0.5em;}sub{bottom:-0.25em;}
 img{border:0;}svg:not(:root){overflow:hidden;}
-figure{margin:0;}
-fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}
-legend{border:0;padding:0;}
 button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}
 button,input{line-height:normal;}button,select{text-transform:none;}
 button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}
@@ -31,9 +29,7 @@ input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-w
 input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 textarea{overflow:auto;vertical-align:top;}
-table{border-collapse:collapse;border-spacing:0;}
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-body {background: #34495e; color: #fff; font-weight: 300; font-family: 'Lato', Calibri, Arial, sans-serif; }
+body {background: #272727; color: #fff; font-weight: 300; font-family: 'Nunito', sans-serif; }
 a {text-decoration: none; color: #f7f7f7; outline: none; }  /*this is what modifies a which may need to be changed @ some point*/
 a:hover, a:focus {color: #fff; outline: none; }
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
@@ -84,7 +80,8 @@ html, body, .container {
 .vidInfo .left .img-link{
  margin:0 auto;
  width: 85%;
- max-height: 12em;
+ max-height: 11em;
+ margin: 0.5em 0em;
  overflow:hidden;
  display:block;
  position: relative;
@@ -99,7 +96,7 @@ html, body, .container {
   border-radius: 0.3em;
   color: #000;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 300;
   text-shadow: none;
   padding: 0.1em 0.2em;
   margin: 0em 0.1em;
@@ -150,7 +147,7 @@ text-align: center;
 font-size: 2em;
 margin: 0 1em 0 1em;
 text-decoration: underline;
-font-weight: 600;
+font-weight: 300;
 line-height: 1.0em
 }
 .vidInfo .text p{
@@ -228,16 +225,43 @@ text-shadow: 2px 2px 2px #000;
 padding-left: 0.5em;
 }
 
+.background-paid{
+	text-align: center;
+
+}
+.background-paid h6{
+	font-size: 1.5em;
+	margin: 1em 0em;
+}
+.background-paid p{
+	font-size: 0.8em;
+	margin-bottom: 1.5em;
+}
+.background-paid a{
+	font-size: 0.8em;
+	width: 100%;
+	margin-bottom: 1em;
+}
+.background-paid .btc-link{
+	padding: 1em 0em;
+
+	display: block;
+
+}
 .add-left{
 	display: inline-block;
 
 	position:absolute;
 	left:0;
 	top: 7em;
-	width: 200px;
+	width: 190px;
 
 	background:grey;
 	z-index: 100;
+}
+.add-left .paid{
+	min-height: 600px;
+	max-height:615px;
 }
 .add-left .icon-cc-nc{
 	position:absolute;
@@ -263,10 +287,11 @@ padding-left: 0.5em;
 }
 .add-left span{
 
- width:95%;
- border: ridge grey 5px;
+ width:100%;
+ border: groove grey 5px;
   display:block;
- margin: 2.5% 2.5%;
+ margin: 2.5% 0;
+ padding: 4px;
  position: relative;
  overflow:hidden;
 }
@@ -275,6 +300,7 @@ padding-left: 0.5em;
 width: 100%;
 }
 .main-header{
+	font-family: 'Life Savers', cursive;
 	color:black;
 	float:left;
 	position :fixed;
@@ -347,6 +373,19 @@ bottom: 0;
   	float: left;
  
 }
+#main-site ul li:after{
+	content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .3s ease, background-color .3s ease;
+}
+#main-site ul li:hover:after {
+    width: 100%;
+    background: #ccc;
+}
 #main-site .more-dropdown ul{
 	font-size: 0.9em;
 display:none;
@@ -373,9 +412,6 @@ border-right:solid 1px #ccc;
 border-left:solid 1px #ccc;
 }
 
-#main-site li:hover{
-	background: rgba(0, 0, 0, 0.6);
-}
 #main-site li .main-dropdown a:after{
     content'<i class=" icon-angle-double-down"></i>';
     color:white;
@@ -610,6 +646,7 @@ transform-origin: center center;
 	width:calc(100% - 200px);
 	float:right;
 	display:block;
+	overflow:hidden;
 }
 .main-footer{
 display: block;
@@ -1713,6 +1750,7 @@ font-size:1.2em;
 		top: 8%;
 		left:8%;
 	}
+
 	.paid{
 		    width: 100%;
 		    height:90px;
@@ -1980,3 +2018,4 @@ font-size:1.2em;
     height: 50px;
   }
 }
+

@@ -142,43 +142,6 @@ try
 		</div>
 	</div>
 
-
-
-<?php 
-/*subtags search and compare*/
-	$values = implode(',', $search_subtags);
-    $sql ="SELECT tag_target_id, targets.tag_id, tag_name, sub_tag_name FROM phpro_tag_targets targets
-    	INNER JOIN  sub_tags ON targets.sub_tag_id=sub_tags.sub_tag_id
-        INNER JOIN phpro_tags tags ON targets.tag_id=tags.tag_id
-    	WHERE targets.sub_tag_id IN ($values)
-    	GROUP BY tag_target_id;
-    	";
-
-    $stmt = db::getInstance()->prepare($sql);
-    $stmt->execute();
-    $video = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo "<div class='similar_videos'>";        
-    $z=0;
-        foreach($video as $vid){
-          	echo "vid ". $z++ . " -->";
-          	print_r($vid);
-
-        	echo "<br> tag_target: " .$vid['tag_target_id'] . " tag_id->" . $vid['tag_id'] ."  sub_tag_name: " . $vid['sub_tag_name'] ;
-        	echo "<br>";
-        }
-
-        /*foreach($video as $vid){
-        	$z++;
-        	print_r($vid);
-        	echo "<br>". $z . "-->";
-        	if($z>10){
-        		break;
-        	}
-        }*/
-        echo "</div>";
-
-
-?>
 	<div class="below_vid"> 
 
 		<div class="bullshit_bar bullshit_rating" >
@@ -186,15 +149,31 @@ try
 
 		</div>
 
-		<div class="similar_videos">
-			<div class="type_similar">
-			
-			</div>
-			<div class="other_types_similar">
-				similar videos in an owl carousel off other types
-			</div>
-		</div>	
+	    <div class='similar_videos'> 
+		<?php 
+		/*subtags search and compare*/
+			$values = implode(',', $search_subtags);
+		    $sql ="SELECT tag_target_id, targets.tag_id, tag_name, sub_tag_name FROM phpro_tag_targets targets
+		    	INNER JOIN  sub_tags ON targets.sub_tag_id=sub_tags.sub_tag_id
+		        INNER JOIN phpro_tags tags ON targets.tag_id=tags.tag_id
+		    	WHERE targets.sub_tag_id IN ($values)
+		    	GROUP BY tag_target_id;
+		    	";
+
+		    $stmt = db::getInstance()->prepare($sql);
+		    $stmt->execute();
+		    $video = $stmt->fetchAll(PDO::FETCH_ASSOC);
+       
+		    $z=0;
+		        foreach($video as $vid){
+		          	echo "vid ". $z++ . " -->";
+		        	echo "<br> tag_target: " .$vid['tag_target_id'] . " tag_id->" . $vid['tag_id'] ."  sub_tag_name: " . $vid['sub_tag_name'] ;
+		        	echo "<br>";
+		        }
+		       
+		?>
+
 	</div>
-	<div class="comments">
+<div class="comments">
 		
 	</div>

@@ -4,29 +4,32 @@
   		var popularSub = $("#popularSub");
 		 
 		  popularMain.owlCarousel({
-		    autoHeight : false,
+                    navigationText: ["",""],
 		    singleItem : true,
 		    slideSpeed : 1000,
 		    navigation: true,
-		    pagination: false,
-		    responsiveBaseWidth: "#popularMain",
-		    afterAction : popSyncPosition,
+		    pagination:false,
+		    lazyEffect: false,
+		    responsiveBaseWidth: "#recentMain",
+		    afterAction : syncPosition,
 		    responsiveRefreshRate : 200,
 		  });
 		 
 		  popularSub.owlCarousel({
-		    autoHeight : false,
-		    items : 8,
-		    itemsDesktop      : [1199,10],
-		    itemsDesktopSmall     : [979,10],
-		    itemsTablet       : [768,8],
-		    itemsMobile       : [479,4],
-		    pagination:false,
-		    itemsCustom: [[0,0],[360,3],[480,4],[600,5],[720,6],[840,7],[960,8],[1080, 9],[1200, 10],[1320, 11],[1440,12],[1560,13],[1680,14]],
-		    responsiveRefreshRate : 100,
-		    afterInit : function(el){
-		      el.find(".owl-item").eq(0).addClass("synced");
-		    }
+                    autoHeight : false,
+                    items : 8,
+		    navigationText: ["",""],
+		    navigation: true,
+                    itemsDesktop      : [1199,10],
+                    itemsDesktopSmall     : [979,10],
+                    itemsTablet       : [768,8],
+                    itemsMobile       : [479,4],
+                    pagination: true,
+                    itemsCustom: [[0,0],[360,3],[480,4],[720,5],[840,5],[960,7],[1080,8],[1200,9],[1320, 10],[1440,11],[1560,12],[1680,13]],
+                    responsiveRefreshRate : 100,
+                    afterInit : function(el){
+                      el.find(".owl-item").eq(0).addClass("synced");
+                    }
 		  });
 		 
 		  function popSyncPosition(el){

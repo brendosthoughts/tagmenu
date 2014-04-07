@@ -7,9 +7,12 @@ function print_header($subTemplate, $toRoot, $meta){ ob_start(); ?>
 		<meta name="viewport" content="width=device-width">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<link rel="shortcut icon" href="http://ec2-54-226-219-255.compute-1.amazonaws.com/tagging/favicon.ico">
+<link href='http://fonts.googleapis.com/css?family=Life+Savers:400,700|Nunito:700,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="<?= $toRoot ?>css/mainTemplate.css">
 		<link rel="stylesheet" href="<?= $toRoot ?>fonts/css/fontello.css">
 		<link rel="stylesheet" href="<?= $toRoot ?>fonts/css/animation.css">
+		
+
         <script src="<?= $toRoot ?>js/jquery-1.10.2.min.js"></script>
 	<?php if ($subTemplate == "home.php"){ ?>
 		<title>Documentaries, Talks & Debates to help expand your mind and perspective of the world</title>

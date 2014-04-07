@@ -21,8 +21,10 @@ height: 18em;
 
 }
 #popularSub{
- margin: 1em;
-  height: 10em; 
+  height: 10em;
+  margin: 1em;
+  width: 98%;
+  width: calc(100% - 2em);
 }
 .sub .item{
     background: #C9C9C9;
@@ -178,7 +180,7 @@ font-size: 1.3em
 .owl-carousel{
   display: none;
   position: relative;
-  width: 100%;
+  width:80%;
   -ms-touch-action: pan-y;
 }
 .owl-carousel .owl-wrapper{
@@ -418,12 +420,12 @@ font-size: 1.3em
   font-size: 1.3em;
   color: white;
 }
-#recentSub .owl-controls .owl-buttons .owl-prev{
+.sub .owl-controls .owl-buttons .owl-prev{
   left: -10px;
   top: 50px; 
 }
  
-#recentSub .owl-controls .owl-buttons .owl-next{
+.sub .owl-controls .owl-buttons .owl-next{
   right: -10px;
   top: 50px;
 }
