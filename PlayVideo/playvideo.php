@@ -1,7 +1,6 @@
 <?php
 try
 {
-      //  db::getInstance()->beginTransaction();
         $sql = "SELECT *
         FROM content c
         INNER JOIN phpro_tag_targets targets  ON c.tag_target_id = targets.tag_target_id
@@ -182,6 +181,5 @@ try
 	        $sql = "UPDATE content SET num_views= num_views + 1 WHERE content_id=:content_id";
         $stmt = db::getInstance()->prepare($sql);
         $stmt->bindParam(':content_id', $vid['content_id']);
-        $stmt->execute();
-
+        db::getInstance()->commit();
 ?>
