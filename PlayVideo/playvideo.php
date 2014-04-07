@@ -179,7 +179,7 @@ try
 	</div>
 <?php
 
-	        $sql = "UPDATE content SET num_views + 1 WHERE content_id=:content_id";
+	        $sql = "UPDATE content SET num_views= num_views + 1 WHERE content_id=:content_id";
         $stmt = db::getInstance()->prepare($sql);
         $stmt->bindParam(':content_id', $vid['content_id']);
         $stmt->execute();
